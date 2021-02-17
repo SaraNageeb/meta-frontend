@@ -1,0 +1,652 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>JavaScript Basics  #01</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6139f9c1-bc86-44be-a428-efcc4ea6a872" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="data:image/png;base64,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"/></div><h1 class="page-title">JavaScript Basics  #01</h1></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="49c133a4-5b2e-427b-be92-e10f4176058b"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">JavaScript is a programming language that drives the web: from front-end user interface design to server-side backend programming, you&#x27;ll find JavaScript at every stage of a web site and web application. In this course, you&#x27;ll learn the fundamental programming concepts and syntax of the JavaScript programming language.</div></figure><nav id="e59ab369-f376-495b-827b-d773a3de6f2a" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#dff63dfb-619f-45c6-a88c-2203066f9c65">Hello, JavaScript!</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#12b16495-012b-4c11-a6fc-78127b8749e6">JavaScript Everywhere</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#bbabdc44-4846-448f-8352-b939cbe0ef7e">Display Messages with JavaScript</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#fcb2edde-7a97-493d-b91b-2c64fdd7f2be">JavaScript Practice Challenge</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#cda3f063-9af9-4947-b520-39dbfe911379">Challenge Task </a></div></nav><h1 id="dff63dfb-619f-45c6-a88c-2203066f9c65" class="">Hello, JavaScript!</h1><p id="3cb46c0c-8c00-4709-acb3-8ce3206caa82" class="">JavaScript is the most popular programming language on the planet. It drives millions of web sites and applications, powers web servers, and is used to build desktop and mobile apps. In this stage, you&#x27;ll create your first JavaScript program and learn how to troubleshoot your programming mistakes.</p><p id="a79f1e49-1417-443a-a7fe-a1d79005fee5" class="">
+</p><h3 id="12b16495-012b-4c11-a6fc-78127b8749e6" class="">JavaScript Everywhere</h3><p id="43570a94-6525-431c-a5ca-fa8bc1f7621c" class="">JavaScript is a powerful programming language that adds dynamic interactivity to millions of sites on the web. Before you start programming, learn about some of the places JavaScript runs and what JavaScript can do.</p><p id="c3b92787-27ba-4e91-9810-8ee8e81dd975" class="">
+</p><h3 id="bbabdc44-4846-448f-8352-b939cbe0ef7e" class="">Display Messages with JavaScript</h3><p id="d94fe08c-c510-40c3-98a9-8c5d76c45503" class="">Now you&#x27;re going to take your first step into programming by learning three different ways to output messages with JavaScript: a dialog box, writing directly to the console and writing to the current web page.</p><p id="fa1e1dd6-794a-4e39-a1f6-aa100c69a12f" class="">
+</p><ul id="758faac6-079f-4ef0-8863-1a2aefab7595" class="bulleted-list"><li>The alert() method displays an alert dialog with the optional specified content and an OK button.</li></ul><ul id="a7d8232b-e640-4eac-9b9e-408e96d9407c" class="bulleted-list"><li>The console.log() method writes a message to the console.</li></ul><ul id="1b42b830-f0ed-47f0-a908-9124699ee367" class="bulleted-list"><li>The document.write() method writes HTML expressions or JavaScript code to a document.</li></ul><p id="b0998d0f-df98-4725-b8e8-415c5e046a65" class="">
+</p><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css')</style><pre id="853bc2bb-839e-43a6-82df-ddec8d4363a6" class="code code-wrap"><code><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"What is your favourite number?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"Welcome to my page"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><p id="367f96c3-43de-45c0-9d03-396ff2a2f48f" class="">
+</p><h3 id="fcb2edde-7a97-493d-b91b-2c64fdd7f2be" class="">JavaScript Practice Challenge</h3><p id="f0ad8e86-2ed1-4c41-88f0-e5f65637ecac" class="">Practice using JavaScript by writing a &quot;self-destructing message&quot; program.</p><p id="ea5aa8c1-14da-4e55-9f9f-cb6d9d94a753" class="">
+</p><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css')</style><pre id="1ef4c698-6f51-46a4-83b7-07bcf7a4bedc" class="code code-wrap"><code><span class="token comment">// 1. Display an alert dialog with the content: "Warning! This message will self-destruct in"</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Warning! This message will self-destruct in"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 2. Display a "3... 2... 1..." countdown using 3 alert dialog boxes</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"3..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"2..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"1..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+<span class="token comment">// 3. This statement selects the &lt;h1> element and replaces its text with "BOOM!".</span>
+document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"h1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">"🔥BOOM!🔥"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 4. Log "Message destroyed!" to the console</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Message destroyed!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><p id="16e7c300-adba-43a9-8cfd-2edd78a13e81" class="">
+</p><h3 id="cda3f063-9af9-4947-b520-39dbfe911379" class="">Challenge Task </h3><p id="42789b81-f738-4b62-b024-3972a3686513" class="">Next, in the app.js file, add the code required to print &quot;Begin program&quot; to the browser&#x27;s JavaScript console.</p><p id="4a3cefae-146a-45be-8eb2-2d89c78bbcbd" class="">Next, write the code for an alert dialog with the message &quot;I am Programming!&quot;.</p><p id="ce48164c-697a-45a4-ba8d-768b1b8b16b8" class="">At the end of the script (after alert()), add the code required to print &#x27;End program&#x27; to the browser&#x27;s JavaScript console.</p><p id="df9c77bf-4bcc-4da7-a186-3ad7363ace01" class="">
+</p><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css')</style><pre id="a8f17732-583d-4dd1-a4b8-5e0850565e8f" class="code code-wrap"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Begin Program"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"I am Programming!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"End program"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><p id="9a82aab6-11ea-45fe-973b-1112e0ce7fa6" class="">
+</p></div></article></body></html>
