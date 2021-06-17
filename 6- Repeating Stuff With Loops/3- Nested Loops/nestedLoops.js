@@ -1,13 +1,6 @@
 // ===================================
 // NESTED FOR LOOP EXAMPLES
 // ===================================
-
-for (let i = 1; i <= 3; i++) {
-    console.log(`i is: ${i}`)
-    for (let j = 1; j <= 3; j++) {
-        console.log(`     j is: ${j}`)
-    }
-}
 /*
 1
  1
@@ -22,6 +15,12 @@ for (let i = 1; i <= 3; i++) {
  2
  3 
 */
+for (let i = 1; i <= 3; i++) {
+    console.log(`i is: ${i}`)
+    for (let j = 1; j <= 3; j++) {
+        console.log(`     j is: ${j}`)
+    }
+}
 
 // ===================================
 // NESTED ARRAY ITERATION

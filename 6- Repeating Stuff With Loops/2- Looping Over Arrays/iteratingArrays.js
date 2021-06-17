@@ -321,13 +321,13 @@ const animals = [
 // Print out each animal with their index
 for (let i = 0; i < animals.length; i++) {
     console.log(i, animals[i]);
-    //console.log(animals[0]);
-    //console.log(animals[312]);
+
+// Print out 1st animal of the array
+console.log(animals[0]);
+
+// Print out last animal of the array
+console.log(animals[312]);
 }
-    // Print out 1st array
-    console.log(animals[0]);
-    // Print out last array
-    console.log(animals[312]);
 
 // Print out in reverse order
 console.log('print out reverse order')
