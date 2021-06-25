@@ -1,5 +1,5 @@
 const testScores = {
-    keenan: 80,
+    keenan: 80, // person (key) - testScores(value)
     damon: 67,
     kim: 89,
     shawn: 91,
@@ -23,6 +23,14 @@ for (let person in testScores) {
 // (turn data into an array and then use for...of)
 // ==============================================
 
+// Print out the person name (key)
+console.log(Object.keys(testScores));
+
+
+// Print out the person score (value)
+console.log(Object.values(testScores));
+
+// Print out the average scored
 let total = 0;
 let scores = Object.values(testScores);
 for (let score of scores) {
