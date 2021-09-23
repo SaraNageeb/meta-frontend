@@ -5,7 +5,7 @@
 In any programming language, we use variables to store information or data. The Data might be any data that is strings, number, boolean etc. As Javascript is Dynamically Typed programming were we don’t specify the type of value to be stored in it.
 
 
-### Basic Syntax
+**Basic Syntax**
 
 ```js
 let someName = value;
@@ -17,7 +17,7 @@ let year = 1995;
 
 ```
 
-### Recall Values
+**Recall Values**
 
 ```js
 let brazil = 5;
@@ -26,11 +26,13 @@ let argentina = 2;
 brazil + argentina // 7
 ```
 
-### Updating or Changing Values
+**Updating or Changing Values**
+
 Once a variable has been initialized with a value, you can change (or update) that value by giving it a different value.
 
 
 Updating by incrementing a value:
+
 ```js
 let brazil = 5;
 
@@ -61,18 +63,23 @@ console.log(favourite_fruit); //Pear
 favourite_fruit = "Kiwi";
 console.log(favourite_fruit); //Kiwi
 ```
-...
 
-### Variable Naming and Conventions
+<br>
+
+## Variable Naming and Conventions
 Here are six rules you must always follow when giving a variable a name:
 
 1. The name must begin with a letter, dollar sign or underscore. It must not start with a number.
 2. The name can contain letters, numbers, dollar sign or an underscore.
-3. You cannot use **keywords** or **reserved** words**.**
+3. You cannot use **keywords** or **reserved** words.
 4. All variables are case sensitive, so score and Score would be different variable names.
 5. Use a name that describes the kind of information that the variable stores. For example, fisrtName might be used to store a person's name first name, lastName for their last name and age for their age.
 6. If your variable name is made up of more than one word, use a capital letter for the first letter of every word after the first word. For example, firstName rather than firstname.
-### Using let and const keywords
+
+---
+
+
+## The let keywords was introduced in ES6 (2015)
 The let keyword was introduced in ES6 (2015).
 
 **The let keyword allows you to declare a variable with block scope.**
@@ -156,9 +163,10 @@ Variables declared inside a { } block can be accessed from outside the block.
 }
 // x CAN be used here
 ```
-...
+---
 
-The const keyword was introduced in ES6 (2015).
+## The const keywords was introduced in ES6 (2015)
+
 
 **Variables defined with const have Block Scope.**
 Like let declarations, const declarations can only be accessed within the block they were declared.
@@ -211,9 +219,9 @@ greeting.message = "say Hello instead";
 // This will update the value of greeting.message without returning errors.
 ```
 
-...
+---
 
-## Recap
+## Difference between var, let and const
 ![Variable](/img/let-var-const.jpeg)
 
 ```js
