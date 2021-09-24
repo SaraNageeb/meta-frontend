@@ -66,7 +66,7 @@ console.log(favourite_fruit); //Kiwi
 
 <br>
 
-## Variable Naming and Conventions
+**Variable Naming and Conventions**
 Here are six rules you must always follow when giving a variable a name:
 
 1. The name must begin with a letter, dollar sign or underscore. It must not start with a number.
