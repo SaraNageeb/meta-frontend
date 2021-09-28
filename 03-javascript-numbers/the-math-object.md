@@ -96,7 +96,7 @@ Math.random();   // returns a random number
 JavaScript lets you create random numbers, which you can use to add variety and surprise in your programs. You generate a random number in JavaScript via a method named Math.random().
 
 ```js
-// Random generate a number between 1-6
+// Generate a random number between 1-6
 const dieRoll = Math.floor( Math.random() * 6 ) + 1; 
 console.log(`You rolled a ${dieRoll}.`);
 ```

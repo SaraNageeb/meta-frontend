@@ -104,7 +104,7 @@ let score = 0;
 
 Later in the program, maybe when the player destroys an invading spaceship, you add 100 points to that score:
 
-```jsx
+```js
 score = score + 100;
 ```
 
