@@ -1,11 +1,10 @@
-### String Methods
+# String Methods
 String methods help you to work with strings.
 ***
 
 ### toLowerCase()
 The toLowerCase() method returns the value of the string converted to uppercase. 
 This method does not affect the value of the string itself since JavaScript strings are immutable.
-
 
 ```js
 const vowels = 'A,E,I,O,U';
@@ -21,6 +20,7 @@ const vowelsLowerCase = vowels.toUpperCase();
 console.log(vowelsLowerCase);
 // expected output: "a,e,i,o,u"
 ```
+
 ***
 
 ### toUpperCase()
@@ -41,6 +41,7 @@ const vowelsUpperCase = vowels.toUpperCase();
 console.log(vowelsUpperCase);
 // expected output: "A,E,I,O,U"
 ```
+
 ***
 
 ### trim()
@@ -52,4 +53,3 @@ str.trim()   // Returns "Hello World!"
 ```
 
 ***
-

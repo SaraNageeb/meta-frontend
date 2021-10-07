@@ -1,4 +1,4 @@
-### Strings
+# Strings
 JavaScript strings are primitive values. JavaScript strings are also immutable. It means that if you process a string, you will always get a new string. The original string doesn’t change.
 
 To create literal strings in JavaScript, you use single quotes or double quotes:
@@ -23,3 +23,5 @@ let message = `Hello, ${fullName}`;
 
 console.log(message); // Hello, Cristiano Ronaldo
 ```
+
+***

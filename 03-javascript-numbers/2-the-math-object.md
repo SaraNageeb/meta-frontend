@@ -1,4 +1,4 @@
-### The Math Object
+# The Math Object
 The JavaScript Math object allows you to perform mathematical tasks on numbers.
 
 All methods and properties can be used without creating a Math object first.
@@ -7,7 +7,6 @@ All methods and properties can be used without creating a Math object first.
 
 ### Math.round()
 returns the nearest integer:
-
 
 ```js
 Math.round(4.9);    // returns 5
@@ -46,7 +45,6 @@ Math.floor(-4.2);    // returns -5
 ***
 
 ### Math.max()
-
 function returns the largest of the zero or more numbers given as input parameters, or NaN if any parameter isn't a number and can't be converted into one.
 
 ```js
@@ -61,11 +59,9 @@ const array1 = [1, 3, 2];
 console.log(Math.max(...array1));
 // expected output: 3
 ```
-
 ***
 
 ### Math.min()
-
 returns the lowest-valued number passed into it, or NaN if any parameter isn't a number and can't be converted into one.
 
 ```js
@@ -80,19 +76,19 @@ const array1 = [2, 3, 1];
 console.log(Math.min(...array1));
 // expected output: 1
 ```
+
 ***
 
 ### Math.random()
-
 returns a random number between 0 (inclusive), and 1 (exclusive):
 
 ```js
 Math.random();   // returns a random number
 ```
+
 ***
 
 ### Create a Random Number
-
 JavaScript lets you create random numbers, which you can use to add variety and surprise in your programs. You generate a random number in JavaScript via a method named Math.random().
 
 ```js
@@ -100,3 +96,5 @@ JavaScript lets you create random numbers, which you can use to add variety and 
 const dieRoll = Math.floor( Math.random() * 6 ) + 1; 
 console.log(`You rolled a ${dieRoll}.`);
 ```
+
+***

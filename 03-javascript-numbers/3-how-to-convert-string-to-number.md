@@ -1,6 +1,7 @@
-### How to convert a string to a number in JavaScript
-
+# How to convert a string to a number in JavaScript
 JavaScript provides various ways to convert a string value into a number.
+
+***
 
 ### Number() 
 The most relevant way to convert a string to number is by using Number() method. 
@@ -14,7 +15,8 @@ Number("24,000"); //NaN
 ```
 
 However it does not converts strings with separators like Number("24,000") as you can see it returns NaN. 
-If you want to convert string with separators then use Intl.NumberFormat.
+
+If you want to convert string with separators then use Intl.NumberFormat().
 
 ***
 
@@ -62,7 +64,7 @@ parseFloat('Age is 25'); //NaN
 
 ***
 
- ### ```+```
+### ```+```
 One “trick” is to use the unary operator + before the string:
 
 ```js
@@ -88,3 +90,4 @@ Just like +, we can also multiply the string with 1 using * 1 to convert the str
 ```
 It is one of the fastest method to available for the quick conversion.
 
+***

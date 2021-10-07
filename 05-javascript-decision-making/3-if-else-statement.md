@@ -12,7 +12,9 @@ if (condition is true) {
 }
 ```
 
-## Examples of if...else statements in JavaScript
+***
+
+### Examples of if...else statements in JavaScript
 
 In this example, the condition for the if statement is true so the message printed to the console would be "Nick is an adult."
 
@@ -26,7 +28,6 @@ if (age >= 18) {
 }
 ```
 
-
 But if I change the age variable to be less than 18, then the condition would be false and the code would execute the else block instead.
 
 ```js
@@ -39,8 +40,9 @@ if (age >= 18) {
 }
 ```
 
+***
 
-## Examples of multiple conditions (if...else if...else statements) in JavaScript
+### Examples of multiple conditions (if...else if...else statements) in JavaScript
 There will be times where you want to test multiple conditions. That is where the else if block comes in.
 
 ```js
@@ -68,3 +70,5 @@ if (age < 18) {
   console.log("Alice is over 21 years old.");
 }
 ```
+
+***

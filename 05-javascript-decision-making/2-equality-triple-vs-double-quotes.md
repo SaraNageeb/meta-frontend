@@ -22,7 +22,7 @@ The value and the type of both foo and bar is same. Therefore the result is true
 
 ***
 
-### Example 2:‌
+### Example 2
 
 ```js
 const number = 1234 
@@ -38,7 +38,8 @@ Even though the values are same, the type is not the same. Hence a == check retu
 
 ***
 
-### Example 3:
+### Example 3
+
 ```js
 console.log(0 == false) //true
 console.log(0 === false) //false  
@@ -56,3 +57,4 @@ When in doubt, use ===. This will save you from a ton of potential bugs.
 
 If you are supporting a use case where you can be a little lenient about the type of incoming data, then use ==. For example, if an API accepts both "true" and true from the client, use ==. In short, do not use == unless you have a strong use case for it.
 
+***

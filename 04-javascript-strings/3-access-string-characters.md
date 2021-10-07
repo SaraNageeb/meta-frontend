@@ -1,4 +1,4 @@
-### Access string characters
+# Access string characters
 In a string characters are indexed from left to right. 
 For instance, in a string named str the first character is at index 0, while the last is at index str.length-1
 
@@ -32,7 +32,7 @@ str.charAt(str.length-1)    // Returns "D"
 
 ***
 
-## Using square brackets notation []
+### Using square brackets notation []
 Another way of accessing a character in a string is to using the square bracket. for example:
 
 ```js
@@ -48,3 +48,5 @@ When we try to access a character whose index is larger than the string length, 
 let str = 'string';
 console.log(str[999]); // undefined
 ```
+
+***

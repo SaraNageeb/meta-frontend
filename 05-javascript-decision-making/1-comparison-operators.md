@@ -1,6 +1,5 @@
 # JavaScript Comparison Operators
 Comparison operators compare two values and give back a boolean value: either true or false. Comparison operators are used in decision making and loops.
-***
 
 ![Comparison Operators](/img/comparison-operators-js.jpeg)
 
@@ -22,6 +21,7 @@ console.log('1' ==  1);
 console.log(0 == false);
 // expected output: true
 ```
+
 ***
 
 ### Not Equal to (!=)	
@@ -44,7 +44,6 @@ console.log(0 != false);
 ***
 
 ### Strict equality (===)
-
 checks whether its two operands are equal, returning a Boolean result. Unlike the equality operator, the strict equality operator always considers operands of different types to be different.
 
 ```js
@@ -142,7 +141,6 @@ console.log('ab' > 'aa');
 ```
 ***
 
-
 ### Greater than or equal (>=)
 returns true if the left operand is greater than or equal to the right operand, and false otherwise.
 
@@ -161,3 +159,4 @@ console.log('ab' >= 'aa');
 // expected output: true
 ```
 
+***

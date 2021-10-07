@@ -1,4 +1,4 @@
-### String Methods with arguments
+# String Methods with arguments
 String methods help you to work with strings.
 ***
 
@@ -36,8 +36,8 @@ tvShow.indexOf("z");  //-1 (not found)
 ```
 
 ***
-### lastIndexOf() 
 
+### lastIndexOf() 
 The lastIndexOf() the method returns the index of the last occurrence of a specified text in a string and returns -1 if the value is not found.
 
 **lastIndexOf() is case sensitive.**
@@ -49,8 +49,8 @@ str.lastIndexOf("Planet")   // Returns -1
 ```
 
 ***
-### chartAt()
 
+### chartAt()
 The charAt method Returns the character at the specified index (position).
 
 ```js
@@ -66,6 +66,7 @@ city.charAt(20); // returns ""
 ```
 
 ***
+
 ### slice()
 The slice method extracts a part of a string and returns a new string.
 
@@ -81,7 +82,6 @@ fruits.slice(7, 13)     // Returns Banana
 ***
 
 ### substr()
-
 The substr method gets a substring beginning at the specified location and having the specified length.
 
 ```js
@@ -92,7 +92,6 @@ str.substr(7, 6)    // Returns Banana
 ***
 
 ### substring()
-
 The substring method extracts the characters from a string, between two specified indices, and returns the new substring. 
 
 It does not include the end index.
@@ -105,6 +104,7 @@ str.substring(7, 13)    // Returns Banana
 ```
 
 ***
+
 ### split()
 The split method is used to split a string into an array of substrings and return the new array. 
 
@@ -118,16 +118,13 @@ let res = str.split(" ");
 console.log(res);
 // ["How", "are", "you", "today", "?"]
 
-
 // Use the limit parameter:
 const myArr = str.split(" ", 3);
 console.log(myArr); // ["How", "are", "you"]
 
-
 // Use a letter as a separator:
 const myArr2 = str.split("o");
 console.log(myArr2) // ["H", "w are y", "u t", "day ?"]
-
 
 // Converting a String to an Array
 // A string can be converted to an array with the split() method:
@@ -137,8 +134,8 @@ text.split("|")          // Split on pipe
 text.split("")           // Split in characters
 ```
 
-
 ***
+
 ### replace()
 The replace() method replaces a specified value with another value in a string.
 
@@ -156,28 +153,22 @@ console.log(p.replace('dog', 'monkey'));
 
 ***
 
-
-
- ### repeat()
+### repeat()
 The repeat method Returns a new string with a specified number of copies of an existing string.
 
 ```js
 let str = "Hello World !";
 let res = str.repeat(5);
 
-
 console.log(res);
 // "Hello World !Hello World !Hello World !Hello World !Hello World !"
 ```
-
 ***
 
 ### includes()
-
 The includes method checks whether a string contains the specified string/characters.
 
 **includes() is case sensitive.**
-
 
 ```js
 let cities = "London, Manchester, Liverpool";
@@ -185,9 +176,7 @@ let cities = "London, Manchester, Liverpool";
 console.log(cities.includes("London")); // True
 console.log(cities.includes("london")); // False
 console.log(cities.includes("Kent")) // False
-
 ```
-
 ***
 
 ### match() 
@@ -199,7 +188,6 @@ The match() method searches a string for a match against a regular expression, a
 The startsWith method returns whether the string starts with the provided string.
 
 **startsWith() is case sensitive.**
-
 
 ```js
 let alphabet = "abcdefghi";
@@ -216,7 +204,6 @@ The endsWith method returns whether the string ends with the provided string.
 
 **endsWith() is case sensitive.**
 
-
 ```js
 let alphabet = "abcdefghi";
 
@@ -227,9 +214,8 @@ console.log(alphabet.endsWith("GHI")); // false
 
 ***
 
-
-
 ### toString()
+The toString() method returns the value of a string.
 
 ```js
 var x = new String(1000);   // converting number into a String object
@@ -241,6 +227,13 @@ console.log(x.toString());         // "1000"
 ***
 
 ### valueOf() 
+The valueOf() method returns the value of a string.
 
+```js
+// Return the primitive value of a string object:
+
+let str = "Hello World!";
+str.valueOf()   // Returns "Hello World!"
+```
 
 ***

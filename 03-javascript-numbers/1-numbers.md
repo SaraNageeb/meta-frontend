@@ -19,8 +19,7 @@ In JavaScript, numbers can be whole numbers (called integers). For example:
 
 ***
 
-### **Storing Numbers in Variables**
-
+### Storing Numbers in Variables
 Just as with string values, you can put a number in a variable, or "assign" a number to a variable using the equals sign (or assignment operator):
 
 ```jsx
@@ -40,9 +39,7 @@ The value stored in the variable **`aString`** is not the number 10. It's a *
 
 ***
 
-### **Creating a Program with Math**
-
-
+### Creating a Program with Math
 Building a short program that helps you calculate the number of seconds in a day, hours in a week, or minutes in a year.
 
 ```jsx
@@ -58,8 +55,7 @@ console.log(`There are ${secondsPerDay} seconds in a day.`);
 
 ***
 
-### **Arithmetic Operators**
-
+### Arithmetic Operators
 JavaScript lets you perform most mathematical calculations, including addition, subtraction, multiplication, and division.
 
 For example, in a previous course, you used the **`+`** symbol (or the addition operator) to add two numbers together:
@@ -114,11 +110,12 @@ The **`let`** keyword allows you to add to the current value of **`score`**.
 
 ***
 
-### **Assignment Operators**
-
+### Assignment Operators
 There are shorthand methods for performing each of the basic mathematical operations on a variable: addition, subtraction, multiplication and division. For example, to add **`10`** to the contents of a variable, use **`+= 10`**. This both adds **`10`** to the current variable and assigns the result back into the variable.
 
 There are also shorthand for subtracting from a variable, multiplying a variable by a value, and dividing a variable by a value.
 <br>
 
 ![Assignment Operators](/img/assignoperators.png)
+
+***
