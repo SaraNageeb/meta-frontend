@@ -1,4 +1,7 @@
 # Javacript Objects 
+
+![Objects](/img/javascript-objects.jpeg)
+
 In JavaScript, an object is an unordered collection of key-value pairs. Each key-value pair is called a property.
 
 The key of a property can be a string and the value of a property can be any valid JavaScript value e.g., a string, a number, an array, and even a function.
