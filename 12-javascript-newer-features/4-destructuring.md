@@ -215,6 +215,92 @@ The object destructuring const { address: { city } } = hero let’s you access t
 
 # Array Destructuring
 
+Assuming that you have a function that returns an array of numbers as follows:
+
+```js
+function getScores() {
+   return [70, 80, 90];
+}
+```
+
+The following invokes the getScores() function and assigns the returned value to a variable:
+
+```js
+let scores = getScores();
+```
+
+To get the individual score, you need to do like this:
+
+```js
+let x = scores[0], 
+    y = scores[1], 
+    z = scores[2];
+```
+
+Prior to ES6, there was no direct way to assign the elements of the returned array to multiple variables such as x, y and z.
+
+Fortunately, starting from ES6, you can use the destructing assignment as follows:
+
+```js
+let [x, y, z] = getScores();
+
+console.log(x); // 70
+console.log(y); // 80
+console.log(z); // 90
+```
+
+The variables x, y and z will take the values of the first, second, and third elements of the returned array.
+
+Note that the square brackets [] look like the array syntax but they are not.
+
+If the getScores() function returns an array of two elements, the third variable will be undefined, like this:
+
+```js
+function getScores() {
+   return [70, 80];
+}
+
+let [x, y, z] = getScores();
+
+console.log(x); // 70
+console.log(y); // 80
+console.log(z); // undefined
+```
+
+In case the getScores() function returns an array that has more than three elements, the remaining elements are discarded. For example:
+
+```js
+function getScores() {
+   return [70, 80, 90, 100];
+}
+
+let [x, y, z] = getScores();
+
+console.log(x); // 70
+console.log(y); // 80
+console.log(z); // 90
+```
+
+### Array Destructuring Assignment and Rest syntax
+It’s possible to take all remaining elements of an array and put them in a new array by using the rest syntax (...):
+
+```js
+let [x, y ,...args] = getScores();
+console.log(x); // 70
+console.log(y); // 80
+console.log(args); // [90, 100]
+```
+
+The variables x and y receive values of the first two elements of the returned array. And the args variable receives all the remaining arguments, which are the last two elements of the returned array.
+
+Note that it’s possible to destructure an array in the assignment that separates from the variable’s declaration. For example:
+
+```js
+let a, b;
+[a, b] = [10, 20];
+console.log(a); // 10
+console.log(b); // 20
+```
 
 ***
 
