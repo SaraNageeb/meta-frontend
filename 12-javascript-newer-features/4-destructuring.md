@@ -307,6 +307,25 @@ console.log(b); // 20
 
 ***
 
+### Default Values
+When you destructure on properties that are not defined, you get undefined:
+
+```js
+const { password } = {};
+
+console.log(password); // -> undefined
+```
+
+You can provide default values for when the property you are destructuring is not defined:
+
+```js
+const [favorite = 'apple'] = [];
+console.log(favorite); // -> apple
+
+const { width = 100 } = {};
+console.log(width); // -> 100
+```
+
 ### More Example
 ```js
 // ===================
