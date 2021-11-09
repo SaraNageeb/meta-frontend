@@ -215,6 +215,8 @@ The object destructuring const { address: { city } } = hero let’s you access t
 
 # Array Destructuring
 
+### Introduction to JavaScript Array destructuring
+
 Assuming that you have a function that returns an array of numbers as follows:
 
 ```js
@@ -282,6 +284,7 @@ console.log(z); // 90
 ```
 
 ### Array Destructuring Assignment and Rest syntax
+
 It’s possible to take all remaining elements of an array and put them in a new array by using the rest syntax (...):
 
 ```js
