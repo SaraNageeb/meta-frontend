@@ -305,8 +305,6 @@ console.log(a); // 10
 console.log(b); // 20
 ```
 
-***
-
 ### Default Values
 When you destructure on properties that are not defined, you get undefined:
 
@@ -325,6 +323,8 @@ console.log(favorite); // -> apple
 const { width = 100 } = {};
 console.log(width); // -> 100
 ```
+
+***
 
 ### More Example
 ```js
