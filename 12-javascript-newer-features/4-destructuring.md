@@ -147,12 +147,17 @@ Now, instead of being undefined, the variable enemies defaults to ['Joker'].
 ### 5. Aliases
 If you’d like to create variables of different names than the properties, then you can use the aliasing feature of object destructuring.
 
+```js
 const { identifier: aliasIdentifier } = expression;
+```
+
 identifier is the name of the property to access, aliasIdentifier is the variable name, and expression should evaluate to an object. After the destructuring, the variable aliasIdentifier contains the property value.
 
 The equivalent code:
 
+```js
 const aliasIdentifier = expression.identifier;
+```
 Here’s an example of object destructuring alias feature:
 
 ```js
