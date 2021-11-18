@@ -17,7 +17,7 @@ Using the event delegation pattern is advantageous for two reasons:
 
 ***
 
-### Event Delegation Example
+### Example
 Event delegation allows us to attach a single event listener, to a parent element, that will fire for all descendants matching a selector, whether those descendants exist now or are added in the future.
 
 The idea is that if we have a lot of elements handled in a similar way, then instead of assigning a handler to each of them – we put a single handler on their common ancestor.
