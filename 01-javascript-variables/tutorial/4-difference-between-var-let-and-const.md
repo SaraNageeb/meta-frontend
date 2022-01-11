@@ -8,7 +8,7 @@ var declarations are globally scoped or function scoped while let and const are 
 
 * const variables can neither be updated nor re-declared. 
 
-![Variable](/img/let-var-const.jpeg)
+![Variable](/img/01-variables/let-var-const.jpeg)
 
 ```js
     // var is function scope.

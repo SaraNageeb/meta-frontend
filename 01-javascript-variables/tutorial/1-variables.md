@@ -1,7 +1,7 @@
 # Variables
 In any programming language, we use variables to store information or data. The Data might be any data that is strings, number, boolean etc. As Javascript is Dynamically Typed programming were we don’t specify the type of value to be stored in it.
 
-![Variable](/img/variable.png)
+![Variables](/img/01-variables/variable.png)
 
 ***
 

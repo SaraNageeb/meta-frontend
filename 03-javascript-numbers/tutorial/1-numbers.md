@@ -116,6 +116,6 @@ There are shorthand methods for performing each of the basic mathematical operat
 There are also shorthand for subtracting from a variable, multiplying a variable by a value, and dividing a variable by a value.
 <br>
 
-![Assignment Operators](/img/assignoperators.png)
+![Assignment Operators](/img/03-numbers/assign-operators.png)
 
 ***
