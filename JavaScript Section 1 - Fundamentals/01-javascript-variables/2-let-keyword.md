@@ -22,20 +22,21 @@ let x = 0;
 
 // SyntaxError: 'x' has already been declared
 ```
+
 **let can be updated but not re-declared.**
 
-Just like var,  a variable declared with let can be updated within its scope. Unlike var, a let variable cannot be re-declared within its scope. 
+Just like var, a variable declared with let can be updated within its scope. Unlike var, a let variable cannot be re-declared within its scope. 
 
 So while this will work:
 
-```jsx
+```js
 let greeting = "say Hi";
     greeting = "say Hello instead";
 ```
 
 this will return an error:
 
-```jsx
+```js
     let greeting = "say Hi";
     let greeting = "say Hello instead"; // error: Identifier 'greeting' has already been declared
 ```

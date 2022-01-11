@@ -1,8 +1,11 @@
 # Variables
-In any programming language, we use variables to store information or data. The Data might be any data that is strings, number, boolean etc. As Javascript is Dynamically Typed programming were we don’t specify the type of value to be stored in it.
+In any programming language, we use variables to store information or data. 
+The Data might be any data that is strings, number, boolean etc. 
+As Javascript is Dynamically Typed programming were we don’t specify the type of value to be stored in it.
 
-![Variables](/img/01-variables/variable.png)
+![Variables][variables]
 
+[variables]:https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables/boxes.png
 ***
 
 **Basic Syntax**
@@ -33,18 +36,12 @@ Once a variable has been initialized with a value, you can change (or update) th
 Updating by incrementing a value:
 
 ```js
-let brazil = 5;
-
-// Add 1 to brazil
-brazil +1 // 6
-
-brazil; // still 5 
-
-// To actually add 1 to brazil:
+// Add 1 to brazil:
 brazil = brazil +1;
 brazil // 6
 
 ```
+
 **Changing a value:**
 
 ```js

@@ -15,6 +15,8 @@ const x = 2;
 // Here x is 10
 ```
 
+<br>
+
 **Variables defined with const cannot be Redeclared or Reassigned.**
 This means that the value of a variable declared with const remains the same within its scope. It cannot be updated or re-declared. So if we declare a variable with const, we can neither do this:
 
@@ -24,9 +26,12 @@ const greeting = "say Hi";
 
 // or this
 
+
 const greeting = "say Hi";
     const greeting = "say Hello instead";// error: Identifier 'greeting' has already been declared
 ```
+
+<br>
 
 **Const Objects**
 Every const declaration, therefore, must be initialized at the time of declaration.
