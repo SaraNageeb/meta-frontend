@@ -9,7 +9,9 @@ This material will teach you the basics of programming and Javascript. Whether y
 
 ## Table of Contents
 
-1. [Fundamentals](https://github.com/mmartins23/javascript/tree/main/JavaScript%20Section%201%20-%20Fundamentals)
+1. [JavaScript Section 1 - Fundamentals](https://github.com/mmartins23/javascript/tree/main/JavaScript%20Section%201%20-%20Fundamentals)
+2. [JavaScript Section 2 - Decision Making](https://github.com/mmartins23/javascript/tree/main/JavaScript%20Section%202%20-%20Decision%20Making)
+
    
 
 
