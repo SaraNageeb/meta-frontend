@@ -9,8 +9,7 @@ This material will teach you the basics of programming and Javascript. Whether y
 
 ## Table of Contents
 
-  1. [Fundamentals](#https://github.com/mmartins23/javascript/tree/main/JavaScript%20Section%201%20-%20Fundamentals)
-  1. [...](#...)
+* [x] [Fundamentals](https://github.com/mmartins23/javascript/tree/main/JavaScript%20Section%201%20-%20Fundamentals)
    
 
 
