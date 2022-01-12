@@ -8,7 +8,7 @@ Strings are a primitive data type. They are any grouping of characters (letters,
 
 ```js
 let city = 'London';
-let country = "Norway";
+let country = "England";
 ```
 ***
 
@@ -16,12 +16,12 @@ let country = "Norway";
 You can use the typeof operator to find the data type of a JavaScript variable.
 
 ```js
-typeof "John"                 // Returns "string"
+typeof "London"               // Returns "string"
 typeof 3.14                   // Returns "number"
 typeof NaN                    // Returns "number"
 typeof false                  // Returns "boolean"
 typeof [1,2,3,4]              // Returns "object"
-typeof {name:'John', age:34}  // Returns "object"
+typeof {name:'Peter', age:23} // Returns "object"
 typeof new Date()             // Returns "object"
 typeof function () {}         // Returns "function"
 typeof myCar                  // Returns "undefined" *
@@ -34,7 +34,7 @@ typeof null                   // Returns "object"
 Numbers are a primitive data type. They include the set of all integers and floating point numbers.
 
 ```js
-let amount = 6;
+let amount = 5;
 let price = 4.99;
 ```
 

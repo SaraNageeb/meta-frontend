@@ -2,7 +2,9 @@
 In a string characters are indexed from left to right. 
 For instance, in a string named str the first character is at index 0, while the last is at index str.length-1
 
-![Strings Index](/img/strings-index.png)
+![Strings][strings]
+
+[strings]:https://usemynotes.com/wp-content/uploads/2021/06/How-to-access-the-characters-of-a-String.jpg
 
 ***
 
