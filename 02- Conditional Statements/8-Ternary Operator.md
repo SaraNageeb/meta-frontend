@@ -1,0 +1,64 @@
+# Ternary Operator
+In the spirit of using short-hand syntax, we can use a ternary operator to simplify an if...else statement.
+
+Take a look at the if...else statement example:
+
+```js
+let isNightTime = true;
+ 
+if (isNightTime) {
+  console.log('Turn on the lights!');
+} else {
+  console.log('Turn off the lights!');
+}
+```
+
+We can use a ternary operator to perform the same functionality:
+
+```js
+condition ? if condition is true : if condition is false
+```
+
+```js
+isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+```
+
+In the example above:
+
+* The condition, isNightTime, is provided before the ?.
+
+* Two expressions follow the ? and are separated by a colon :.
+
+* If the condition evaluates to true, the first expression executes.
+
+* If the condition evaluates to false, the second expression executes.
+
+Like if...else statements, ternary operators can be used for conditions which evaluate to true or false.
+
+***
+
+```js
+let isLocked = false;
+
+isLocked ? 
+  console.log('You will need a key to open the door.')
+: console.log('You will not need a key to open the door.')
+```
+
+```js
+let isCorrect = true;
+
+isCorrect ?
+  console.log('Correct!')
+:
+  console.log('Incorrect!')
+```
+
+```js
+let favoritePhrase = 'Love That!';
+
+favoritePhrase === 'Love That!' ? 
+  console.log('I love that!')
+:
+console.log("I don't love that!")
+```
