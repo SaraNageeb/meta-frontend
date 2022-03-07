@@ -1,0 +1,43 @@
+/* ================================= 
+  Flexbox
+==================================== */
+
+.container {
+	/* This defines a flex container; inline or block depending on the given value. 
+	It enables a flex context for all its direct children. */
+	display: flex;
+	height: 125px;
+	justify-content: flex-start;
+	/* 
+	flex-start: Default value. Items are positioned at the beginning of the container
+    flex-end: Items are positioned at the end of the container
+    center: Items are positioned in the center of the container
+    space-between: Items will have space between them
+    space-around: Items will have space before, between, and after them
+    space-evenly: Items will have equal space around them
+	*/
+}
+
+.flex-end {
+	justify-content: flex-end;
+}
+
+.center {
+	justify-content: center;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.space-around {
+	justify-content: space-around;
+}
+
+.space-evenly {
+	justify-content: space-evenly;
+}
+
+.container .item-m1 {
+	margin-right: auto;
+}

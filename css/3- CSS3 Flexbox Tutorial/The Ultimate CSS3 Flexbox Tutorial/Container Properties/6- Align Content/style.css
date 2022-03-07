@@ -1,0 +1,102 @@
+/* APPEARANCE STYLES*/
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+
+.box {
+  font-size: 50px;
+  color: white;
+  padding: 10px;
+  text-align:center;
+  font-family: lato;
+  font-weight: 300;
+  box-sizing: border-box;
+  width: 200px;
+}
+
+.box-1 {
+  background: #e51400; 
+}
+.box-2 {
+  background: #e3c800;
+}
+.box-3 {
+  background: #60a917; 
+}
+.box-4 {
+  background: #1ba1e2;
+} 
+.box-5 {
+  background: #111111;
+}
+.box-6 {
+  background: #fa5d5d;
+}
+.box-7 {
+  background: #fa04fa;
+}
+.box-8 {
+  background: #ffaf01;
+}
+.box-9 {
+  background: #676967;
+}
+
+
+/*  LAYOUT STYLES */
+.container,.container1, .container2, .container3, .container4, .container5, .container6 { 
+  display: flex; 
+  /* Torna o elemento um flex container automaticamente 
+  transformando todos os seus filhos diretos em flex itens. */
+  
+  border: 2px solid black;
+  height: 80vh;
+  /* vh é a altura da janela de visualização. o número que você anexa
+  é uma porcentagem, então a altura: 100vh será a altura de 100%
+  de qualquer que seja o dispositivo. */
+}
+.container1 {
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* flex items will wrap onto multiple lines, from top to bottom. */
+  justify-content: flex-start;
+  /* items are centered along the line*/
+  align-items: center;
+  align-content: center;
+}
+
+.container2 {
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* flex items will wrap onto multiple lines, from top to bottom. */
+  justify-content: flex-end;
+  /* items are centered along the line*/
+  align-items: center;
+  align-content: center;
+}
+
+.container3 {
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* flex items will wrap onto multiple lines, from top to bottom. */
+  justify-content: center;
+  /* items are centered along the line*/
+  align-items: center;
+  /* Items are positioned at the center of the container	 */
+  align-content: center;
+  /* Lines are packed toward the center of the flex container	 */
+}
+
+.container4 {
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* flex items will wrap onto multiple lines, from top to bottom. */
+  justify-content: space-evenly;
+  /* items are centered along the line*/
+  align-items: center;
+  /* Items are positioned at the center of the container	 */
+  align-content: center;
+  /* Lines are packed toward the center of the flex container	 */
+
+}
+
+
+

@@ -1,0 +1,19 @@
+/* ================================= 
+  Flexbox
+==================================== */
+
+.container {
+	/* This defines a flex container; inline or block depending on the given value. 
+	It enables a flex context for all its direct children. */
+	display: flex; 
+	height: 100px;
+}
+
+.item-1 {
+	order: 1; /* default is 0 */
+}
+
+.item-2 {
+	order: 2;
+}
+

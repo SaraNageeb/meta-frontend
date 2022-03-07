@@ -1,0 +1,32 @@
+/* ================================= 
+  Flexbox
+==================================== */
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	height: 450px;
+}
+
+.item {
+	flex: 1 200px;
+}
+
+/* 
+The align-self property applies to flex items only.
+align-self: flex-start; aligns a flex item to the **start** of the cross axis.
+align-self: flex-end; aligns a flex item to the **end** of the cross axis.
+align-self: center; aligns a flex item to the **center** of the cross axis.
+ */
+
+.item-2 {
+	align-self: flex-start;
+}
+
+.item-3 {
+	align-self: flex-end;
+}
+
+.item-4 {
+	align-self: center;
+}

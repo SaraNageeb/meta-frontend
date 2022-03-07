@@ -1,0 +1,30 @@
+/* ================================= 
+  Flexbox
+==================================== */
+
+.container {
+	display: flex; 
+	/* This defines a flex container; inline or block depending on the given value. 
+	It enables a flex context for all its direct children. */
+	height: 300px;
+	flex-direction: row;
+	/* 
+	row (default): left to right in ltr; right to left in rtl
+    row-reverse: right to left in ltr; left to right in rtl
+    column: same as row but top to bottom
+    column-reverse: same as row-reverse but bottom to top
+	 */
+}
+
+.container-row-reverse {
+flex-direction: row-reverse;
+}
+
+.container-column {
+flex-direction: column;
+
+}
+
+.container-column-reverse {
+flex-direction: column-reverse;
+}

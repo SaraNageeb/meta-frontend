@@ -1,0 +1,59 @@
+/* APPEARANCE STYLES*/
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+
+.box {
+  font-size: 50px;
+  color: white;
+  padding: 10px;
+  text-align:center;
+  font-family: lato;
+  font-weight: 300;
+  box-sizing: border-box;
+  flex-basis: 50%;
+  /* Defines the initial size of a flexbox item. 
+  Each box will take 50% of the div*/
+}
+
+.box:nth-of-type(3n){
+  flex-basis: 100%;
+  /* Every third box will take 100% of the div */
+}
+.box-1 {
+  background: #e51400; 
+}
+.box-2 {
+  background: #e3c800;
+}
+.box-3 {
+  background: #60a917; 
+}
+.box-4 {
+  background: #1ba1e2;
+} 
+
+.box-5 {
+  background: #212222;
+} 
+
+/*  LAYOUT STYLES */
+.container1 {
+  display: flex; 
+  /* Torna o elemento um flex container automaticamente 
+  transformando todos os seus filhos diretos em flex itens. */ 
+  border: 2px solid black;
+  height: 100vh;
+  /* vh é a altura da janela de visualização. o número que você anexa
+  é uma porcentagem, então a altura: 100vh será a altura de 100%
+  de qualquer que seja o dispositivo. */
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* flex items will wrap onto multiple lines, from top to bottom. */
+}
+
+
+
+
+
+
+
+
