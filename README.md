@@ -9,9 +9,9 @@ This material will teach you the basics of programming and Javascript. Whether y
 
 ## Table of Contents
 
-1. [HTML](https://github.com/mmartins23/javascript/tree/main/JavaScript%20Section%201%20-%20Fundamentals)
-2. [CSS](https://github.com/mmartins23/javascript/tree/main/JavaScript%20Section%202%20-%20Decision%20Making)
-3. [CSS](https://github.com/mmartins23/javascript/tree/main/JavaScript%20Section%202%20-%20Decision%20Making)
+1. [HTML](https://github.com/mmartins23/myFrontEndWorld/tree/main/html)
+2. [CSS](https://github.com/mmartins23/myFrontEndWorld/tree/main/css)
+3. [JS](https://github.com/mmartins23/myFrontEndWorld/tree/main/javascript)
 
 
 ## License
