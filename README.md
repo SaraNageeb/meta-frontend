@@ -1,18 +1,17 @@
 # JavaScript
 This material will teach you the basics of programming and Javascript. Whether you are an experienced programmer or not, this book is intended for everyone who wishes to learn the JavaScript programming language.
 
-![JS][js-img]
+![FrontEnd][frontend]
 
-[js-img]:https://niixer.com/wp-content/uploads/2020/11/javascript.png
+[frontend]:https://i.redd.it/8iq3jlyl8q781.png
 
 <br>
 
 ## Table of Contents
 
-1. [JavaScript Section 1 - Fundamentals](https://github.com/mmartins23/javascript/tree/main/JavaScript%20Section%201%20-%20Fundamentals)
-2. [JavaScript Section 2 - Decision Making](https://github.com/mmartins23/javascript/tree/main/JavaScript%20Section%202%20-%20Decision%20Making)
-
-   
+1. [HTML](https://github.com/mmartins23/javascript/tree/main/JavaScript%20Section%201%20-%20Fundamentals)
+2. [CSS](https://github.com/mmartins23/javascript/tree/main/JavaScript%20Section%202%20-%20Decision%20Making)
+3. [CSS](https://github.com/mmartins23/javascript/tree/main/JavaScript%20Section%202%20-%20Decision%20Making)
 
 
 ## License
