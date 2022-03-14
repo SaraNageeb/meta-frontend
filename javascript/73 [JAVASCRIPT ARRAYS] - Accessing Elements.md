@@ -37,3 +37,23 @@ console.log(famousSayings[2]);
 
 console.log(famousSayings[3]);
 ```
+
+***
+### Nested Array
+In order to access items in a nested array, you would add another index number to correspond to the inner array.
+
+```js
+let nestedArray = [
+	[
+		"salmon",
+		"halibut",
+	],
+	[
+		"coral",
+		"reef",
+	]
+];
+
+console.log(nestedArray[1][0]); // coral
+```
+***

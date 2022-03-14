@@ -13,7 +13,10 @@ There are three different elements inside the array.
 Each element inside the array is a different data type.
 We can also save an array to a variable. You may have noticed we did this in the previous exercise:
 
+```js
 let newYearsResolutions = ['Keep a journal', 'Take a falconry class', 'Learn to juggle'];
+```
+
 Let’s practice by making an array of our own.
 
 ***

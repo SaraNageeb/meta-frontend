@@ -6,3 +6,5 @@ The for...of loop is used to iterate through the values of an iterable.	The for.
 
 ### for...of
 The for...of loop cannot be used to iterate over an object.	You can use for...in to iterate over an iterable such arrays and strings but you should avoid using for...in for iterables.
+
+***
