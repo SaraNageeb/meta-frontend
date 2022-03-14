@@ -1,4 +1,4 @@
-### Convert an array to a string using .toString()
+# Convert an array to a string using .toString()
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
