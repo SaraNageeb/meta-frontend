@@ -115,25 +115,25 @@ The keystone of AJAX is the XMLHttpRequest object.
 4. Send a Request to a server
 
 ```js
-// This creates a request obj 
+// Create a new XMLHttpRequest object
 const request = new XMLHttpRequest();
 
 request.addEventListener('readystatechange', () => {
-    // console.log(request, request.readyState)
 
-    // if the request is done and the status is sucessfull 
+    // when readyState is 4 and status property is 200, the responde is ready
+    // executes when promise is resolved successfully
     if(request.readyState === 4 && request.status === 200) {
         console.log(request, request.responseText);
-    // if not display an error msg   
+    // executes if there is an error  
     } else if(request.readyState === 4) {
         console.log('Could not fetch the data');
     }
 });
 
-// telling the request type and where to get the data from
-request.open('GET', 'https://pokeapi.co/api/v2/pokemon');
+// Configure it: Get-request for the URL
+request.open('GET', 'https://pokeapi.co/api/v2/pokemon?limit=3');
 
-// sending the request
+// Send the request over the network
 request.send();
 ```
 
@@ -152,30 +152,43 @@ This means that a website can update its information without having to reload th
 This process is easier to do with JSON than XML/RSS. And today, as many websites are using AJAX, the .json file is becoming very popular.
 
 ```js
-// This creates a request obj 
+// Create a new XMLHttpRequest object
 const request = new XMLHttpRequest();
 
 request.addEventListener('readystatechange', () => {
-    // console.log(request, request.readyState)
 
-    // if the request is done and the status is sucessfull 
+    // when readyState is 4 and status property is 200, the responde is ready
+    // executes when promise is resolved successfully
     if(request.readyState === 4 && request.status === 200) {
-        // JSON.Parse - converts JSON string into javascript obj
+        // converts JSON string into javascript obj
         const data = JSON.parse(request.responseText);
         console.log(request, data);
-    // if not display an error msg   
+    // executes if there is an error     
     } else if(request.readyState === 4) {
         console.log('Could not fetch the data');
     }
 });
 
-// telling the request type and where to get the data from
-request.open('GET', 'https://pokeapi.co/api/v2/pokemon');
+// Configure it: Get-request for the URL
+request.open('GET', 'https://pokeapi.co/api/v2/pokemon?limit=3');
 
-// sending the request
+// Send the request over the network
 request.send();
 ```
+Output
 
+```js
+[{
+  name: "bulbasaur",
+  url: "https://pokeapi.co/api/v2/pokemon/1/"
+}, {
+  name: "ivysaur",
+  url: "https://pokeapi.co/api/v2/pokemon/2/"
+}, {
+  name: "venusaur",
+  url: "https://pokeapi.co/api/v2/pokemon/3/"
+}]
+```
 ***
 
 ### Promises
@@ -215,37 +228,51 @@ Let's suppose that the program below is an asynchronous program. Then the progra
 
 ```js
 const getPokemon = resourceData => {
+
+    // Make an asynchnorous call and either resolver or reject
     return new Promise((resolve, reject) => {
+
+        // Create a new XMLHttpRequest object
         const request = new XMLHttpRequest()
 
         request.addEventListener('readystatechange', () => {
-            // console.log(request, request.readyState)
 
-            // if the request is done and the status is sucessfull
+             // when readyState is 4 and status property is 200, the responde is ready
+            // executes when promise is resolved successfully
             if (request.readyState === 4 && request.status === 200) {
-                // JSON.Parse - converts JSON string into javascript obj
+            // converts JSON string into javascript obj
                 const data = JSON.parse(request.responseText)
                 resolve(data)
-                // if not display an error msg
+            // executes if there is an error     
             } else if (request.readyState === 4) {
                 reject('Could not fetch the data')
             }
         })
 
-        // telling the request type and where to get the data from
+        // Configure it: Get-request for the URL
         request.open('GET', resourceData)
 
-        // sending the request
+        // Send the request over the network
         request.send()
     })
 }
 
-getPokemon('https://pokeapi.co/api/v2/pokemon')
+getPokemon('https://pokeapi.co/api/v2/pokemon?limit=3')
     .then(data => {
-        console.log('promise resolve:', data)
+        console.log('promise resolve:', data) // Log the result of 3 Pokemons
     })
-    .catch(err => {
-        console.log('promise rejected:', err)
+    .catch(err => { // As the URL is a valid one, this will not be called
+        console.log('promise rejected:', err) // Log an error
+    })
+
+
+// Example 2: Let's try an invalid URL
+getPokemon('https://pokeapi.co/api/v2/pokemon-bad')
+    .then(data => {
+        console.log('promise resolve:', data) // Log the result of 3 Pokemons
+    })
+    .catch(err => { // As the URL is invalid, this will  be called
+        console.log('promise rejected:', err) // Log an error
     })
 ```
 
@@ -269,43 +296,85 @@ The syntax of then() method is:
 promiseObject.then(onFulfilled, onRejected);
 ```
 
+Promise Chaining Example:
+
 ```js
 const getPokemon = (resourceData) => {
 
+    // Make an asynchnorous call and either resolver or reject
     return new Promise((resolve, reject) => {
+
+        // Create a new XMLHttpRequest object
         const request = new XMLHttpRequest();
 
         request.addEventListener('readystatechange', () => {
-            // console.log(request, request.readyState)
 
-            // if the request is done and the status is sucessfull 
+             // when readyState is 4 and status property is 200, the responde is ready
+            // executes when promise is resolved successfully
             if (request.readyState === 4 && request.status === 200) {
-                // JSON.Parse - converts JSON string into javascript obj
+                // converts JSON string into javascript obj
                 const data = JSON.parse(request.responseText);
                 resolve(data);
-                // if not display an error msg   
+            // executes if there is an error   
             } else if (request.readyState === 4) {
                 reject('Could not fetch the data');
             }
         });
 
-        // telling the request type and where to get the data from
+        // Configure it: Get-request for the URL
         request.open('GET', resourceData);
 
-        // sending the request
+        // Send the request over the network
         request.send();
     });
 };
 
-getPokemon('https://pokeapi.co/api/v2/pokemon')
+getPokemon('https://pokeapi.co/api/v2/pokemon?limit=3')
     .then(data => {
-        console.log('promise resolve:', data);
-        return getPokemon('https://pokeapi.co/api/v2/pokemon?limit=21&offset=30');
+        console.log('promise resolve:', data); // Log the result of 3 Pokemons
+        return getPokemon('https://pokeapi.co/api/v2/pokemon?limit=6&offset=3');
     }).then(data => {
-        console.log('promise 2 resolve:', data);
+        console.log('promise 2 resolve:', data); // Log the result of 6 Pokemons
     }).catch((err) => {
-        console.log('promise rejected:', err);
+        console.log('promise rejected:', err); // Log an error
     });
+```
+
+Output 
+
+```js
+"promise resolve:"
+[{
+  name: "bulbasaur",
+  url: "https://pokeapi.co/api/v2/pokemon/1/"
+}, {
+  name: "ivysaur",
+  url: "https://pokeapi.co/api/v2/pokemon/2/"
+}, {
+  name: "venusaur",
+  url: "https://pokeapi.co/api/v2/pokemon/3/"
+}]
+
+"promise 2 resolve:"
+[{
+  name: "charmander",
+  url: "https://pokeapi.co/api/v2/pokemon/4/"
+}, {
+  name: "charmeleon",
+  url: "https://pokeapi.co/api/v2/pokemon/5/"
+}, {
+  name: "charizard",
+  url: "https://pokeapi.co/api/v2/pokemon/6/"
+}, {
+  name: "squirtle",
+  url: "https://pokeapi.co/api/v2/pokemon/7/"
+}, {
+  name: "wartortle",
+  url: "https://pokeapi.co/api/v2/pokemon/8/"
+}, {
+  name: "blastoise",
+  url: "https://pokeapi.co/api/v2/pokemon/9/"
+}]
 ```
 
 In the above program, the then() method is used to chain the functions to the promise. The then() method is called when the promise is resolved successfully.
@@ -324,7 +393,6 @@ const getPokemon = (resourceData) => {
         const request = new XMLHttpRequest();
 
         request.addEventListener('readystatechange', () => {
-            // console.log(request, request.readyState)
 
             // executes when promise is resolved successfully
             if (request.readyState === 4 && request.status === 200) {
@@ -337,29 +405,28 @@ const getPokemon = (resourceData) => {
             }
         });
 
-        // telling the request type and where to get the data from
+        // Configure it: Get-request for the URL
         request.open('GET', resourceData);
 
-        // sending the request
+        // Send the request over the network
         request.send();
     });
 };
 
-// The URL is invalid
+
 getPokemon('https://pokeapi.co/api/v2/pokemon123')
     .then(data => {
-        console.log('promise resolve:', data);
+        console.log('promise resolve:', data); // Log the result of 3 Pokemons
         return getPokemon('https://pokeapi.co/api/v2/pokemon?limit=21&offset=30');
     }).then(data => {
-        console.log('promise 2 resolve:', data);
-    }).catch((err) => {
-        console.log('promise rejected:', err);
+        console.log('promise 2 resolve:', data); // Log the result of 6 Pokemons
+    }).catch((err) => { // As the URL is invalid, this will  be called
+        console.log('promise rejected:', err); // Log an error
     });
 ```
+Output
 
 ```
-output
-
 "promise rejected:", "Could not fetch the data"
 ```
 
@@ -378,17 +445,16 @@ In addition, the Fetch API is much simpler and cleaner. It uses the Promise to d
 The fetch() method is available in the global scope that instructs the web browsers to send a request to a URL.
 
 ```js
-fetch(`https://pokeapi.co/api/v2/pokemon/`)
-.then((response) => {
-    console.log('resolved', response);
-    // getting the data
-    return response.json();
-}) // now we can actually get the data from the json method
-.then((data) => {
-  console.log(data);
+// GET request
+fetch(`https://pokeapi.co/api/v2/pokemon?limit=3`)
+// Handle the success
+.then(response => response.json()) // return data in json format
+.then(data => { 
+  console.log(data) // Print data to console
 })
-.catch((err) => {
-  console.log('rejected', err);
+// Handle the error
+.catch(err => { 
+  console.log('rejected', err) // print error to console
 });
 ```
 
@@ -421,7 +487,7 @@ The use of await pauses the async function until the promise returns a result (r
 const getPokemons = async () => {
 
     // Here, you fetch the url
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=3');
 
     if(response.status !== 200) {
         throw new Error('Cannot fetch the data');
@@ -449,50 +515,45 @@ Output
 }, {
   name: "venusaur",
   url: "https://pokeapi.co/api/v2/pokemon/3/"
-}, {
-  name: "charmander",
-  url: "https://pokeapi.co/api/v2/pokemon/4/"
-}, {
-  name: "charmeleon",
-  url: "https://pokeapi.co/api/v2/pokemon/5/"
-}, {
-  name: "charizard",
-  url: "https://pokeapi.co/api/v2/pokemon/6/"
-}, {
-  name: "squirtle",
-  url: "https://pokeapi.co/api/v2/pokemon/7/"
-}, {
-  name: "wartortle",
-  url: "https://pokeapi.co/api/v2/pokemon/8/"
-}, {
-  name: "blastoise",
-  url: "https://pokeapi.co/api/v2/pokemon/9/"
-}
+}]
 ```
 ***
 
 ### Axios
 
+Axios is a lightweight HTTP client based on the XMLHttpRequests service. It is similar to the Fetch API and is used to perform HTTP requests.
+
+**Advantage of Axios over Fetch API**
+
+* supports older browsers
+* has a way to abort a request
+* has a way to set a response timeout
+* has built-in CSRF protection
+* supports upload progress
+* performs automatic JSON data transformation
+
 ```js
 // Make a request for a list of pokemons 
-axios.get('https://pokeapi.co/api/v2/pokemon')
+axios.get('https://pokeapi.co/api/v2/pokemon?limit=3')
+  // handle success
   .then(response => {
-    // handle success
-    console.log(response);
+    console.log(response); // Print response to console
   })
+  // handle error
   .catch(error => {
-    // handle error
-    console.log(error);
+    console.log(error); // Print error to console
   });
   
  
   
   // Async Function
   const getPokemon = async () => {
-  const res = await axios.get("https://pokeapi.co/api/v2/pokemon");
+  const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=3");
   console.log(res.data);
   };
 
 
 getPokemon();
 ```
+
+***
