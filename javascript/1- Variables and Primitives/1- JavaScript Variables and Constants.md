@@ -52,8 +52,9 @@ It's possible to change the value stored in the variable. For example,
 let x = 5; 
 console.log(x); // 5
 ```
-```
-// vaue of variable x is changed
+
+```js
+// value of variable x is changed
 x = 3; 
 console.log(x); // 3
 ```
