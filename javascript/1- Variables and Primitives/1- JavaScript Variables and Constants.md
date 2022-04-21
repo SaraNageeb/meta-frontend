@@ -151,3 +151,23 @@ var declarations are globally scoped or function scoped while let and const are 
 * While `var` and `let` can be declared without being initialized, `const` must be initialized during declaration.
 
 ***
+
+### Constants
+A constant holds a value that doesn’t change. To declare a constant, you use the const keyword. When defining a constant, you need to initialize it with a value. For example:
+
+```js
+const workday = 5;
+```
+
+Once defining a constant, you cannot change its value.
+
+The following example attempts to change the value of the workday constant to 4 and causes an error:
+
+```js
+workday = 2;
+```
+
+```
+Error:
+
+Uncaught TypeError: Assignment to constant variable.
