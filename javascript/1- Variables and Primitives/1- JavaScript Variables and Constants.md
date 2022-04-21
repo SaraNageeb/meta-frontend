@@ -32,6 +32,8 @@ In JavaScript, it's possible to declare variables in a single statement.
 let x = 5, y = 6, z = 7;
 ```
 
+***
+
 ### Difference between var, let and const
 Both var,let and const are used to declare variables. However, there are some differences between them:
 
