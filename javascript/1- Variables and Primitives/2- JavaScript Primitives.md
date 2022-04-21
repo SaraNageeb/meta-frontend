@@ -208,5 +208,4 @@ console.log(Boolean(0));  // false
 console.log(Boolean({foo: 100}));  // true on non-empty object
 console.log(Boolean(null));// false
 ```
-
 ***
