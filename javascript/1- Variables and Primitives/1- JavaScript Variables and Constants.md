@@ -99,6 +99,37 @@ let new = 5; // Error! new is a keyword.
 ```
 
 ***
+
+### Undefined vs. undeclared variables
+It’s important to distinguish between undefined and undeclared variables.
+
+An undefined variable is a variable that has been declared but has not been initialized with a value. For example:
+
+```js
+let message;
+console.log(message); // undefined
+```
+
+In this example, the message variable is declared but not initialized. Therefore, the message variable is undefined.
+
+In contrast, an undeclared variable is a variable that has not been declared. For example:
+
+```js
+console.log(counter);
+```
+```
+Output:
+
+console.log(counter);
+
+            ^
+ReferenceError: counter is not defined
+```
+Code language: JavaScript (javascript)
+In this example, the counter variable has not been declared. Hence, accessing it causes a ReferenceError.
+
+***
+
 ### Difference between var, let and const
 Both var,let and const are used to declare variables. However, there are some differences between them:
 
