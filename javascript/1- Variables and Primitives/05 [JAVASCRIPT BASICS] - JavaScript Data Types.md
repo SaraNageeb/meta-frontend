@@ -174,7 +174,7 @@ str = str + ' String';
 In this example:
 
 * First, declare the str variable and initialize it to a string of 'JavaScript'.
-<br>
+
 * Second, use the + operator to combine 'JavaScript' with ' String' to make its value as 'Javascript String'.
 
 Behind the scene, the JavaScript engine creates a new string that holds the new string 'JavaScript String' and destroys the original strings 'JavaScript' and ' String'.
