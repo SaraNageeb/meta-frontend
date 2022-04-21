@@ -32,6 +32,16 @@ In JavaScript, it's possible to declare variables in a single statement.
 let x = 5, y = 6, z = 7;
 ```
 
+If you use a variable without initializing it, it will have an undefined value.
+
+```
+let x; // x is the name of the variable
+
+console.log(x); // undefined
+```
+
+Here x is the variable name and since it does not contain any value, it will be undefined.
+
 ***
 
 ### Difference between var, let and const
