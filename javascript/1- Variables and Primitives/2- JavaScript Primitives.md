@@ -199,12 +199,13 @@ Code language: JavaScript (javascript) In this example, the counter variable has
 ***
 
 ### The null type
-A null value is used to declare a variable as empty, or as a variable with an unknown value.
+In JavaScript, null is a special value that represents an empty or unknown value. For example:
 
 ```js
 let age = null; //since we do not know what the age is..
 console.log("age is " + age);
 ```
+The code above suggests that the age variable is empty at the moment and may have a value later.
 
 JavaScript defines that null is equal to undefined as follows:
 
