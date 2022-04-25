@@ -31,6 +31,16 @@ getFruit();                //apple
 ### Function scope
 When a variable is declared inside a function, it is only accessible within that function and cannot be used outside that function.
 
+```js
+function foo(){
+    // function scope
+    let fruit ='apple'; // fruit is scoped to foo function
+    console.log('inside function: ',fruit);
+}
+
+foo();                    // inside function: apple
+console.log(fruit);       // error: fruit is not defined, fruit does not exist outside the function foo.
+```
 
 ***
 
