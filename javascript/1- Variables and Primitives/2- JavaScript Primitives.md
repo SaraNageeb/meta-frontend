@@ -3,23 +3,6 @@ Data types are used to classify one particular type of data in programming langu
 
 ***
 
-### JavaScript has the primitive data types:
-
-1. null
-2. undefined
-3. boolean
-4. number
-5. string
-6. symbol – available from ES2015
-7. bigint – available from ES2020
-8. and a complex data type object.
-
-
-![Datatypes][datatypes]
-
-[datatypes]:https://www.javascripttutorial.net/wp-content/uploads/2022/01/JavaScript-data-types.svg
-
-
 JavaScript is a dynamically typed language. It means that a variable doesn’t associate with a type. In other words, a variable can hold a value of different types. For example:
 
 
@@ -52,40 +35,36 @@ Output:
 
 ***
 
-### The undefined type
-The undefined type is a primitive type that has only one value undefined. By default, when a variable is declared but not initialized, it is assigned the value of undefined.
+### The string type
+In JavaScript, a string is a sequence of zero or more characters. A string literal begins and ends with either a single quote(') or a double quote (").
 
-Consider the following example:
-
-```js
-let counter;
-console.log(counter);        // undefined
-console.log(typeof counter); // undefined
-```
-
-In this example, the counter is a variable. Since counter hasn’t been initialized, it is assigned the value undefined. The type of counter is also undefined.
-
-It’s important to note that the typeof operator also returns undefined when you call it on a variable that hasn’t been declared:
+A string that begins with a double quote must end with a double quote. Likewise, a string that begins with a single quote must also end with a single quote:
 
 ```js
-console.log(typeof undeclaredVar); // undefined
+let greeting = 'Hi';
+let message  = "Bye";
 ```
 
-***
-
-### The null type
-The null type is the second primitive data type that also has only one value null. For example:
+If you want to single quote or double quotes in a literal string, you need to use the backslash to escape it. For example:
 
 ```js
-let obj = null;
-console.log(typeof obj); // object
+let message = 'I\'m also a valid string'; // use \ to escape the single quote (')
 ```
 
-JavaScript defines that null is equal to undefined as follows:
+JavaScript strings are immutable. This means that it cannot be modified once created. However, you can create a new string from an existing string. For example:
 
 ```js
-console.log(null == undefined); // true
+let str = 'JavaScript';
+str = str + ' String';
 ```
+
+In this example:
+
+* First, declare the str variable and initialize it to a string of 'JavaScript'.
+
+* Second, use the + operator to combine 'JavaScript' with ' String' to make its value as 'Javascript String'.
+
+Behind the scene, the JavaScript engine creates a new string that holds the new string 'JavaScript String' and destroys the original strings 'JavaScript' and ' String'.
 
 ***
 
@@ -148,39 +127,6 @@ console.log(NaN == NaN); // false
 
 ***
 
-### The string type
-In JavaScript, a string is a sequence of zero or more characters. A string literal begins and ends with either a single quote(') or a double quote (").
-
-A string that begins with a double quote must end with a double quote. Likewise, a string that begins with a single quote must also end with a single quote:
-
-```js
-let greeting = 'Hi';
-let message  = "Bye";
-```
-
-If you want to single quote or double quotes in a literal string, you need to use the backslash to escape it. For example:
-
-```js
-let message = 'I\'m also a valid string'; // use \ to escape the single quote (')
-```
-
-JavaScript strings are immutable. This means that it cannot be modified once created. However, you can create a new string from an existing string. For example:
-
-```js
-let str = 'JavaScript';
-str = str + ' String';
-```
-
-In this example:
-
-* First, declare the str variable and initialize it to a string of 'JavaScript'.
-
-* Second, use the + operator to combine 'JavaScript' with ' String' to make its value as 'Javascript String'.
-
-Behind the scene, the JavaScript engine creates a new string that holds the new string 'JavaScript String' and destroys the original strings 'JavaScript' and ' String'.
-
-***
-
 ### The boolean type
 The boolean type has two literal values: true and false in lowercase. The following example declares two variables that hold the boolean values.
 
@@ -208,4 +154,70 @@ console.log(Boolean(0));  // false
 console.log(Boolean({foo: 100}));  // true on non-empty object
 console.log(Boolean(null));// false
 ```
+***
+
+### The undefined type
+The undefined type is a primitive type that has only one value undefined. By default, when a variable is declared but not initialized, it is assigned the value of undefined.
+
+Consider the following example:
+
+```js
+let counter;
+console.log(counter);        // undefined
+console.log(typeof counter); // undefined
+```
+
+In this example, the counter is a variable. Since counter hasn’t been initialized, it is assigned the value undefined. The type of counter is also undefined.
+
+It’s important to note that the typeof operator also returns undefined when you call it on a variable that hasn’t been declared:
+
+```js
+console.log(typeof undeclaredVar); // undefined
+```
+
+**Undefined vs. undeclared variables**
+
+It’s important to distinguish between undefined and undeclared variables.
+
+An undefined variable is a variable that has been declared but has not been initialized with a value. For example:
+
+```js
+let message;
+console.log(message); // undefined
+```
+
+In this example, the message variable is declared but not initialized. Therefore, the message variable is undefined.
+
+In contrast, an undeclared variable is a variable that has not been declared. For example:
+
+```js
+console.log(counter);
+```
+```js
+Output:
+
+console.log(counter);
+
+            ^
+ReferenceError: counter is not defined
+```
+
+Code language: JavaScript (javascript) In this example, the counter variable has not been declared. Hence, accessing it causes a ReferenceError.
+
+***
+
+### The null type
+The null type is the second primitive data type that also has only one value null. For example:
+
+```js
+let obj = null;
+console.log(typeof obj); // object
+```
+
+JavaScript defines that null is equal to undefined as follows:
+
+```js
+console.log(null == undefined); // true
+```
+
 ***
