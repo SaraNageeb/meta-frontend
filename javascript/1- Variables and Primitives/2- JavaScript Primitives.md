@@ -25,14 +25,6 @@ counter = "Hi";
 console.log(typeof(counter)); // "string"
 ```
 
-```
-Output:
-
-"number"
-"boolean"
-"string"
-```
-
 ***
 
 ### The string type
