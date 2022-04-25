@@ -199,11 +199,11 @@ Code language: JavaScript (javascript) In this example, the counter variable has
 ***
 
 ### The null type
-The null type is the second primitive data type that also has only one value null. For example:
+A null value is used to declare a variable as empty, or as a variable with an unknown value.
 
 ```js
-let obj = null;
-console.log(typeof obj); // object
+let age = null; //since we do not know what the age is..
+console.log("age is " + age);
 ```
 
 JavaScript defines that null is equal to undefined as follows:
