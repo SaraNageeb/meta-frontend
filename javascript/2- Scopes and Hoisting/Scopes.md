@@ -125,3 +125,45 @@ foo1();
 ```
 
 ***
+
+# JavaScript Hoisting
+Hoisting in JavaScript is a behavior in which a function or a variable can be used before declaration. For example,
+
+```js
+// using test before declaring
+console.log(test);   // undefined
+var test;
+```
+
+The above program works and the output will be undefined. The above program behaves as
+
+```js
+// using test before declaring
+var test;
+console.log(test); // undefined
+```
+
+Since the variable test is only declared and has no value, undefined value is assigned to it.
+
+***
+
+# Variable Hoisting
+In terms of variables and constants, keyword var is hoisted and let and const does not allow hoisting.
+
+For example,
+
+```js
+// program to display value
+a = 5;
+console.log(a);
+var a; // 5
+```
+
+In the above example, variable a is used before declaring it. And the program works and displays the output 5. The program behaves as:
+
+```js
+// program to display value
+var a;
+a = 5;
+console.log(a); // 5
+```
