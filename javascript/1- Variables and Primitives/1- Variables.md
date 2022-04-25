@@ -1,5 +1,6 @@
 # JavaScript Variables
 Variables are a fundamental concept in any programming language. In JavaScript, you can declare variables by using the keywords var, const, or let.
+
 ![Variables][variables]
 
 [variables]:https://i.imgur.com/HYO9xE2.png
