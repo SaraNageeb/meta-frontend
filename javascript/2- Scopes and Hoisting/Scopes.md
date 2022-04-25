@@ -238,28 +238,42 @@ While using let, the variable must be declared first.
 ### Function Hoisting
 A function can be called before declaring it. For example,
 
+```js
 // program to print the text
 greet();
 
 function greet() {
     console.log('Hi, there.');
 }
+```
+
 Output
 
+```js
 Hi, there
+```
+
 In the above program, the function greet is called before declaring it and the program shows the output. This is due to hoisting.
 
 However, when a function is used as an expression, an error occurs because only declarations are hoisted. For example;
 
+```js
 // program to print the text
 greet();
 
 let greet = function() {
     console.log('Hi, there.');
 }
+```
+
 Output
 
+```js
 Uncaught ReferenceError: greet is not defined
+```
+
 If var was used in the above program, the error would be:
 
+```js
 Uncaught TypeError: greet is not a function
+```
