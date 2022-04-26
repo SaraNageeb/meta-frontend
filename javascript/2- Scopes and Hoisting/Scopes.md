@@ -278,6 +278,8 @@ If var was used in the above program, the error would be:
 Uncaught TypeError: greet is not a function
 ```
 
+***
+
 ### Declare Your Variables At the Top !
 Hoisting is (to many developers) an unknown or overlooked behavior of JavaScript.
 
