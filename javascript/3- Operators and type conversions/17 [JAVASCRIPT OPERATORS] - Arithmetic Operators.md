@@ -88,4 +88,6 @@ console.log(y); // Output: 100
 let z = 8;
 z /= 2; // Can be written as z = z / 2
 console.log(z); // Output: 4
+```
+
 ***
