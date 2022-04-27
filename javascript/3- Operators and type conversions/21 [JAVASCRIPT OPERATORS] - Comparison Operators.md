@@ -49,7 +49,10 @@ console.log('We can eat later!')
 # JavaScript Triple Equals Sign VS Double Equals Sign – Comparison Operators Explained with Examples
 
 * Double Equals (==) checks for value equality only. It inherently does type coercion. This means that before checking the values, it converts the types of the variables to match each other.
+
+
 <br>
+
 * Triple Equals (===) does not perform type coercion. It will verify whether the variables being compared have both the same value AND the same type.
 
 ***
