@@ -8,47 +8,80 @@ Values can be explicitly converted to strings by calling either String() or n.to
 
 With the String() function, let’s convert a Boolean value to a string by passing the value true into the parameters for String().
 
+```js
 String(true);
+```
+
 When we do this, the string literal "true" will be returned.
 
+```js
 Output
 "true"
+```
+
 Alternatively, we can pass a number into the function.
 
+```js
 String(49);
+```
+
 A string literal of that number will be returned.
 
+```js
 Output
 "49"
+```
+
 Let’s use the String() function with a variable. We’ll assign a number value to the variable odyssey and then use the typeof operator to check for type.
 
+```js
 let odyssey = 2001;
 console.log(typeof odyssey);
+```
+
+```js
 Output
 number
+```
+
 At this point, the variable odyssey is assigned the numerical value of 2001, which we have confirmed to be a number.
 
 Now, let’s reassign odyssey to its string equivalent and then use typeof to confirm that we have successfully converted the variable’s value from a number to a string.
 
+```js
 odyssey = String(odyssey);	// "2001"
 console.log(typeof odyssey);
+```
+
+```js
 Output
 string
+```
+
 In the example above, we have confirmed that odyssey was reassigned to be equivalent to a string value following the data type conversion.
 
 We can use n.toString() in a similar way. We can replace n with a variable:
 
+```js
 let blows = 400;
 blows.toString();
+```
+
 The variable blows will be returned as a string.
 
+```js
 Output
 "400"
+```
+
 Alternatively, we can put a value within parentheses rather than a variable with n.toString():
 
+```js
 (1776).toString();			// returns "1776"
 (false).toString();			// returns "false"
 (100 + 200).toString();		// returns "300"
+```
+
 By using String() or n.toString() we are able to explicitly convert values of Boolean or number data types to string values in order to ensure that our code behaves as we anticipate.
 
 ***
@@ -58,33 +91,54 @@ When converting values to a number data type, we’ll use the Number()method. Pr
 
 We can pass a string of a number to the Number() method:
 
+```js
 Number("1984");
+```
+
 The string will be converted to a number and no longer be enclosed within quotation marks.
 
+```js
 Output
 1984
+```
+
 We can also assign a string to a variable and then convert it.
 
+```js
 let dalmatians = "101";
 Number(dalmatians);
+```
+
+```js
 Output
 101
+```
+
 The string literal "101" was converted to the number 101 via its variable.
 
 Strings of white spaces or empty strings will convert to 0.
 
+```js
 Number(" ");	// returns 0
 Number("");		// returns 0
+```
+
 Be aware that strings of non-numbers will convert to NaN which stands for Not a Number. This includes numbers separated by spaces.
 
+```js
 Number("twelve");	// returns NaN
 Number("20,000");	// returns NaN
 Number("2 3");		// returns NaN
 Number("11-11-11");	// returns NaN
+```
+
 For Boolean data types, false will evaluate to 0 and true will evaluate to 1.
 
+```js
 Number(false);		// returns 0
 Number(true);		// returns 1
+```
+
 The Number() method converts non-number data types to numbers.
 
 ***
