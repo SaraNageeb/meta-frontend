@@ -111,4 +111,6 @@ The value of empty string and false is same in JavaScript. Hence, == returns tru
 ### When should you use == and when should you use ===?
 When in doubt, use ===. This will save you from a ton of potential bugs.
 
-If you are supporting a use case where you can be a little lenient about the type of incoming data, then use ==. For example, if an API accepts both "true" and true from the client, use ==. In short, do not use == unless you have a strong use case for it.
+If you are supporting a use case where you can be a little lenient about the type of incoming data, then use ==. 
+
+For example, if an API accepts both "true" and true from the client, use ==. In short, do not use == unless you have a strong use case for it.
