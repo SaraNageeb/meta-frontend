@@ -148,19 +148,28 @@ To convert numbers or strings to Boolean values, the Boolean() method is used. T
 
 Any value that is interpreted as empty, like the number 0, an empty string, or values that are undefined or NaN or null are converted to false.
 
+```js
 Boolean(0);			// returns false
 Boolean("");		// returns false
 Boolean(undefined);	// returns false
 Boolean(NaN);		// returns false
 Boolean(null);		// returns false
+```
+
 Other values will be converted to true, including string literals composed of white space.
 
+```js
 Boolean(2000);		// returns true
 Boolean(" ");		// returns true
 Boolean("Maniacs");	// returns true
+```
+
 Note that "0" as a string literal will convert to true since it is a non-empty string value:
 
+```js
 Boolean("0");	// returns true
+```
+
 Converting numbers and strings to Boolean values can allow us to evaluate data within binary terms and can be leveraged for control flow in our programs.
 
 ***
