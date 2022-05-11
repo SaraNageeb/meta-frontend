@@ -8,3 +8,13 @@ Here is a list of different operators you will learn in this tutorial.
 ***
 
 ### JavaScript Arithmetic Operators
+Arithmetic operators are used to perform arithmetic calculations. For example,
+
+const number = 3 + 5; // 8
+Here, the + operator is used to add two operands.
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
