@@ -233,6 +233,3 @@ So just in case you missed the differences, here they are:
 
 
 * While var and let can be declared without being initialized, const must be initialized during declaration.
-
-***
-
