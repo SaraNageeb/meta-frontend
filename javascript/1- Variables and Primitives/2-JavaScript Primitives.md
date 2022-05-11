@@ -212,5 +212,3 @@ JavaScript defines that null is equal to undefined as follows:
 ```js
 console.log(null == undefined); // true
 ```
-
-***
