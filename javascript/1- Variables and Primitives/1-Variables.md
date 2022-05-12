@@ -101,7 +101,7 @@ If you have used greeter in other parts of your code, you might be surprised at 
 
 ***
 
-### Let
+## Let
 let is now preferred for variable declaration. It's no surprise as it comes as an improvement to var declarations. It also solves the problem with var that we just covered. Let's consider why this is so.
 
 ***
@@ -165,7 +165,7 @@ Just like  var, let declarations are hoisted to the top. Unlike var which is ini
 
 ***
 
-### Const
+## Const
 Variables declared with the const maintain constant values. const declarations share some similarities with let declarations.
 
 ***
