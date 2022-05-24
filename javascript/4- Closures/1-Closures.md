@@ -116,4 +116,6 @@ When we run ```console.log(g1)```, it returns the function definition.
 
 The concept of closure exists for other programming languages like Python, Swift, Ruby, etc.
 
+A closure is a function having access to the parent scope, even after the parent function has closed.
+
 ***
