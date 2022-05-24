@@ -68,7 +68,11 @@ To call the function stored in the ```g1``` variable, we use ```g1()``` with par
 
 ***
 
+<<<<<<< Updated upstream
 ### JavaScript Closures
+=======
+JavaScript Closures
+>>>>>>> Stashed changes
 In JavaScript, closure provides access to the outer scope of a function from inside the inner function, even after the outer function has closed. For example,
 
 ```js
