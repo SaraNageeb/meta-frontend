@@ -75,7 +75,6 @@ dailyActivities.push('exercise');
 console.log(dailyActivities); //  ['eat', 'sleep', 'exercise']
 ```
 
-
 The ```unshift()``` method adds an element at the beginning of the array. For example,
 
 ```js
@@ -85,6 +84,32 @@ let dailyActivities = ['eat', 'sleep'];
 dailyActivities.unshift('work'); 
 
 console.log(dailyActivities); // ['work', 'eat', 'sleep']
+```
+
+***
+
+### Change the Elements of an Array
+You can also add elements or change the elements by accessing the index value.
+
+```js
+let dailyActivities = [ 'eat', 'sleep'];
+
+// this will add the new element 'exercise' at the 2 index
+dailyActivities[2] = 'exercise';
+dailyActivities[1] = 'work';
+
+console.log(dailyActivities); // ['eat', 'work', 'exercise']
+```
+
+Suppose, an array has two elements. If you try to add an element at index 3 (fourth element), the third element will be undefined. For example,
+
+```js
+let dailyActivities = [ 'eat', 'sleep'];
+
+// this will add the new element 'exercise' at the 3 index
+dailyActivities[3] = 'exercise';
+
+console.log(dailyActivities); // ["eat", "sleep", undefined, "exercise"]
 ```
 
 ***
