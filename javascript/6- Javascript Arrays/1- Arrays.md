@@ -114,4 +114,81 @@ dailyActivities[3] = 'exercise';
 console.log(dailyActivities); // ["eat", "sleep", undefined, "exercise"]
 ```
 
+Basically, if you try to add elements to high indices, the indices in between will have undefined value.
 ***
+
+### Remove an Element from an Array
+You can use the ```pop()``` method to remove the last element from an array. The ```pop()``` method also returns the returned value. For example,
+
+```js
+let dailyActivities = ['work', 'eat', 'sleep', 'exercise'];
+
+// remove the last element
+dailyActivities.pop();
+console.log(dailyActivities); // ['work', 'eat', 'sleep']
+
+// remove the last element from ['work', 'eat', 'sleep']
+const removedElement = dailyActivities.pop();
+
+//get removed element
+console.log(removedElement); // 'sleep'
+console.log(dailyActivities);  // ['work', 'eat']
+```
+
+If you need to remove the first element, you can use the ```shift()``` method. The ```shift()``` method removes the first element and also returns the removed element. For example,
+
+```js
+let dailyActivities = ['work', 'eat', 'sleep'];
+
+// remove the first element
+dailyActivities.shift();
+
+console.log(dailyActivities); // ['eat', 'sleep']
+```
+
+***
+
+### Array length
+You can find the length of an element (the number of elements in an array) using the length property. For example,
+
+```js
+const dailyActivities = [ 'eat', 'sleep'];
+
+// this gives the total number of elements in an array
+console.log(dailyActivities.length); // 2
+```
+
+***
+
+### Array Methods
+In JavaScript, there are various array methods available that makes it easier to perform useful calculations.
+
+Some of the commonly used JavaScript array methods are:
+
+```
+concat()	joins two or more arrays and returns a result
+
+indexOf()	searches an element of an array and returns its position
+
+find()	returns the first value of an array element that passes a test
+
+findIndex()	returns the first index of an array element that passes a test
+
+forEach()	calls a function for each element
+
+includes()	checks if an array contains a specified element
+
+push()	aads a new element to the end of an array and returns the new length of an array
+
+unshift()	adds a new element to the beginning of an array and returns the new length of an array
+
+pop()	removes the last element of an array and returns the removed element
+
+shift()	removes the first element of an array and returns the removed element
+
+sort()	sorts the elements alphabetically in strings and in ascending order
+
+slice()	selects the part of an array and returns the new array
+
+splice()	removes or replaces existing elements and/or adds new elements
+```
