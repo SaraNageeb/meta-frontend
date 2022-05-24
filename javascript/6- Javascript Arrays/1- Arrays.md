@@ -96,6 +96,8 @@ let dailyActivities = [ 'eat', 'sleep'];
 
 // this will add the new element 'exercise' at the 2 index
 dailyActivities[2] = 'exercise';
+
+// this will update the element at the index 1
 dailyActivities[1] = 'work';
 
 console.log(dailyActivities); // ['eat', 'work', 'exercise']
