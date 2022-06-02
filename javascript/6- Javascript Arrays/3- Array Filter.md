@@ -86,3 +86,4 @@ const femaleCharacters = characters.filter(character => character.gender === 'fe
 ***
 
 https://coursework.vschool.io/array-filter-exercises/
+https://www.w3resource.com/javascript-exercises/
