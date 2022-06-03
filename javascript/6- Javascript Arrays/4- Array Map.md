@@ -61,10 +61,14 @@ console.log(heights); // [172, 202, 150, 188]
 
 ```js
 const NamesAndHeights = characters.map(character => ({name: character.name, height: character.height}));
-console.log(NamesAndHeights);
+console.log(NamesAndHeights); 
 ```
 
 ***
 ### 4.Get an array of all first names
 
+```js
+const firstName = characters.map(character => character.name.split(" ")[0]);
+console.log(firstName); // ["Luke", "Darth", "Leia", "Anakin"]
+```
 ***
