@@ -40,3 +40,26 @@ const characters = [
 ```
 
 ***
+
+### 1. Get an array of all names
+
+```js
+const name = characters.map(character => character.name);
+console.log(name); // ["Luke Skywalker", "Darth Vader", "Leia Organa", "Anakin Skywalker"]
+```
+
+***
+### 2. Get an array of all heights
+
+```js
+const heights = characters.map(character => character.height);
+console.log(heights); // [172, 202, 150, 188]
+```
+
+***
+### 3. Get an array of objects with just name and height properties
+
+***
+### 4.Get an array of all first names
+
+***
