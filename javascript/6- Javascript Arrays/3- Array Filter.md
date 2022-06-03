@@ -88,6 +88,7 @@ const femaleCharacters = characters.filter(character => character.gender === 'fe
 https://coursework.vschool.io/array-filter-exercises/
 https://www.w3resource.com/javascript-exercises/
 https://bobbyhadz.com/blog/javascript-find-even-numbers-in-array
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
 ***
 # Array Filter Exercises
