@@ -88,3 +88,38 @@ const femaleCharacters = characters.filter(character => character.gender === 'fe
 https://coursework.vschool.io/array-filter-exercises/
 https://www.w3resource.com/javascript-exercises/
 https://bobbyhadz.com/blog/javascript-find-even-numbers-in-array
+
+***
+# Array Filter Exercises
+
+### 1) Given an array of numbers, return a new array that has only the numbers that are 5 or greater.
+
+```js
+const arr = [3, 6, 8, 2];
+
+const fiveAndGreaterOnly = arr.filter(number => number > 5);
+
+console.log(fiveAndGreaterOnly);
+```
+
+1. Call the filter() method, passing it a function.
+2. On each iteration, verify that the number doesn't have a remainder when divided by 2.
+3. The filter method returns a new array containing the elements that satisfy the condition.
+
+***
+
+### 2) Given an array of numbers, return a new array that only includes the even numbers.
+
+```js
+const arr = [3, 6, 8, 2, 7, 5, 4];
+
+const even = arr.filter(number => number % 2 === 0);
+
+console.log(even);
+```
+
+1. Call the filter() method, passing it a function.
+2. On each iteration, verify that the number doesn't have a remainder when divided by 2.
+3. The filter method returns a new array containing the elements that satisfy the condition.
+
+***
