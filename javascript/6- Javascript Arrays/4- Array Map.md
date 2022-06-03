@@ -72,3 +72,5 @@ const firstName = characters.map(character => character.name.split(" ")[0]);
 console.log(firstName); // ["Luke", "Darth", "Leia", "Anakin"]
 ```
 ***
+
+https://coursework.vschool.io/array-map-exercises/
