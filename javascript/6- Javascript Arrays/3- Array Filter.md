@@ -123,3 +123,40 @@ console.log(even);
 3. The filter method returns a new array containing the elements that satisfy the condition.
 
 ***
+
+### 3) Given an array of strings, return a new array that only includes those that are 5 characters or fewer in length.
+
+```js
+const arr = ["dog", "wolf", "by", "family", "eaten", "camping"];
+
+const FiveCharOrLess = arr.filter(char => char.length <= 5);
+
+console.log(FiveCharOrLess); // ["dog", "wolf", "by", "eaten"]
+```
+
+1. Call the filter() method, passing it a function.
+2. On each iteration, verify that the number doesn't have a remainder when divided by 2.
+3. The filter method returns a new array containing the elements that satisfy the condition.
+
+***
+
+### 4) Make a filtered list of all the people who are old enough to see The Matrix (older than 18)
+
+```js
+const arr = [
+    { name: "Anna", age: 21 },
+    { name: "Bob", age: 2 },
+    { name: "Chi", age: 5 },
+    { name: "Dan", age: 18 },
+];
+
+const over18 = arr.filter(person => person.age >= 18).map(person => person.name);
+
+console.log(over18); // ["Anna", "Dan"]
+```
+
+1. Call the filter() method, passing it a function.
+2. On each iteration, verify that the number doesn't have a remainder when divided by 2.
+3. The filter method returns a new array containing the elements that satisfy the condition.
+
+***
