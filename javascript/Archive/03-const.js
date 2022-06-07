@@ -5,7 +5,11 @@ secretNumber = 21; // Uncaught TypeError: Assignment to constant variable.
 
 
 // You can create a const object:
-const car = {type:"Fiat", model:"500", color:"white"};
+const car = {
+  type:"Fiat", 
+  model:"500", 
+  color:"white"
+};
 
 // You can change a property:
 car.color = "red";
