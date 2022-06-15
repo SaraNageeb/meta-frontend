@@ -95,3 +95,30 @@ arr.forEach(verifyEvenNum);
 ```
 
 ***
+
+### Example 3
+To count the duplicates in an array, declare an empty object variable that will store the count for each value and use the forEach() method to iterate over the array. On each iteration, increment the count for the value by 1 or initialize it to 1 if it hasn't been set already.
+
+```js
+const arr = ['one', 'two', 'one', 'one', 'two', 'three'];
+
+const count = {};
+
+arr.forEach(element => {
+  count[element] = (count[element] || 0) + 1;
+});
+
+
+console.log(count);
+//
+```
+
+* The function we passed to the Array.forEach method gets called with each element in the array.
+
+* For each element we check if the value in already present as a key in the count object. If it is present, we increment it by 1.
+
+* If the value is not yet present, we initialize it to 1.
+
+* The logical OR (||) operator is there to check if the key has not been initialized in the array. If the accessor returns undefined, we initialize the value for the key to 0 + 1.
+
+***
