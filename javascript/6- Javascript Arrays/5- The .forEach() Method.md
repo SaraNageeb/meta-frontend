@@ -45,7 +45,7 @@ The forEach() method is used to iterate over an array. For example,
 const socialNetworks = ['Facebook', 'Twitter', 'Instagram', 'Youtube'];
 
 const logArrayInfo = ((socialNetwork,index, array) => {
-console.log(index, socialNetwork, array);
+console.log(socialNetwork,index,array);
 })
 
 
@@ -61,8 +61,8 @@ socialNetworks.forEach(logArrayInfo);
 // ForEach and Function
 const socialNetworks = ['Facebook', 'Twitter', 'Instagram', 'Youtube'];
 
-function printsocialNetworks(index, element) {
-console.log(index, element);
+function printsocialNetworks(element, index) {
+console.log(element, index);
 }
 
 socialNetworks2.forEach(printsocialNetworks);
