@@ -37,7 +37,7 @@ It’s good to be aware of the different ways to pass in callback functions as a
 
 ***
 
-### forEach with Arrays
+### Example 1
 The forEach() method is used to iterate over an array. For example,
 
 ```js
@@ -70,9 +70,28 @@ socialNetworks2.forEach(printsocialNetworks2);
 // "Twitter", 1
 // "Instagram", 2
 // "Youtube", 3
-
 ```
 
 In the above program, the forEach() method takes myFunction() function that displays each element of a students array.
+
+***
+
+### Example 2
+Let's create an array with the numbers from 1 to 6 and display in the browser console only the even numbers. Check the code below.
+
+```js
+const arr = [1,2,3,4,5,6];
+
+const verifyEvenNum = el => {
+if (el % 2 === 0) {
+console.log(el);
+} 
+}
+
+arr.forEach(verifyEvenNum);
+// 2
+// 4
+// 6
+```
 
 ***
