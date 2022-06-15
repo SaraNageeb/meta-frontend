@@ -1,8 +1,9 @@
 # The .forEach() Method
 The forEach() method executes a provided function once for each array element.
 
-https://content.codecademy.com/courses/learn-javascript-iterators/iterator%20anatomy.svg
+![ForEach][foreach]
 
+[foreach]:https://content.codecademy.com/courses/learn-javascript-iterators/iterator%20anatomy.svg
 ***
 
 The code above will log a nicely formatted list of the groceries to the console. Let’s explore the syntax of invoking ```.forEach()```.
@@ -32,3 +33,6 @@ The above example uses a function declaration but you can also use a function ex
 
 All three code snippets do the same thing. In each array iteration method, we can use any of the three examples to supply a callback function as an argument to the iterator. 
 It’s good to be aware of the different ways to pass in callback functions as arguments in iterators because developers have different stylistic preferences.
+
+
+***
