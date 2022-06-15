@@ -36,3 +36,43 @@ It’s good to be aware of the different ways to pass in callback functions as a
 
 
 ***
+
+### forEach with Arrays
+The forEach() method is used to iterate over an array. For example,
+
+```js
+// forEach and Arrow Function
+const socialNetworks = ['Facebook', 'Twitter', 'Instagram', 'Youtube'];
+
+const logArrayInfo = ((index,socialNetwork, array) => {
+console.log(index, socialNetwork, array);
+})
+
+
+socialNetworks.forEach(logArrayInfo); 
+// "Facebook", 0, ["Facebook", "Twitter", "Instagram", "Youtube"]
+// "Twitter", 1, ["Facebook", "Twitter", "Instagram", "Youtube"]
+// "Instagram", 2, ["Facebook", "Twitter", "Instagram", "Youtube"]
+// "Youtube", 3, ["Facebook", "Twitter", "Instagram", "Youtube"]
+```
+
+
+```js
+// ForEach and Function
+const socialNetworks2 = ['Facebook', 'Twitter', 'Instagram', 'Youtube'];
+
+function printsocialNetworks2(index, element) {
+console.log(index, element);
+}
+
+socialNetworks2.forEach(printsocialNetworks2);
+// "Facebook", 0
+// "Twitter", 1
+// "Instagram", 2
+// "Youtube", 3
+
+```
+
+In the above program, the forEach() method takes myFunction() function that displays each element of a students array.
+
+***
