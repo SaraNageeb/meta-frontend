@@ -59,13 +59,13 @@ socialNetworks.forEach(logArrayInfo);
 
 ```js
 // ForEach and Function
-const socialNetworks2 = ['Facebook', 'Twitter', 'Instagram', 'Youtube'];
+const socialNetworks = ['Facebook', 'Twitter', 'Instagram', 'Youtube'];
 
-function printsocialNetworks2(index, element) {
+function printsocialNetworks(index, element) {
 console.log(index, element);
 }
 
-socialNetworks2.forEach(printsocialNetworks2);
+socialNetworks2.forEach(printsocialNetworks);
 // "Facebook", 0
 // "Twitter", 1
 // "Instagram", 2
