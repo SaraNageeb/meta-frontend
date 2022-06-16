@@ -1,4 +1,4 @@
-# Array Concat
+# Array Concat Overview
 The concat() method returns a new array by merging two or more values/arrays.
 
 ***
