@@ -1,4 +1,4 @@
-# The .forEach() Method
+# The forEach() Overview
 The forEach() method executes a provided function once for each array element.
 
 ![ForEach][foreach]
