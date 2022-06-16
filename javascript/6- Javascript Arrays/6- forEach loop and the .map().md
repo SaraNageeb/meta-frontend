@@ -13,8 +13,6 @@ If you notice closely, although they look very similar there is a fundamental di
 forEach() changes the original array, whereas map() returns a new array, without mutating the original array.
 So which one should you pick? It depends on what you are trying to do with the array.
 
-Note: I always prefer to use map() over forEach().
-
 If you are looking to make changes to the array, map() is preferable. map() ensures that it doesn’t change/mutate the original array, and returns a new array instead.
 
 forEach() is used when you want to iterate through the array and allows a callback function that mutates the original array unlike map(). If you are not looking to transform the array items, but just need to iterate through it and print them or do other actions with them, then forEach() could can be used.
