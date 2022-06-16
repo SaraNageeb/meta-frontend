@@ -1,4 +1,4 @@
-# Reverse
+# Array Reverse Overview
 The reverse() method returns the array in reverse order.
 
 ***
