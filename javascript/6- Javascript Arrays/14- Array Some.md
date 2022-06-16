@@ -39,3 +39,9 @@ const characters = [
 ```
 
 ***
+
+### SOME
+Is there at least one male character?
+Is there at least one character with blue eyes?
+Is there at least one character taller than 200?
+Is there at least one character that has mass less than 50?
