@@ -20,7 +20,27 @@ console.log(firstOdd);
 ```
 
 ***
-() method as- numbers.findIndex(isEven).
+
+Example 1: Using findIndex() method
+// function that returns even number
+function isEven(element) {
+  return element % 2 == 0;
+}
+
+// defining an array of integers
+let numbers = [1, 45, 8, 98, 7];
+
+// returns the index of the first even number in the array
+let firstEven = numbers.findIndex(isEven);
+
+console.log(firstEven); // 2
+Run Code
+Output
+
+2
+In the above example, we have used the findIndex() method to find the index of the first even number in the numbers array.
+
+isEven() is a function that returns an even number. We have passed isEven() as a callback in the findIndex() method as- numbers.findIndex(isEven).
 
 The method returns 2 which is the index of the first even number in numbers i.e. 8.
 
@@ -59,5 +79,6 @@ Run Code
 Output
 
 2
+
 
 
