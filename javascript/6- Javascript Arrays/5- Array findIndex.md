@@ -20,7 +20,44 @@ console.log(firstOdd);
 ```
 
 ***
+() method as- numbers.findIndex(isEven).
+
+The method returns 2 which is the index of the first even number in numbers i.e. 8.
+
+Example 2: findIndex() with Arrow Function
+// defining an array
+let days = ["Sunday", "Wednesday", "Tuesday", "Friday"];
+
+// returns the first index of 'Wednesday' in the array
+let index = days.findIndex((day) => day === "Wednesday");
+
+console.log(index); // 1
+Run Code
+Output
+
+1
+Here we have passed an arrow function as a callback in the findIndex() method. The method returns the first index of 'Wednesday'.
+
+Example 3: findIndex() with Object Elements
+// defining an object 
+const team = [
+  { name: "Bill", age: 10 },
+  { name: "Linus", age: 15 },
+  { name: "Alan", age: 20 },
+  { name: "Steve", age: 34 },
+];
+
+// function that returns age greater than or equal to 18
+function isAdult(member) {
+  return member.age >= 18;
+}
+
+// returns the index of the first element which is 
+// greater than or equal to 18  
+console.log(team.findIndex(isAdult)); // 2
+Run Code
+Output
+
+2
 
 
-
-***
