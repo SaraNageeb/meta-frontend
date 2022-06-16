@@ -3,8 +3,9 @@ The Array.map() method allows you to iterate over the array and modify its eleme
 
 ***
 
+### Star Wars Data
+
 ```js
-Star Wars Data
 const characters = [
     {
         name: 'Luke Skywalker',
