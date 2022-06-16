@@ -1,9 +1,6 @@
 # Array Join Overview
 The join() method returns a new string by concatenating all of the elements in an array, separated by a specified separator.
 
-
-Example
-
 ```js
 let message = ["JavaScript", "is", "fun."];
 
