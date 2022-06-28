@@ -44,26 +44,26 @@ const characters = [
 ### 1) Is there at least one male character?
 
 ```js
-const oneMaleCharacter = characters.some(character => character.gender === 'male');
+const oneMaleCharacter = characters.some(character => character.gender === 'male'); // true
 ```
 ***
 ### 2) Is there at least one character with blue eyes?
 
 ```js
-const characterBlueEyes = characters.some(character => character.eye_color === 'blue');
+const characterBlueEyes = characters.some(character => character.eye_color === 'blue'); // true
 ```
 ***
-### 3) Is there at least one character taller than 200?
+### 3) Is there at least one character taller than 210?
 
 ```js
-const characterOver200 = characters.some(character => character.height > 200);
+const characterOver200 = characters.some(character => character.height > 210); // false
 ```
 
 ***
 ### 4) Is there at least one character that has mass less than 50?
 
 ```js
-const characterMassLess50 = characters.some(character => character.mass < 50);
+const characterMassLess50 = characters.some(character => character.mass < 50); // true
 ```
 
 ***
