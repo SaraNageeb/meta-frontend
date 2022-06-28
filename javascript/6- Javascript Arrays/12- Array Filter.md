@@ -85,12 +85,6 @@ const femaleCharacters = characters.filter(character => character.gender === 'fe
 
 ***
 
-https://coursework.vschool.io/array-filter-exercises/
-https://www.w3resource.com/javascript-exercises/
-https://bobbyhadz.com/blog/javascript-find-even-numbers-in-array
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
-
-***
 # Array Filter Exercises
 
 ### 1) Given an array of numbers, return a new array that has only the numbers that are 5 or greater.
@@ -147,4 +141,11 @@ const over18 = arr.filter(person => person.age >= 18).map(person => person.name)
 
 console.log(over18); // ["Anna", "Dan"]
 ```
+***
+
+https://coursework.vschool.io/array-filter-exercises/
+https://www.w3resource.com/javascript-exercises/
+https://bobbyhadz.com/blog/javascript-find-even-numbers-in-array
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
 ***
