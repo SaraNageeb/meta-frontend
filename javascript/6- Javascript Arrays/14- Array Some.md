@@ -40,8 +40,12 @@ const characters = [
 
 ***
 
-## SOME
+
 ### 1) Is there at least one male character?
+
+```js
+const oneMaleCharacter = characters.some(character => character.gender === 'male');
+```
 ***
 ### 2) Is there at least one character with blue eyes?
 ***
