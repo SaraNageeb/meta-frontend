@@ -50,6 +50,8 @@ const characters = [
 
 ### 3) Is every character shorter than 200?
 
+***
+
 ### 4) Is every character male?
 
 ***
