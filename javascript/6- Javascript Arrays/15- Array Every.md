@@ -1,5 +1,5 @@
-# Array Some Overview
-This method check if at least one of array’s item passed the condition. If passed, it return ‘true’ otherwise ‘false’.
+# Array Every Overview
+This method check if all array’s item passed the condition. If passed, it return ‘true’ otherwise ‘false’.
 
 ***
 
