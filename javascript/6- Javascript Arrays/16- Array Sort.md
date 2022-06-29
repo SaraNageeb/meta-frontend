@@ -44,6 +44,9 @@ const characters = [
 
 ```js
 // sort in descending order
+const byName = characters.sort((a,b) => a.name <  b.name ? 1 : -1);
+
+// sort in ascending order
 const byName = characters.sort((a,b) => a.name <  b.name ? -1 : 1);
 ```
 ***
@@ -52,10 +55,10 @@ const byName = characters.sort((a,b) => a.name <  b.name ? -1 : 1);
 
 ```js
 // sort in descending order
-const byName = characters.sort((a,b) => a.mass - b.mass);
+const byMass = characters.sort((a,b) => a.mass - b.mass);
 
 // sort in ascending order
-const byName2 = characters.sort((a,b) => b.mass - a.mass);
+const byMass = characters.sort((a,b) => b.mass - a.mass);
 ```
 ***
 
@@ -66,10 +69,13 @@ const byName2 = characters.sort((a,b) => b.mass - a.mass);
 const byHeight = characters.sort((a,b) => a.height - b.height);
 
 // sort in ascending order
-const byHeight2 = characters.sort((a,b) => b.height - a.height);
+const byHeight = characters.sort((a,b) => b.height - a.height);
 ```
 ***
 
 ### 4) Sort by gender
 
+```js
+const byGender = characters.sort((a,b) => a.gender === 'female' ? -1: 1);
+```
 ***
