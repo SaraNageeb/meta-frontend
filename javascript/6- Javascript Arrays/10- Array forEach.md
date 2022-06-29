@@ -1,44 +1,41 @@
 # The forEach() Overview
 The forEach() method executes a provided function for each array element.
 
+```js
+let numbers = [1, 3, 4, 9, 8];
+
+// function to compute square of each number
+function computeSquare(element) {
+  console.log(element * element);
+}
+
+// compute square root of each element
+numbers.forEach(computeSquare);
+
+/* Output:
+1
+9 
+16
+81
+64
+*/
+```
+
 ***
 
 ### Example 1
-The forEach() method is used to iterate over an array. For example,
 
 ```js
-// forEach and Arrow Function
-const socialNetworks = ['Facebook', 'Twitter', 'Instagram', 'Youtube'];
-
-const logArrayInfo = ((socialNetwork,index, array) => {
-console.log(socialNetwork,index,array);
-})
-
-
-socialNetworks.forEach(logArrayInfo); 
-// "Facebook", 0, ["Facebook", "Twitter", "Instagram", "Youtube"]
-// "Twitter", 1, ["Facebook", "Twitter", "Instagram", "Youtube"]
-// "Instagram", 2, ["Facebook", "Twitter", "Instagram", "Youtube"]
-// "Youtube", 3, ["Facebook", "Twitter", "Instagram", "Youtube"]
-```
-
-
-```js
-// ForEach and Function
-const socialNetworks = ['Facebook', 'Twitter', 'Instagram', 'Youtube'];
-
-function printsocialNetworks(element, index) {
-console.log(element, index);
+function printElements(element, index) {
+    console.log('Array Element ' + index + ': ' + element);
 }
 
-socialNetworks2.forEach(printsocialNetworks);
-// "Facebook", 0
-// "Twitter", 1
-// "Instagram", 2
-// "Youtube", 3
-```
+const prices = [1800, 2000, 3000, , 5000, 500, 8000];
 
-In the above program, the forEach() method takes myFunction() function that displays each element of a students array.
+// forEach does not execute for elements without values
+// in this case, it skips the third element as it is empty
+prices.forEach(printElements);
+```
 
 ***
 
