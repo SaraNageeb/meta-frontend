@@ -43,32 +43,33 @@ const characters = [
 ### 1) Sort by name
 
 ```js
-const byName = characters.sort((a,b) => a.mass - b.mass);
+// sort in descending order
+const byName = characters.sort((a,b) => a.name <  b.name ? -1 : 1);
 ```
 ***
 
 ### 2) Sort by mass
 
 ```js
+// sort in descending order
 const byName = characters.sort((a,b) => a.mass - b.mass);
+
+// sort in ascending order
+const byName2 = characters.sort((a,b) => b.mass - a.mass);
 ```
 ***
 
 ### 3) Sort by height
 
 ```js
-const byHeight = characters.sort((a,b) => a.mass - b.mass);
+// sort in descending order
+const byHeight = characters.sort((a,b) => a.height - b.height);
+
+// sort in ascending order
+const byHeight2 = characters.sort((a,b) => b.height - a.height);
 ```
 ***
 
 ### 4) Sort by gender
 
 ***
-
-  // sort in descending order
-  descOrder = arr.sort((a, b) => a > b ? -1 : 1);
-  console.log(descOrder); // output: [6, 5, 4, 3, 2, 1]
-
-  // sort in ascending order
-  ascOrder = alpha.sort((a, b) => a > b ? 1 : -1);
-  console.log(ascOrder); // output: ['a', 'c', 'e', 'u', 'y']
