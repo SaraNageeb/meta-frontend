@@ -37,6 +37,17 @@ const prices = [1800, 2000, 3000, , 5000, 500, 8000];
 prices.forEach(printElements);
 ```
 
+Output
+
+```
+Array Element 0: 1800
+Array Element 1: 2000
+Array Element 2: 3000
+Array Element 4: 5000
+Array Element 5: 500
+Array Element 6: 8000
+```
+
 ***
 
 ### Example 2
