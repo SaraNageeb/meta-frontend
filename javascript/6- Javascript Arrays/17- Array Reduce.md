@@ -84,3 +84,8 @@ Output
 
 ***
 
+REDUCE
+Get the total mass of all characters
+Get the total height of all characters
+Get the total number of characters in all the character names
+Get the total number of characters by eye color (hint. a map of eye color to count)
