@@ -138,7 +138,7 @@ const totalMass = characters.reduce((acc, cur)=> acc + cur.mass, 0);
 const totalHeight = characters.reduce((acc, cur)=> acc + cur.height, 0);
 ```
 ***
-### 3) Get the total number of characters in all the character names
+### 3) Get the total number of characters by eye color
 
 ```js
 const characterByEyeColor = characters.reduce((acc, cur) => {
@@ -155,7 +155,7 @@ const characterByEyeColor = characters.reduce((acc, cur) => {
 { blue: 2, yellow: 1, brown: 1 }
 ```
 ***
-### 4)Get the total number of characters by eye color
+### 4) Get the total number of characters in all the character names
 
 ```js
 const totalNameChar = characters.reduce((acc, cur)=> acc + cur.name.length, 0);
