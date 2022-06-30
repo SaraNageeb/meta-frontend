@@ -149,13 +149,20 @@ const characterByEyeColor = characters.reduce((acc, cur) => {
   } 
   return acc;
 }, {});
-
 ```
 
+```
+{ blue: 2, yellow: 1, brown: 1 }
+```
 ***
 ### 4)Get the total number of characters by eye color
 
 ```js
 const totalNameChar = characters.reduce((acc, cur)=> acc + cur.name.length, 0);
 ```
+
+```
+52
+```
+
 ***
