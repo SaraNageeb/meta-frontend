@@ -131,12 +131,21 @@ const characters = [
 const totalMass = characters.reduce((acc, cur)=> acc + cur.mass, 0);
 ```
 
+```
+346
+```
+
 ***
 ### 2) Get the total height of all characters
 
 ```js
 const totalHeight = characters.reduce((acc, cur)=> acc + cur.height, 0);
 ```
+
+```
+712
+```
+
 ***
 ### 3) Get the total number of characters by eye color
 
