@@ -126,8 +126,17 @@ const characters = [
 
 
 ### 1) Get the total mass of all characters
+
+```js
+const totalMass = characters.reduce((acc, cur)=> acc + cur.mass, 0);
+```
+
 ***
 ### 2) Get the total height of all characters
+
+```js
+const totalHeight = characters.reduce((acc, cur)=> acc + cur.height, 0);
+```
 ***
 ### 3) Get the total number of characters in all the character names
 ***
