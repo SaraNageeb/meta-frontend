@@ -143,7 +143,7 @@ const totalHeight = characters.reduce((acc, cur)=> acc + cur.height, 0);
 ```js
 const characterByEyeColor = characters.reduce((acc, cur) => {
   if(acc[cur.eye_color]) {
-     acc[cur.eye_color] = acc[cur.eye_color] + 1
+     acc[cur.eye_color]++;
   } else {
   }  acc[cur.eye_color] = 1;
 }, {});
