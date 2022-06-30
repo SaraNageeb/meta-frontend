@@ -1,6 +1,10 @@
 # Array Reduce Overview
 The array reduce() is a built-in JavaScript method used to apply a function to each element in the array to reduce the array to a single value. The reduce() method accepts two parameters, the total and the current value.
 
+![image](https://user-images.githubusercontent.com/25232528/176709910-a173dd25-e905-40e1-bf72-5487b86e95b9.png)
+
+***
+
 ### Example 1: Sum of All Values of Array
 
 ```js
