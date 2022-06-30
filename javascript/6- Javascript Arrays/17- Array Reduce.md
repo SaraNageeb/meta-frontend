@@ -127,5 +127,5 @@ const characters = [
 ***
 ### 3) Get the total number of characters in all the character names
 ***
-### 4)Get the total number of characters by eye color (hint. a map of eye color to count)
+### 4)Get the total number of characters by eye color
 ***
