@@ -145,7 +145,9 @@ const characterByEyeColor = characters.reduce((acc, cur) => {
   if(acc[cur.eye_color]) {
      acc[cur.eye_color]++;
   } else {
-  }  acc[cur.eye_color] = 1;
+  acc[cur.eye_color] = 1;
+  } 
+  return acc;
 }, {});
 
 ```
