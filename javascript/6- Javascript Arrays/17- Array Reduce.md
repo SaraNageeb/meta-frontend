@@ -22,7 +22,9 @@ console.log(summation); // 21
 
 ***
 
-Example 2: Subtracting Numbers in Array
+### Example 2: Subtracting Numbers in Array
+
+```js
 const numbers = [1800, 50, 300, 20, 100];
 
 // subtract all numbers from first number
@@ -43,14 +45,22 @@ let remaining = expenses.reduce(
   salary
 );
 console.log(remaining); // 2700
-Run Code
+```
+
 Output
 
+```
 1330
 2700
+```
+
 This example clearly explains the difference between passing an initialValue and not passing an initialValue.
 
-Example 3: Remove Duplicate Items from Array
+***
+
+### Example 3: Remove Duplicate Items from Array
+
+```js
 let ageGroup = [18, 21, 1, 1, 51, 18, 21, 5, 18, 7, 10];
 let uniqueAgeGroup = ageGroup.reduce(function (accumulator, currentValue) {
   if (accumulator.indexOf(currentValue) === -1) {
@@ -60,11 +70,17 @@ let uniqueAgeGroup = ageGroup.reduce(function (accumulator, currentValue) {
 }, []);
 
 console.log(uniqueAgeGroup); // [ 18, 21, 1, 51, 5, 7, 10 ]
-Run Code
+```
+
+
 Output
 
+```
 [
   18, 21,  1, 51,
    5,  7, 10
 ]
+```
+
+***
 
