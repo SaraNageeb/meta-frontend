@@ -97,10 +97,6 @@ const fiveAndGreaterOnly = arr.filter(number => number > 5);
 console.log(fiveAndGreaterOnly);
 ```
 
-1. Call the filter() method, passing it a function.
-2. On each iteration, verify that the number doesn't have a remainder when divided by 2.
-3. The filter method returns a new array containing the elements that satisfy the condition.
-
 ***
 
 ### 2) Given an array of numbers, return a new array that only includes the even numbers.
@@ -129,10 +125,6 @@ const FiveCharOrLess = arr.filter(char => char.length <= 5);
 console.log(FiveCharOrLess); // ["dog", "wolf", "by", "eaten"]
 ```
 
-1. Call the filter() method, passing it a function.
-2. On each iteration, verify that the number doesn't have a remainder when divided by 2.
-3. The filter method returns a new array containing the elements that satisfy the condition.
-
 ***
 
 ### 4) Make a filtered list of all the people who are old enough to see The Matrix (older than 18)
@@ -149,10 +141,12 @@ const over18 = arr.filter(person => person.age >= 18).map(person => person.name)
 
 console.log(over18); // ["Anna", "Dan"]
 ```
+***
 
-1. Call the filter() method, passing it a function.
-2. On each iteration, verify that the number doesn't have a remainder when divided by 2.
-3. The filter method returns a new array containing the elements that satisfy the condition.
+https://coursework.vschool.io/array-filter-exercises/
+https://www.w3resource.com/javascript-exercises/
+https://bobbyhadz.com/blog/javascript-find-even-numbers-in-array
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
 ***
 https://coursework.vschool.io/array-filter-exercises/

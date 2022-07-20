@@ -3,11 +3,14 @@ JavaScript object is a non-primitive data-type that allows you to store multiple
 
 Here is an example of a JavaScript object.
 
+```js
 // object
 const student = {
     firstName: 'ram',
     class: 10
 };
+```
+
 Here, student is an object that stores values such as strings and numbers.
 
 ***
