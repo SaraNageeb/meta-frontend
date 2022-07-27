@@ -50,10 +50,10 @@ You will be introduced to some of the most commonly used Linux commands that you
  
 By the end of this course, you will be able to: 
  
-•	Implement Version Control systems. 
-•	Navigate and configure using the command line. 
-•	Manage code revisions. 
-•	Create and use a GitHub repository. 
+*	Implement Version Control systems. 
+*	Navigate and configure using the command line. 
+*	Manage code revisions. 
+*	Create and use a GitHub repository. 
 
 ### COURSE 4: HTML and CSS in depth
 You’ll use software development tools like HTML to build attractive web pages that work well—and you’ll use structured semantic data to control how websites appear to the end user. 
@@ -77,8 +77,7 @@ The Capstone project enables you to demonstrate multiple skills from the Certifi
 
 On completion of the Capstone project, you’ll have a job-ready portfolio that you can show to recruiters, demonstrate during interviews and impress potential future employers.
 
-### COURSE 9
-Coding Interview Preparation
+### COURSE 9: Coding Interview Preparation
 The final course in this program will help prepare you for the unique aspects of a coding job interview, with approaches to problem solving, computer science foundations and soft skills needed to land the job.
 
 You’ll gain strategic insights and tips for successful interviewing. And, you’ll have the opportunity to openly discuss the emotional components of the interview process with other learners taking this course.
