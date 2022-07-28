@@ -1,4 +1,4 @@
-### Variable Hoisting
+# Variable Hoisting
 In terms of variables and constants, keyword var is hoisted and let and const does not allow hoisting.
 
 For example,
@@ -86,7 +86,7 @@ While using let, the variable must be declared first.
 
 ***
 
-### Function Hoisting
+## Function Hoisting
 A function can be called before declaring it. For example,
 
 ```js
@@ -131,7 +131,7 @@ Uncaught TypeError: greet is not a function
 
 ***
 
-### Declare Your Variables At the Top !
+## Declare Your Variables At the Top !
 Hoisting is (to many developers) an unknown or overlooked behavior of JavaScript.
 
 If a developer doesn't understand hoisting, programs may contain bugs (errors).
