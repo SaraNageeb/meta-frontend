@@ -21,14 +21,14 @@ This behavior is visible in the code snippet below:
 let value = 0;
 
 if(true) {
-    // novo escopo, O TDZ do 'valor' começa
+    // new scope, TDZ of 'value' starts
 
-    // Ao tentar acessar a variavel, tomamos ReferenceError,
-    // pois neste momento ela é uma variavel que nao foi inicializada
+    // When trying to access the variable, we get ReferenceError,
+    // because at this moment the variable has not been initialized
 
     console.log(value); // ReferenceError
 
-    let value; // TDZ termina e 'valor' é definida com 'undefined'
+    let value; // TDZ terminates and 'value' is set to 'undefined'
     console.log(value); // undefined
 
     value = 1;
@@ -37,3 +37,5 @@ if(true) {
 
 console.log(value); // 0
 ```
+
+This behavior prevents us from having strange results with the values of the variables, which was one of the big headaches when using JavaScript.
