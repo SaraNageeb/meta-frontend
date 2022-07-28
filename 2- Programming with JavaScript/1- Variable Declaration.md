@@ -92,7 +92,7 @@ This is why let and const are necessary.
 
 ***
 
-# Let
+# Let Declaration
 let is now preferred for variable declaration. It's no surprise as it comes as an improvement to var declarations. It also solves the problem with var that we just covered. Let's consider why this is so.
 
 ## let is block scoped
