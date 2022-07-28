@@ -39,3 +39,27 @@ console.log(value); // 0
 ```
 
 This behavior prevents us from having strange results with the values of the variables, which was one of the big headaches when using JavaScript.
+
+***
+
+## Why is the TDZ created when it is?
+
+
+```js
+{
+ 	// This is the temporal dead zone for the age variable!
+	// This is the temporal dead zone for the age variable!
+	// This is the temporal dead zone for the age variable!
+ 	// This is the temporal dead zone for the age variable!
+	let age = 25; // Whew, we got there! No more TDZ
+	console.log(age);
+}
+```
+**The temporal dead zone captured and catalogued.**
+
+If we add a console.log inside the TDZ you will see this error:
+
+```
+VM308:5 Uncaught ReferenceError: Cannot access 'age' before initialization
+    at <anonymous>:5:16
+```
