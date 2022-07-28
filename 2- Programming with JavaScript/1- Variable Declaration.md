@@ -92,3 +92,60 @@ This is why let and const are necessary.
 
 ***
 
+# Let
+let is now preferred for variable declaration. It's no surprise as it comes as an improvement to var declarations. It also solves the problem with var that we just covered. Let's consider why this is so.
+
+## let is block scoped
+A block is a chunk of code bounded by {}. A block lives in curly braces. Anything within curly braces is a block.
+
+So a variable declared in a block with let  is only available for use within that block. Let me explain this with an example:
+
+```js
+   let greeting = "say Hi";
+   let times = 4;
+
+   if (times > 3) {
+        let hello = "say Hello instead";
+        console.log(hello);// "say Hello instead"
+    }
+   console.log(hello) // hello is not defined
+   ```
+   
+ We see that using hello outside its block (the curly braces where it was defined) returns an error. This is because let variables are block scoped .
+
+## let can be updated but not re-declared.
+Just like var,  a variable declared with let can be updated within its scope. Unlike var, a let variable cannot be re-declared within its scope. So while this will work:
+
+```js
+let greeting = "say Hi";
+    greeting = "say Hello instead";
+```
+
+this will return an error:
+
+```js
+    let greeting = "say Hi";
+    let greeting = "say Hello instead"; // error: Identifier 'greeting' has already been declared
+```
+
+However, if the same variable is defined in different scopes, there will be no error:
+
+```js
+    let greeting = "say Hi";
+    if (true) {
+        let greeting = "say Hello instead";
+        console.log(greeting); // "say Hello instead"
+    }
+    console.log(greeting); // "say Hi"
+ ```
+ 
+Why is there no error? This is because both instances are treated as different variables since they have different scopes.
+
+This fact makes let a better choice than var. When using let, you don't have to bother if you have used a name for a variable before as a variable exists only within its scope.
+
+Also, since a variable cannot be declared more than once within a scope, then the problem discussed earlier that occurs with var does not happen.
+
+## Hoisting of let
+Just like  var, let declarations are hoisted to the top. Unlike var which is initialized as undefined, the let keyword is not initialized. So if you try to use a let variable before declaration, you'll get a Reference Error.
+
+***
