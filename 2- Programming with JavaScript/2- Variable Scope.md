@@ -1,4 +1,4 @@
-# What is Scope?
+# Introducing Scope in JavaScript
 Scope determines the accessibility (visibility) of variables.
 
 JavaScript has 5 types of scope:
@@ -45,7 +45,6 @@ console.log(fruit);       // error: fruit is not defined, fruit does not exist o
 ***
 
 ## Local Scope
-Local Scope
 Variables declared inside the functions become Local to the function and are considered in the corresponding local scope. Every Functions has its own scope. Same variable can be used in different functions because they are bound to the respective functions and are not mutual visible.
 
 ```js
