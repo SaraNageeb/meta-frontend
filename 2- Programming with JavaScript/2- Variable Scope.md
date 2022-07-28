@@ -28,7 +28,7 @@ getFruit();                //apple
 
 ***
 
-### Function scope
+## Function scope
 When a variable is declared inside a function, it is only accessible within that function and cannot be used outside that function.
 
 ```js
