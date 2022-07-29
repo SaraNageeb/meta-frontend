@@ -13,6 +13,35 @@ There are 2 kinds of data types, each of which are further divided into sub-type
 
 ## Primitive data sub-types
 
+### 1. String:
+Strings are used to store data that involves characters, like names or addresses. You can perform operations like string concatenation, in JavaScript.
 
-### 1. Number:
+```js
+const name = 'Peter';
+const surname = "Parker";
+const fullName = ` ${name} ${surname}`;
+
+console.log(fullName); // Peter Parker
+```
+***
+
+### 2. Number:
 Number type stands for both integers and floating points. Many mathematical operations are carried out using these numbers.
+
+```js
+let age = 22;
+age = age+1;  // mathematical operation 
+
+console.log("Your age next year is : " + age) // "Your integer number is : 23"
+```
+***
+
+### 3. Boolean:
+This data type represents logical entities. Boolean represents one of two values: true or false. It is easier to think of it as a yes/no switch. For example,
+
+```js
+const dataChecked = true;
+const valueCounted = false;
+```
+
+***
