@@ -11,6 +11,7 @@ JavaScript is a dynamically typed language. It means that a variable doesn’t a
 ![Datatypes][datatypes]
 
 [datatypes]:https://usemynotes.com/wp-content/uploads/2021/04/Types-of-data-types-in-JS.jpg
+
 ***
 
 ## Primitive data sub-types
@@ -179,7 +180,7 @@ We use arrays to store data in consecutive memory locations; this helps to acces
 
 ```js
 var cars = [" Merc ", " Honda ", " BMW "];
-console.log("Our cars are :" + cars); //display an array of cars
+console.log("Our cars are :" + cars); // display an array of cars
 ```
 
 ***
