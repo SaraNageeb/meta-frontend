@@ -1,14 +1,3 @@
-![Variables][variables]
-
-[variables]:https://images.viblo.asia/cb582798-fddf-4af3-ae7e-ded31585327e.png
-
-* var declarations are globally scoped or function scoped while let and const are block scoped.
-* var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
-* They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.
-* While var and let can be declared without being initialized, const must be initialized during declaration.
-
-***
-
 # Var Declaration
 Before the advent of ES6, var declarations ruled. There are issues associated with variables declared with var, though. That is why it was necessary for new ways to declare variables to emerge. First, let's get to understand var more before we discuss those issues.
 
@@ -208,4 +197,11 @@ This will update the value of greeting.message without returning errors.
 Just like let, const declarations are hoisted to the top but are not initialized.
 
 ***
+![Variables][variables]
 
+[variables]:https://images.viblo.asia/cb582798-fddf-4af3-ae7e-ded31585327e.png
+
+* var declarations are globally scoped or function scoped while let and const are block scoped.
+* var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
+* They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.
+* While var and let can be declared without being initialized, const must be initialized during declaration.
