@@ -231,6 +231,8 @@ You fail the exam.
 
 Suppose the use enters 35. Then the condition marks >= 40 evaluates to false. So the second expression fail is assigned to the result variable.
 
+<br>
+
 In JavaScript, a ternary operator can be used to replace certain types of if..else statements. For example,
 
 You can replace this code
@@ -263,7 +265,7 @@ The output of both programs will be the same.
 
 Output
 
-```js
+```
 You are not eligible to vote yet.
 ```
 ***
