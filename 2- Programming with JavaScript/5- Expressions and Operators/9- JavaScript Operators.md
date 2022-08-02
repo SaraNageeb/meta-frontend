@@ -162,3 +162,20 @@ Here, ```&&``` is the logical operator ```AND```. Since both ```x < 6``` and ```
 | &&       | Logical AND: true if both the operands are true, else returns false                 | x && y   |
 | \|\|     | Logical OR: true if either of the operands is true; returns false if both are false | x \|\| y |
 | !        | Logical NOT: true if the operand is false and vice-versa.                           | !x       |
+
+
+#### Example 3: Logical Operators in JavaScript
+
+```js
+// logical AND
+console.log(true && true); // true
+console.log(true && false); // false
+
+// logical OR
+console.log(true || false); // true
+
+// logical NOT
+console.log(!true); // false
+```
+
+***
