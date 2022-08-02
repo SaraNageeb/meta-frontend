@@ -70,6 +70,8 @@ Here, the ```+``` operator is used to add two operands.
 | **       | Exponentiation (Power)      | ```x ** y```     |
 
 
+#### Example 1: Arithmetic operators in JavaScript
+
 ```js
 let x = 5;
 let y = 3;
