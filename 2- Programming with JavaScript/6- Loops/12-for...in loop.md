@@ -48,3 +48,32 @@ In the above program, the ```for...in``` loop is used to iterate over the ```stu
 * The object key is assigned to the variable ```key```.
 * ```student[key]``` is used to access the value of ```key```.
 
+***
+
+### Example 2: Update Values of Properties
+
+```js
+const salaries= {
+    Jack : 24000,
+    Paul : 34000,
+    Monica : 55000
+}
+
+// using for...in
+for ( let i in salaries) {
+
+    // add a currency symbol
+    let salary = "$" + salaries[i];
+
+    // display the values
+    console.log(`${i} : ${salary}`);
+}
+```
+
+```
+Jack : $24000,
+Paul : $34000,
+Monica : $55000
+```
+
+In the above example, the ```for...in``` loop is used to iterate over the properties of the ```salaries``` object. Then, the string ```$``` is added to each value of the object.
