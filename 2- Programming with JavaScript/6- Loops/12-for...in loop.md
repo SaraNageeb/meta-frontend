@@ -77,3 +77,51 @@ Monica : $55000
 ```
 
 In the above example, the ```for...in``` loop is used to iterate over the properties of the ```salaries``` object. Then, the string ```$``` is added to each value of the object.
+
+***
+
+### for...in with Strings
+You can also use for...in loop to iterate over string values. For example,
+
+```js
+const string = 'code';
+
+// using for...in loop
+for (let i in string) {
+    console.log(string[i]);
+}
+```
+
+```
+c
+o
+d
+e
+```
+
+***
+
+### for...in with Arrays
+You can also use for...in with arrays. For example,
+
+```js
+// define array
+const arr = [ 'hello', 1, 'JavaScript' ];
+
+// using for...in loop
+for (let x in arr) {
+    console.log(arr[x]);
+}
+```
+
+```
+hello
+1
+JavaScript
+```
+
+Note: You should not use ```for...in``` to iterate over an array where the index order is important.
+
+One of the better ways to iterate over an array is using the ```for...of``` loop.
+
+***
