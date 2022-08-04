@@ -10,7 +10,7 @@ In short, ```forEach()``` loops do not return a new array but ```map()``` functi
 ### What is the difference?
 If you notice closely, although they look very similar there is a fundamental difference between ```forEach()``` and ```map()``` functions.
 
-```forEach()``` changes the original array, whereas map() returns a new array, without mutating the original array.
+```forEach()``` changes the original array, whereas ```map()``` returns a new array, without mutating the original array.
 
 So which one should you pick? It depends on what you are trying to do with the array.
 
