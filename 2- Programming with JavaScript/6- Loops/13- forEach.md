@@ -29,12 +29,9 @@ The forEach() method is used to iterate over an array. For example,
 let students = ['John', 'Sara', 'Jack'];
 
 // using forEach
-students.forEach(myFunction);
-
-function myFunction(item) {
-
-    console.log(item);
-}
+students.forEach(function(students){
+console.log(student)
+});
 ```
 
 ```
@@ -54,19 +51,17 @@ As we have seen in the above example, the ```forEach()``` method is used to iter
 let students = ['John', 'Sara', 'Jack'];
 
 // using forEach
-students.forEach(myFunction);
+students.forEach(function (student, index, arr) {
+// adding strings to the array elements
+    console.log(`Hello: ${student}`);
+    // console.log(student, index, arr);
 
-function myFunction(item, index, arr) {
+});
 
-    // adding strings to the array elements
-    arr[index] = 'Hello ' + item;
-}
-
-console.log(students);
 ```
 
 ```
-["Hello John", "Hello Sara", "Hello Jack"]
+["Hello: John", "Hello: Sara", "Hello: Jack"]
 ```
 
 ***
