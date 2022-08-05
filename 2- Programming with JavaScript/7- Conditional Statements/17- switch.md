@@ -71,7 +71,7 @@ In the above program, an expression ```a = 2``` is evaluated with a ```switch```
 
 ## Example 2: switch With Multiple Case
 
-```
+```js
 // multiple case switch program
 let fruit = 'apple';
 switch(fruit) {
