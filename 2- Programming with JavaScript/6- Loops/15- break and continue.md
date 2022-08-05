@@ -55,10 +55,8 @@ continue [label];
 
 ***
 
-### continue with for Loop
+### Example 1: Print the Value of i
 In a ```for``` loop, ```continue``` skips the current iteration and control flow jumps to the updateExpression.
-
-## Example 1: Print the Value of i
 
 ```js
 // program to print the value of i
@@ -97,3 +95,5 @@ This means
 * When ```i``` is equal to 3, the ```continue``` statement skips the third iteration.
 * Then, ```i``` becomes 4 and the test condition and ```continue``` statement is evaluated again.
 * Hence, 4 and 5 are printed in the next two iterations.
+
+***
