@@ -2,9 +2,13 @@
 
 The try, catch and finally blocks are used to handle exceptions (a type of an error). Before you learn about them, you need to know about the types of errors in programming.
 
-**Types of Errors**
+Here are some of the most common errors in JavaScript: 
 
-In programming, there can be two types of errors in the code:
+* ReferenceError 
+
+* SyntaxError 
+
+* TypeError 
 
 ***
 
