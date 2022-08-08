@@ -57,6 +57,8 @@ However, as can be confirmed by running the above line of code, strings do not h
 
 ## Example 01 - Good use of try and catch
 
+
+
 ```js
 let json = '{ "age": 30 }';
  
