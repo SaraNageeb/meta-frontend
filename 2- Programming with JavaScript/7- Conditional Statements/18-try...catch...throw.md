@@ -43,6 +43,16 @@ There's an interesting caveat regarding the SyntaxError in JavaScript: it cannot
 
 ## TypeError 
 
+A TypeError is thrown when, for example, trying to run a method on a non-supported data type.
+
+A simple example is attempting to run the ```pop()``` method on a string:
+
+```js
+"hello".pop() // Uncaught TypeError: "hello".pop is not a function
+```
+
+However, as can be confirmed by running the above line of code, strings do not have all the array methods readily available to them, and trying to use some of those methods will result in a TypeError being thrown.  
+
 ***
 
 ```js
