@@ -60,18 +60,18 @@ However, as can be confirmed by running the above line of code, strings do not h
 
 
 ```js
-let json = '{ "age": 30 }';
+let json = '{ "age": 30 }'; // data from the server
  
 try {
  
-  let user = JSON.parse(json); 
-  if (!user.name) {
+  let user = JSON.parse(json); // convert the text representation to JS object
+  if (!user.name) { // if there is no user.name throw new SyntaxError
     throw new SyntaxError("Incomplete data: no name");
   }
  
   console.log( user.name );
  
 } catch(e) {
-  console.log( "JSON Error: " + e ); 
+  console.log( "JSON Error: " + e ); // JSON Error: Incomplete data: no name
 }
 ```
