@@ -4,11 +4,44 @@ The try, catch and finally blocks are used to handle exceptions (a type of an er
 
 Here are some of the most common errors in JavaScript: 
 
-* ReferenceError 
+## ReferenceError 
 
-* SyntaxError 
+A ReferenceError gets thrown when, for example, one tries to use variables that haven't been declared anywhere.
 
-* TypeError 
+An example can be, say, attempting to console log a variable that doesn't exist:
+
+```js
+console.log(username);
+```
+If the variable named ```username``` hasn't been declared, the above line of code will result in the following output:
+
+```js
+Uncaught ReferenceError: username is not defined
+```
+
+***
+
+## SyntaxError 
+
+Any kind of invalid JavaScript code will cause a SyntaxError.
+
+For example:
+
+```js
+var a "there's no assignment operator here";
+```
+
+The above line of code will throw the following error:  
+
+```js
+Uncaught SyntaxError: Unexpected string
+```
+
+There's an interesting caveat regarding the SyntaxError in JavaScript: it cannot be caught using the ```try-catch``` block.  
+
+***
+
+## TypeError 
 
 ***
 
