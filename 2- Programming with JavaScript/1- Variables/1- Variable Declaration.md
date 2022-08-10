@@ -1,12 +1,14 @@
 # Var Declaration
 Before the advent of ES6, var declarations ruled. There are issues associated with variables declared with var, though. That is why it was necessary for new ways to declare variables to emerge. First, let's get to understand var more before we discuss those issues.
 
+***
+
 ## Scope of var
-Scope essentially means where these variables are available for use. var declarations are globally scoped or function/locally scoped.
+Scope essentially means where these variables are available for use. ```var``` declarations are globally scoped or function/locally scoped.
 
 The scope is global when a var variable is declared outside a function. This means that any variable that is declared with var outside a function block is available for use in the whole window.
 
-var is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function.
+```var``` is function ```scoped``` when it is declared within a function. This means that it is available and can be accessed only within that function.
 
 To understand further, look at the example below.
 
@@ -47,7 +49,7 @@ and this also
     greeter = "say Hello instead";
 ```
 
-## Hoisting of var
+### Hoisting of var
 Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. This means that if we do this:
 
 ```js
@@ -65,7 +67,7 @@ it is interpreted as this:
 
 So var variables are hoisted to the top of their scope and initialized with a value of undefined.
 
-## Problem with var
+### Problem with var
 There's a weakness that comes with  var. I'll use the example below to explain:
 
 ```js
@@ -86,8 +88,8 @@ This is why let and const are necessary.
 
 ***
 
-# Let Declaration
-let is now preferred for variable declaration. It's no surprise as it comes as an improvement to var declarations. It also solves the problem with var that we just covered. Let's consider why this is so.
+## Let Declaration
+```let``` is now preferred for variable declaration. It's no surprise as it comes as an improvement to var declarations. It also solves the problem with var that we just covered. Let's consider why this is so.
 
 ## let is block scoped
 A block is a chunk of code bounded by {}. A block lives in curly braces. Anything within curly braces is a block.
