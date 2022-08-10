@@ -20,7 +20,7 @@ var greeter = "hey hi";
     }
 ```
 
-Here, greeter is globally scoped because it exists outside a function while hello is function scoped. So we cannot access the variable hello outside of a function. So if we do this:
+Here, greeter is globally scoped because it exists outside a function while hello is function scoped. So we cannot access the variable ```hello``` outside of a function. So if we do this:
 
 ```js
     var tester = "hey hi";
