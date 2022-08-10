@@ -1,5 +1,5 @@
 # Variable Hoisting
-In terms of variables and constants, keyword var is hoisted and let and const does not allow hoisting.
+In terms of variables and constants, keyword ```var``` is hoisted and let and const does not allow hoisting.
 
 For example,
 
@@ -27,7 +27,7 @@ console.log(a);
 var a = 5;
 ```
 
-Output
+**Output**
 
 ```js
 undefined
@@ -59,15 +59,15 @@ greet(); // hello
 console.log(b);
 ```
 
-Output
+**Output**
 
 ```js
 hello
 Uncaught ReferenceError: b is not defined
 ```
-In the above example, variable b is hoisted to the top of the function greet and becomes a local variable. Hence b is only accessible inside the function. b does not become a global variable.
+In the above example, variable ```b``` is hoisted to the top of the function greet and becomes a local variable. Hence ```b``` is only accessible inside the function. ```b``` does not become a global variable.
 
-If a variable is used with the let keyword, that variable is not hoisted. For example,
+If a variable is used with the ```let``` keyword, that variable is not hoisted. For example,
 
 ```js
 // program to display value
@@ -76,7 +76,7 @@ console.log(a);
 let a; // error
 ```
 
-Output
+**Output**
 
 ```js
 Uncaught ReferenceError: Cannot access 'a' before initialization
@@ -98,13 +98,13 @@ function greet() {
 }
 ```
 
-Output
+**Output**
 
 ```js
 Hi, there
 ```
 
-In the above program, the function greet is called before declaring it and the program shows the output. This is due to hoisting.
+In the above program, the function ```greet``` is called before declaring it and the program shows the output. This is due to hoisting.
 
 However, when a function is used as an expression, an error occurs because only declarations are hoisted. For example;
 
@@ -117,7 +117,7 @@ let greet = function() {
 }
 ```
 
-Output
+**Output**
 
 ```js
 Uncaught ReferenceError: greet is not defined
@@ -139,3 +139,5 @@ If a developer doesn't understand hoisting, programs may contain bugs (errors).
 To avoid bugs, always declare all variables at the beginning of every scope.
 
 Since this is how JavaScript interprets the code, it is always a good rule.
+
+***
