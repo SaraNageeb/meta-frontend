@@ -85,7 +85,7 @@ So, since ```times > 3``` returns ```true```, greeter is redefined to ```"say He
 
 If you have used greeter in other parts of your code, you might be surprised at the output you might get. This will likely cause a lot of bugs in your code.
 
-This is why let and const are necessary.
+This is why ```let``` and const are necessary.
 
 ***
 
@@ -138,7 +138,7 @@ However, if the same variable is defined in different scopes, there will be no e
  
 Why is there no error? This is because both instances are treated as different variables since they have different scopes.
 
-This fact makes let a better choice than ```var```. When using let, you don't have to bother if you have used a name for a variable before as a variable exists only within its scope.
+This fact makes ```let``` a better choice than ```var```. When using ```let```, you don't have to bother if you have used a name for a variable before as a variable exists only within its scope.
 
 Also, since a variable cannot be declared more than once within a scope, then the problem discussed earlier that occurs with ```var``` does not happen.
 
@@ -148,10 +148,10 @@ Just like  ```var```, ```let``` declarations are hoisted to the top. Unlike ```v
 ***
 
 ## Const Declaration
-Variables declared with the const maintain constant values. const declarations share some similarities with let declarations.
+Variables declared with the const maintain constant values. const declarations share some similarities with ```let``` declarations.
 
 ### const declarations are block scoped
-Like let declarations, const declarations can only be accessed within the block they were declared.
+Like ```let``` declarations, const declarations can only be accessed within the block they were declared.
 
 ### const cannot be updated or re-declared
 This means that the value of a variable declared with const remains the same within its scope. It cannot be updated or re-declared. So if we declare a variable with const, we can neither do this:
@@ -197,19 +197,19 @@ we can do this:
 This will update the value of greeting.message without returning errors.
 
 ## Hoisting of const
-Just like let, const declarations are hoisted to the top but are not initialized.
+Just like ```let```, const declarations are hoisted to the top but are not initialized.
 
 ***
 ![Variables][variables]
 
 [variables]:https://images.viblo.asia/cb582798-fddf-4af3-ae7e-ded31585327e.png
 
-* ```var``` declarations are globally scoped or function scoped while let and const are block scoped.
+* ```var``` declarations are globally scoped or function scoped while ```let``` and const are block scoped.
 
-* ```var``` variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
+* ```var``` variables can be updated and re-declared within its scope; ```let``` variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
 
-* They are all hoisted to the top of their scope. But while ```var``` variables are initialized with undefined, let and const variables are not initialized.
+* They are all hoisted to the top of their scope. But while ```var``` variables are initialized with undefined, ```let``` and const variables are not initialized.
 
-* While ```var``` and let can be declared without being initialized, const must be initialized during declaration.
+* While ```var``` and ```let``` can be declared without being initialized, const must be initialized during declaration.
 
 ***
