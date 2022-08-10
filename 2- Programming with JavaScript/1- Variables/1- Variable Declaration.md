@@ -1,12 +1,12 @@
 # Var Declaration
-Before the advent of ES6, var declarations ruled. There are issues associated with variables declared with var, though. That is why it was necessary for new ways to declare variables to emerge. First, let's get to understand var more before we discuss those issues.
+Before the advent of ES6, ```var``` declarations ruled. There are issues associated with variables declared with ```var```, though. That is why it was necessary for new ways to declare variables to emerge. First, let's get to understand ```var``` more before we discuss those issues.
 
 ***
 
 ## Scope of var
 Scope essentially means where these variables are available for use. ```var``` declarations are globally scoped or function/locally scoped.
 
-The scope is global when a var variable is declared outside a function. This means that any variable that is declared with var outside a function block is available for use in the whole window.
+The scope is global when a ```var``` variable is declared outside a function. This means that any variable that is declared with ```var``` outside a function block is available for use in the whole window.
 
 ```var``` is function ```scoped``` when it is declared within a function. This means that it is available and can be accessed only within that function.
 
@@ -90,7 +90,7 @@ This is why let and const are necessary.
 ***
 
 ## Let Declaration
-```let``` is now preferred for variable declaration. It's no surprise as it comes as an improvement to var declarations. It also solves the problem with var that we just covered. Let's consider why this is so.
+```let``` is now preferred for variable declaration. It's no surprise as it comes as an improvement to ```var``` declarations. It also solves the problem with ```var``` that we just covered. Let's consider why this is so.
 
 ### let is block scoped
 A block is a chunk of code bounded by ```{}```. A block lives in curly braces. Anything within curly braces is a block.
@@ -138,22 +138,22 @@ However, if the same variable is defined in different scopes, there will be no e
  
 Why is there no error? This is because both instances are treated as different variables since they have different scopes.
 
-This fact makes let a better choice than var. When using let, you don't have to bother if you have used a name for a variable before as a variable exists only within its scope.
+This fact makes let a better choice than ```var```. When using let, you don't have to bother if you have used a name for a variable before as a variable exists only within its scope.
 
-Also, since a variable cannot be declared more than once within a scope, then the problem discussed earlier that occurs with var does not happen.
+Also, since a variable cannot be declared more than once within a scope, then the problem discussed earlier that occurs with ```var``` does not happen.
 
 ### Hoisting of let
-Just like  ```var```, ```let``` declarations are hoisted to the top. Unlike var which is initialized as undefined, the ```let``` keyword is not initialized. So if you try to use a ```let``` variable before declaration, you'll get a Reference Error.
+Just like  ```var```, ```let``` declarations are hoisted to the top. Unlike ```var``` which is initialized as undefined, the ```let``` keyword is not initialized. So if you try to use a ```let``` variable before declaration, you'll get a Reference Error.
 
 ***
 
-# Const Declaration
+## Const Declaration
 Variables declared with the const maintain constant values. const declarations share some similarities with let declarations.
 
-## const declarations are block scoped
+### const declarations are block scoped
 Like let declarations, const declarations can only be accessed within the block they were declared.
 
-## const cannot be updated or re-declared
+### const cannot be updated or re-declared
 This means that the value of a variable declared with const remains the same within its scope. It cannot be updated or re-declared. So if we declare a variable with const, we can neither do this:
 
 ```js
@@ -204,9 +204,12 @@ Just like let, const declarations are hoisted to the top but are not initialized
 
 [variables]:https://images.viblo.asia/cb582798-fddf-4af3-ae7e-ded31585327e.png
 
-* var declarations are globally scoped or function scoped while let and const are block scoped.
-* var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
-* They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.
-* While var and let can be declared without being initialized, const must be initialized during declaration.
+* ```var``` declarations are globally scoped or function scoped while let and const are block scoped.
+
+* ```var``` variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
+
+* They are all hoisted to the top of their scope. But while ```var``` variables are initialized with undefined, let and const variables are not initialized.
+
+* While ```var``` and let can be declared without being initialized, const must be initialized during declaration.
 
 ***
