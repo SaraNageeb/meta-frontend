@@ -34,7 +34,7 @@ Here, greeter is globally scoped because it exists outside a function while hell
 
 We'll get an error which is as a result of hello not being available outside the function.
 
-var variables can be re-declared and updated
+```var``` variables can be re-declared and updated
 This means that we can do this within the same scope and won't get an error.
 
 ```js
@@ -65,10 +65,10 @@ it is interpreted as this:
     greeter = "say hello"
 ```
 
-So var variables are hoisted to the top of their scope and initialized with a value of undefined.
+So ```var``` variables are hoisted to the top of their scope and initialized with a value of undefined.
 
 ### Problem with var
-There's a weakness that comes with  var. I'll use the example below to explain:
+There's a weakness that comes with ```var```. I'll use the example below to explain:
 
 ```js
     var greeter = "hey hi";
@@ -81,9 +81,10 @@ There's a weakness that comes with  var. I'll use the example below to explain:
     console.log(greeter) // "say Hello instead"
 ````
 
-So, since times > 3 returns true, greeter is redefined  to "say Hello instead". While this is not a problem if you knowingly want greeter to be redefined, it becomes a problem when you do not realize that a variable greeter has already been defined before.
+So, since ```times > 3``` returns ```true```, greeter is redefined to ```"say Hello instead"```. While this is not a problem if you knowingly want greeter to be redefined, it becomes a problem when you do not realize that a variable greeter has already been defined before.
 
 If you have used greeter in other parts of your code, you might be surprised at the output you might get. This will likely cause a lot of bugs in your code.
+
 This is why let and const are necessary.
 
 ***
@@ -91,10 +92,10 @@ This is why let and const are necessary.
 ## Let Declaration
 ```let``` is now preferred for variable declaration. It's no surprise as it comes as an improvement to var declarations. It also solves the problem with var that we just covered. Let's consider why this is so.
 
-## let is block scoped
-A block is a chunk of code bounded by {}. A block lives in curly braces. Anything within curly braces is a block.
+### let is block scoped
+A block is a chunk of code bounded by ```{}```. A block lives in curly braces. Anything within curly braces is a block.
 
-So a variable declared in a block with let  is only available for use within that block. Let me explain this with an example:
+So a variable declared in a block with ```let``` is only available for use within that block. Let me explain this with an example:
 
 ```js
    let greeting = "say Hi";
@@ -107,10 +108,10 @@ So a variable declared in a block with let  is only available for use within tha
    console.log(hello) // hello is not defined
    ```
    
- We see that using hello outside its block (the curly braces where it was defined) returns an error. This is because let variables are block scoped .
+ We see that using hello outside its block (the curly braces where it was defined) returns an error. This is because ```let``` variables are block scoped .
 
-## let can be updated but not re-declared.
-Just like var,  a variable declared with let can be updated within its scope. Unlike var, a let variable cannot be re-declared within its scope. So while this will work:
+### let can be updated but not re-declared.
+Just like ```var```,  a variable declared with ```let``` can be updated within its scope. Unlike ```var```, a ```let``` variable cannot be re-declared within its scope. So while this will work:
 
 ```js
 let greeting = "say Hi";
@@ -141,8 +142,8 @@ This fact makes let a better choice than var. When using let, you don't have to 
 
 Also, since a variable cannot be declared more than once within a scope, then the problem discussed earlier that occurs with var does not happen.
 
-## Hoisting of let
-Just like  var, let declarations are hoisted to the top. Unlike var which is initialized as undefined, the let keyword is not initialized. So if you try to use a let variable before declaration, you'll get a Reference Error.
+### Hoisting of let
+Just like  ```var```, ```let``` declarations are hoisted to the top. Unlike var which is initialized as undefined, the ```let``` keyword is not initialized. So if you try to use a ```let``` variable before declaration, you'll get a Reference Error.
 
 ***
 
