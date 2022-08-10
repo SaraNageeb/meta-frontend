@@ -213,3 +213,6 @@ Just like ```let```, ```const``` declarations are hoisted to the top but are not
 * While ```var``` and ```let``` can be declared without being initialized, ```const``` must be initialized during declaration.
 
 ***
+
+
+
