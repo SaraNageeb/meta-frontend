@@ -1,7 +1,7 @@
 # Temporal Dead Zone
 In ES6, the ''hoisting'' of let and const are different from variables and functions.
 
-When a variable is declared using let or const, it has what is called a Temporal Dead Zone (TDZ), a name that describes the behavior that, in its scope, it is inaccessible until execution reaches its declaration.
+When a variable is declared using let or const, it has what is called a ```Temporal Dead Zone (TDZ)```, a name that describes the behavior that, in its scope, it is inaccessible until execution reaches its declaration.
 
 This behavior is visible in the code snippet below:
 
@@ -63,3 +63,4 @@ If we add a console.log inside the TDZ you will see this error:
 VM308:5 Uncaught ReferenceError: Cannot access 'age' before initialization
     at <anonymous>:5:16
 ```
+***
