@@ -32,7 +32,7 @@ Here, greeter is globally scoped because it exists outside a function while hell
     console.log(hello); // error: hello is not defined
 ```
 
-We'll get an error which is as a result of hello not being available outside the function.
+We'll get an error which is as a result of ```hello``` not being available outside the function.
 
 ```var``` variables can be re-declared and updated
 This means that we can do this within the same scope and won't get an error.
