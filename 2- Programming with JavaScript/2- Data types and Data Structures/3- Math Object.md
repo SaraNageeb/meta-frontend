@@ -18,7 +18,7 @@ Here is a list of built-in number methods in JavaScript.
 
 ***
 
-## Example
+## Example: JavaScript Number Methods
 
 ```js
 // check if a is integer
