@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Working with numbers</title>
+</head>
+<body>
+
+    <section>
+        <h1>Your number is: <span id="number-title">0</span></h1>
+        <div id="text"></div>
+    </section>
+    
+    <script>
+        const askNumber = Number(prompt('What is your favorite number?'));
+        const replyNumber = document.getElementById("number-title");
+
+        const text = document.getElementById('text');
+
+        // Replace 0 with the number replied by the user
+        replyNumber.innerHTML = askNumber;
+
+        // Working with different numbers method
+        text.innerHTML = '';
+        text.innerHTML += `<p>Square Root: ${Math.sqrt(askNumber)}</p>`;
+
+        text.innerHTML += `<p>${askNumber} is integer: ${Number.isInteger(askNumber)}</p>`;
+
+        text.innerHTML += `<p>${askNumber} is NaN: ${Number.isNaN(askNumber)}</p>`;
+
+        text.innerHTML += `<p>Rounding up: ${Math.ceil(askNumber)}</p>`;
+
+        text.innerHTML += `<p>Rounding down: ${Math.floor(askNumber)}</p>`;
+
+        text.innerHTML += `<p>As decimals: ${askNumber.toFixed(2)}</p>`;
+    </script>
+</body>
+</html>
