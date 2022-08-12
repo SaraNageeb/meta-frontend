@@ -3,8 +3,8 @@ In programming, type conversion is the process of converting data of one type to
 
 There are two types of type conversion in JavaScript.
 
-Implicit Conversion - automatic type conversion
-Explicit Conversion - manual type conversion
+* Implicit Conversion - automatic type conversion
+* Explicit Conversion - manual type conversion
 
 ***
 
@@ -31,7 +31,7 @@ Here are some common methods of explicit conversions.
 ***
 
 ### 1. Convert to Number Explicitly
-To convert numeric strings and boolean values to numbers, you can use Number(). For example,
+To convert numeric strings and boolean values to numbers, you can use ```Number()```. For example,
 
 ```js
 let result;
@@ -51,7 +51,7 @@ result = Number(false);
 console.log(result); // 0
 ```
 
-In JavaScript, empty strings and null values return 0. For example,
+In JavaScript, empty strings and ```null``` values return 0. For example,
 
 ```js
 let result;
@@ -79,7 +79,7 @@ console.log(result); // NaN
 ***
 
 ### 2. Convert to String Explicitly
-To convert other data types to strings, you can use either String() or toString(). For example,
+To convert other data types to strings, you can use either ```String()``` or ```toString()```. For example,
 
 ```js
 //number to string
@@ -114,14 +114,14 @@ result = true.toString();
 console.log(result); // "true"
 ```
 
-**Note** ```String()``` takes null and undefined and converts them to string. However, toString() gives error when null are passed.
+**Note** ```String()``` takes ```null``` and ```undefined``` and converts them to string. However, ```toString()``` gives error when ```null are passed```.
 
 ***
 
 ### 3. Convert to Boolean Explicitly
-To convert other data types to a boolean, you can use Boolean().
+To convert other data types to a boolean, you can use ```Boolean()```.
 
-In JavaScript, undefined, null, 0, NaN, '' converts to false. For example,
+In JavaScript, ```undefined```, ```null```, ```0```, ```NaN```, ```''``` converts to ```false```. For example,
 
 ```js
 let result;
@@ -141,7 +141,7 @@ result = Boolean(NaN);
 console.log(result); // false
 ```
 
-All other values give true. For example,
+All other values give ```true```. For example,
 
 ```js
 result = Boolean(324);
@@ -172,3 +172,5 @@ The table shows the conversion of different values to String, Number, and Boolea
 | undefined | "undefined"       | NaN               | false              |
 | ''        | ""                | 0                 | false              |
 | ' '       | " "               | 0                 | true               |
+
+***
