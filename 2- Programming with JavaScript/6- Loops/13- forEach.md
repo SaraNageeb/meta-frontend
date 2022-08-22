@@ -30,7 +30,7 @@ let students = ['John', 'Sara', 'Jack'];
 
 // using forEach
 students.forEach(function(students){
-console.log(student)
+console.log(students)
 });
 ```
 
