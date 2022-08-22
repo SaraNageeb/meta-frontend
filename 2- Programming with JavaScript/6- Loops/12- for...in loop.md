@@ -102,7 +102,7 @@ e
 ***
 
 ### for...in with Arrays
-You can also use for...in with arrays. For example,
+You can also use ```for...in``` with arrays. For example,
 
 ```js
 // define array
