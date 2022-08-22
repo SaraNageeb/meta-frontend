@@ -108,7 +108,7 @@ console.log('x ** y =', x ** y);
 ***
 
 ### JavaScript Comparison Operators
-Comparison operators compare two values and return a boolean value, either true or false. For example,
+Comparison operators compare two values and return a ```boolean``` value, either true or false. For example,
 
 ```js
 const a = 3, b = 2;
@@ -220,7 +220,7 @@ Enter your marks: 78
 You pass the exam.
 ```
 
-Suppose the user enters 78. Then the condition marks >= 40 is checked which evaluates to true. So the first expression pass is assigned to the result variable.
+Suppose the user enters ```78```. Then the condition marks ```>= 40``` is checked which evaluates to true. So the first expression pass is assigned to the result variable.
 
 **Output 2**
 
@@ -229,7 +229,7 @@ Enter your marks: 35
 You fail the exam.
 ```
 
-Suppose the use enters 35. Then the condition marks >= 40 evaluates to false. So the second expression fail is assigned to the result variable.
+Suppose the use enters ```35```. Then the condition marks ```>= 40``` evaluates to false. So the second expression fail is assigned to the result variable.
 
 <br>
 
