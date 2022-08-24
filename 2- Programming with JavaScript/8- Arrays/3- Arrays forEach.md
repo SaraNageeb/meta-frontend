@@ -39,7 +39,7 @@ A couple of best practices to keep in mind:
 
 You can also practise reading this in English as following:
 
-We have an apps array and we iterate over it one by one. Now we can start thinking about a single item of that array, which is one app
+We have an apps array and we iterate over it one by one. Now we can start thinking about a single item of that array, which is one app.
 
 <br>
 
@@ -64,6 +64,23 @@ users.forEach(user => {
      console.log(user.id);
      console.log(user.name);
 });
+```
+
+This will log:
+
+```
+{
+  id: 1,
+  name: "Alex"
+}
+1
+"Alex"
+{
+  id: 2,
+  name: "Sam"
+}
+2
+"Sam"
 ```
 
 Because every user (or item) is an object, you can access the keys id and name by calling ```user.id``` and ```user.name```.
@@ -91,7 +108,9 @@ This will log:
 2 "Clock"
 ```
 
-**Example 1**
+***
+
+#### Example 1: Printing Contents of Array
 
 ```js
 function printElements(element, index) {
@@ -116,10 +135,8 @@ Array Element 5: 500
 Array Element 6: 8000
 ```
 
-
-
-### Example 2
-Let's create an array with the numbers from 1 to 6 and display in the browser console only the even numbers. Check the code below.
+#### Example 2: Find even numbers
+Let's create an array with the numbers from 1 to 6 and display in the browser console only the even numbers.
 
 ```js
 const arr = [1,2,3,4,5,6];
@@ -138,8 +155,10 @@ arr.forEach(verifyEvenNum);
 
 ***
 
-### Example 3
-To count the duplicates in an array, declare an empty object variable that will store the count for each value and use the forEach() method to iterate over the array. On each iteration, increment the count for the value by 1 or initialize it to 1 if it hasn't been set already.
+#### Example 3: Find Duplicates
+To count the duplicates in an array, declare an empty object variable that will store the count for each value and use the forEach() method to iterate over the array. 
+
+On each iteration, increment the count for the value by 1 or initialize it to 1 if it hasn't been set already.
 
 ```js
 const countries = ['Argentina', 'Brazil', 'Argentina', 'Argentina', 'Brazil', 'Portugal'];
@@ -163,23 +182,5 @@ console.log(count);
 
 * The logical OR (||) operator is there to check if the key has not been initialized in the array. If the accessor returns undefined, we initialize the value for the key to 0 + 1.
 
+***
 
-```js
-let numbers = [1, 3, 4, 9, 8];
-
-// function to compute square of each number
-function computeSquare(element) {
-  console.log(element * element);
-}
-
-// compute square root of each element
-numbers.forEach(computeSquare);
-
-/* Output:
-1
-9 
-16
-81
-64
-*/
-```
