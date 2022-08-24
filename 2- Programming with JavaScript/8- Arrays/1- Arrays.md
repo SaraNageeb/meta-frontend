@@ -173,11 +173,9 @@ Some of the commonly used JavaScript array methods are:
 | indexOf()   | searches an element of an array and returns its position                               |
 | find()      | returns the first value of an array element that passes a test                         |
 | findIndex() | returns the first index of an array element that passes a test                         |
-| forEach()   | calls a function for each element                                                      |
 | includes()  | checks if an array contains a specified element                                        |
 | sort()      | sorts the elements alphabetically in strings and in ascending order                    |
-| slice()     | selects the part of an array and returns the new array                                 |
-| splice()    | removes or replaces existing elements and/or adds new elements                         |
+
 
 Example: JavaScript Array Methods
 
