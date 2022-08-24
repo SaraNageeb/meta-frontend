@@ -204,8 +204,8 @@ console.log(routine); // ["exercise", "sleep", "work", "eat"]
 
 ***
 
-#### Array Concat Overview
-The concat() method returns a new array by merging two or more values/arrays.
+### Array Concat Overview
+The ```concat()``` method returns a new array by merging two or more values/arrays.
 
 ```js
 let primeNumbers = [2, 3, 5, 7]
@@ -223,7 +223,7 @@ console.log(joinedArrays);
 */
 ```
 
-**Example 1: Using concat() method**
+#### Example 1: Using concat() method
 
 ```js
 var languages1 = ["JavaScript", "Python", "Java"];
@@ -263,7 +263,7 @@ console.log(reversedArray);
 // Output: [ 5, 4, 3, 2, 1 ]
 ```
 
-**Example 1: Using reverse() Method**
+#### Example 1: Using reverse() Method
 
 ```js
 let languages = ["JavaScript", "Python", "C++", "Java", "Lua"];
