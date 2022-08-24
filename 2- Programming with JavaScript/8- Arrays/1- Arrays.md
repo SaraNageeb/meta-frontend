@@ -1,7 +1,9 @@
 # JavaScript Arrays
 An array is an object that can store multiple values at once. For example,
 
+```js
 const words = ['hello', 'world', 'welcome'];
+```
 
 Here, ```words``` is an array. The array is storing 3 values.
 
@@ -43,7 +45,7 @@ const newData = [
 ***
 
 ### Access Elements of an Array
-You can access elements of an array using indices (0, 1, 2 …). For example,
+You can access elements of an ```array``` using indices (0, 1, 2 …). For example,
 
 ```js
 const myArray = ['h', 'e', 'l', 'l', 'o'];
@@ -103,7 +105,7 @@ dailyActivities[1] = 'work';
 console.log(dailyActivities); // ['eat', 'work', 'exercise']
 ```
 
-Suppose, an array has two elements. If you try to add an element at index 3 (fourth element), the third element will be undefined. For example,
+Suppose, an ```array``` has two elements. If you try to add an element at index 3 (fourth element), the third element will be undefined. For example,
 
 ```js
 let dailyActivities = [ 'eat', 'sleep'];
@@ -206,3 +208,117 @@ console.log(routine); // ["exercise", "sleep", "work", "eat"]
 
 ***
 
+#### Array Concat Overview
+The concat() method returns a new array by merging two or more values/arrays.
+
+```js
+let primeNumbers = [2, 3, 5, 7]
+let evenNumbers = [2, 4, 6, 8]
+
+// join two arrays 
+let joinedArrays = primeNumbers.concat(evenNumbers);
+console.log(joinedArrays);
+
+/* Output:
+[
+  2, 3, 5, 7,
+  2, 4, 6, 8 
+]
+*/
+```
+
+**Example 1: Using concat() method**
+
+```js
+var languages1 = ["JavaScript", "Python", "Java"];
+var languages2 = ["C", "C++"];
+
+// concatenating two arrays
+var new_arr = languages1.concat(languages2);
+console.log(new_arr); // [ 'JavaScript', 'Python', 'Java', 'C', 'C++' ]
+
+// concatenating a value and array
+var new_arr1 = languages2.concat("Lua", languages1);
+console.log(new_arr1); // [ 'C', 'C++', 'Lua', 'JavaScript', 'Python', 'Java' ]
+```
+
+Output
+
+```
+[ 'JavaScript', 'Python', 'Java', 'C', 'C++' ]
+[ 'C', 'C++', 'Lua', 'JavaScript', 'Python', 'Java' ]
+```
+
+***
+
+#### Array Reverse Overview
+The ```reverse()``` method returns the array in reverse order.
+
+```js
+let numbers = [1, 2, 3, 4, 5];
+
+// reversing the numbers array
+let reversedArray = numbers.reverse();
+
+console.log(reversedArray);
+```
+
+```
+// Output: [ 5, 4, 3, 2, 1 ]
+```
+
+**Example 1: Using reverse() Method**
+
+```js
+let languages = ["JavaScript", "Python", "C++", "Java", "Lua"];
+
+// reversing the order of languages array
+let reversedArray = languages.reverse();
+
+console.log("Reversed Array: ", reversedArray);
+
+// modifies the original array
+console.log("Original Array: ", languages);
+```
+
+Output
+
+```js
+Reversed Array: [ 'Lua', 'Java', 'C++', 'Python', 'JavaScript' ]
+Original Array: [ 'Lua', 'Java', 'C++', 'Python', 'JavaScript' ]
+```
+
+In the above example, we have used the ```reverse()``` method to reverse the languages array.
+
+```languages.reverse()``` reverses the order of each element in the array and returns the reversed array.
+
+Since the method modifies the original array, both languages and reversedArray hold the same value.
+
+<br>
+
+**Example 2: reverse() Method with Spread Operator**
+
+In Example 1, we saw how the ```reverse()``` method modifies the original array.
+
+But if we use the **```spread operator(...)```** in the array along with the ```reverse()``` method, it does not modify the original array. For example:
+
+```js
+let languages = ["JavaScript", "Python", "C++", "Java", "Lua"];
+
+// using spread operator to reverse the array
+let reversedArray = [...languages].reverse();
+
+console.log("Reversed Array:", reversedArray);
+
+// modifies the original array
+console.log("Original Array:", languages);
+```
+
+Output
+
+```js
+Reversed Array: [ 'Lua', 'Java', 'C++', 'Python', 'JavaScript' ]
+Original Array: [ 'JavaScript', 'Python', 'C++', 'Java', 'Lua' ]
+```
+
+***
