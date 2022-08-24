@@ -176,30 +176,6 @@ Some of the commonly used JavaScript array methods are:
 | includes()  | checks if an array contains a specified element                                        |
 | sort()      | sorts the elements alphabetically in strings and in ascending order                    |
 
-
-Example: JavaScript Array Methods
-
-```js
-let dailyActivities = ['sleep', 'work', 'exercise']
-let newRoutine = ['eat'];
-
-// sorting elements in the alphabetical order
-dailyActivities.sort();
-console.log(dailyActivities); // ['exercise', 'sleep', 'work']
-
-//finding the index position of string
-const position = dailyActivities.indexOf('work');
-console.log(position); // 2
-
-// slicing the array elements
-const newDailyActivities = dailyActivities.slice(1);
-console.log(newDailyActivities); // [ 'sleep', 'work']
-
-// concatenating two arrays
-const routine = dailyActivities.concat(newRoutine);
-console.log(routine); // ["exercise", "sleep", "work", "eat"]
-```
-
 ***
 
 ### Array Concat Overview
@@ -290,7 +266,7 @@ Since the method modifies the original array, both languages and ```reversedArra
 
 <br>
 
-**Example 2: reverse() Method with Spread Operator**
+#### Example 2: reverse() Method with Spread Operator
 
 In Example 1, we saw how the ```reverse()``` method modifies the original array.
 
@@ -317,7 +293,7 @@ Original Array: [ 'JavaScript', 'Python', 'C++', 'Java', 'Lua' ]
 
 ***
 
-#### Array Join Overview
+### Array Join Overview
 The ```join()``` method returns a new string by concatenating all of the elements in an array, separated by a specified separator.
 
 ```js
@@ -330,7 +306,7 @@ console.log(joinedMessage);
 // Output: JavaScript is fun.
 ```
 
-**Example: Using join() method**
+#### Example: Using join() methodß
 
 ```js
 var info = ["Terence", 28, "Kathmandu"];
@@ -348,7 +324,7 @@ Here, we can see that the ```join()``` method converts all the array elements in
 
 ***
 
-#### Array indexOf() Overview
+### Array indexOf() Overview
 The ```indexOf()``` method returns the first index of occurance of an array element, or -1 if it is not found.
 
 ```js
@@ -361,7 +337,7 @@ console.log(index);
 // Output: 1
 ```
 
-**Example 1: Using indexOf() method**
+#### Example 1: Using indexOf() method
 
 ```js
 var priceList = [10, 8, 2, 31, 10, 1, 65];
@@ -384,7 +360,7 @@ console.log(index4); // -1
 
 ***
 
-#### Array findIndex() Overview
+### Array findIndex() Overview
 The ```findIndex()``` method returns the index of the ```first element``` in the array that satisfies the provided callback function. Otherwise, it returns -1, indicating that no element passed the test. 
 
 ```js
@@ -408,7 +384,7 @@ Output
 2
 ```
 
-**Example 1: Using findIndex() method**
+#### Example 1: Using findIndex() methodß
 
 ```js
 // function that returns even number
@@ -435,9 +411,9 @@ In the above example, we have used the ```findIndex()``` method to find the inde
 
 ```isEven()``` is a function that returns an even number. We have passed ```isEven()``` as a callback in the ```findIndex()``` method as- numbers.```findIndex(isEven)```.
 
-The method returns 2 which is the index of the first even number in numbers i.e. 8.
+The method returns ```2``` which is the index of the first even number in numbers i.e. ```8```.
 
-**Example 2: findIndex() with Arrow Function**
+#### Example 2: findIndex() with Arrow Functionß
 
 ```js
 // defining an array
@@ -456,8 +432,7 @@ Output
 
 Here we have passed an arrow function as a callback in the ```findIndex()``` method. The method returns the first index of ```'Wednesday'```.
 
-
-**Example 3: findIndex() with Object Elements**
+#### Example 3: findIndex() with Object Elements
 
 ```js
 // defining an object 
@@ -486,7 +461,7 @@ Output
 
 ***
 
-#### Array lastIndexOf() Overview
+### Array lastIndexOf() Overview
 The ```lastIndexOf()``` method returns the index of the last occurrence of a specified element in the array.
 
 ```js
@@ -506,7 +481,7 @@ console.log(lastIndex);
 
 * The ```lastIndexOf()``` starts at a specified index and searches from right to left.
 
-**Example 1: Using lastIndexOf() Method**
+#### Example 1: Using lastIndexOf() Method
 
 ```js
 let alphabets = ["a", "b", "c", "a", "d"];
@@ -529,7 +504,7 @@ The last occurrence of ```'a'``` is at index 3 in alphabets so alphabets.```last
 ```alphabets.lastIndexOf("e")``` returns ```-1``` because the array does not contain ```'e'```.
 
 
-**Example 2: lastIndexOf() with two Parameters**
+#### Example 2: lastIndexOf() with two Parameters
 
 ```js
 let alphabets = ["a", "b", "c", "a", "d", "a"];
@@ -547,7 +522,7 @@ In the above example, we have passed the second argument ```4``` in the ```lastI
 
 ***
 
-#### Array find() Overview
+### Array find() Overview
 The ```find()``` method returns the value of the first array element that satisfies the provided test function.
 
 ```js
@@ -565,7 +540,7 @@ console.log(evenNumber);
 // Output: 4
 ```
 
-**Example 1: Using find() method**
+#### Example 1: Using find() method
 
 ```js
 function isEven(element) {
@@ -582,7 +557,7 @@ let firstOdd = randomArray.find((element) => element % 2 == 1);
 console.log(firstOdd); // 1
 ```
 
-**Example 2: find() with Object elements**
+#### Example 2: find() with Object elements
 
 ```js
 const team = [
@@ -606,7 +581,7 @@ console.log(adultMember); // { name: 'Alan', age: 20 }
 
 ***
 
-#### Array includes() Overview
+### Array includes() Overview
 The ```includes()``` method checks if an array contains a specified element or not.
 
 ```js
@@ -621,7 +596,7 @@ console.log(check);
 // Output: true
 ```
 
-**Example 1: Using includes() method**
+#### Example 1: Using includes() method
 
 ```js
 let languages = ["JavaScript", "Java", "C", "C++"];
@@ -649,7 +624,7 @@ In the above example, we have used the ```includes()``` method to check whether 
 ```languages.includes("C")``` returns ```true``` since the array contains ```'C'``` and ```languages.includes("Ruby")``` returns ```false``` since the array does not contain ```'Ruby'```.
 
 
-**Example 2: includes() for Case-Sensitive Search**
+#### Example 2: includes() for Case-Sensitive Search
 The ```includes()``` method is case sensitive. For example:
 
 ```js
@@ -677,7 +652,7 @@ Here the ```includes()``` method returns true for searchValue- ```'Python'``` an
 
 This is because the method is case sensitive and it treats ```'Python'``` and ```'python'``` as two different strings.
 
-**Example 3: includes() with two Parameters**
+#### Example 3: includes() with two Parameters
 
 ```js
 let languages = ["JavaScript", "Java", "C", "Python"];
@@ -707,189 +682,3 @@ In the above example, we have passed two argument values in the ```include()``` 
 In ```languages.includes("Java", -3)```, the method starts searching ```'Java'``` from the third last element because of the negative argument ```-3```.
 
 ***
-
-#### The forEach() Overview
-It helps you iterate (loop) over array items one by one. Here's an example:
-
-```js
-const apps = ["Calculator", "Messaging", "Clock"];
-
-apps.forEach(app => {
-    console.log(app);
-});
-```
-
-If the ```=>``` is new to you, that's called an ```arrow function```. In this particular example, you will not see a difference between using an ```arrow function``` and a ```regular function```, so here's how you can iterate without an arrow function:
-
-```js
-const apps = ["Calculator", "Messaging", "Clock"];
-
-apps.forEach(function(app) {
-    console.log(app);
-});
-```
-
-The output (in the console) of both of these snippets of code is the following:
-
-```js
-"Calculator"
-"Messaging"
-"Clock"
-```
-
-Notice how the callback function passed to the ```forEach``` is being called for every single element of the array.
-
-**Best practices**
-
-A couple of best practices to keep in mind:
-
-* Try to have the name of the array in plural (example: apps)
-* Then the first argument inside the forEach should be in singular (example: app)
-* Always start with a console.log(item) as this helps you visualise the items that you just iterated over (one by one).
-
-You can also practise reading this in English as following:
-
-We have an apps array and we iterate over it one by one. Now we can start thinking about a single item of that array, which is one app
-
-<br>
-
-**Iterate over array of objects**
-A common data structure that you will be working with is arrays of objects, for example:
-
-```js
-const users = [{
-    id: 1,
-    name: "Alex"
-}, {
-    id: 2,
-    name: "Sam"
-}];
-```
-
-Iterating over this array is the same as above, however keep in mind that the item you will get will be an object.
-
-```js
-users.forEach(user => {
-     console.log(user); // an object
-     console.log(user.id);
-     console.log(user.name);
-});
-```
-
-Because every user (or item) is an object, you can access the keys id and name by calling ```user.id``` and ```user.name```.
-
-<br>
-
-**Using the index in the forEach**
-You can also access the index of every item of an array inside the callback passed to forEach.
-
-```js
-const apps = ["Calculator", "Messaging", "Clock"];
-
-apps.forEach(function(app, index) {
-    console.log(index, app);
-});
-```
-
-This will log:
-
-```js
-0 "Calculator"
-
-1 "Messaging"
-
-2 "Clock"
-```
-
-**Example 1**
-
-```js
-function printElements(element, index) {
-    console.log('Array Element ' + index + ': ' + element);
-}
-
-const prices = [1800, 2000, 3000, , 5000, 500, 8000];
-
-// forEach does not execute for elements without values
-// in this case, it skips the third element as it is empty
-prices.forEach(printElements);
-```
-
-Output
-
-```
-Array Element 0: 1800
-Array Element 1: 2000
-Array Element 2: 3000
-Array Element 4: 5000
-Array Element 5: 500
-Array Element 6: 8000
-```
-
-
-
-### Example 2
-Let's create an array with the numbers from 1 to 6 and display in the browser console only the even numbers. Check the code below.
-
-```js
-const arr = [1,2,3,4,5,6];
-
-const verifyEvenNum = el => {
-if (el % 2 === 0) {
-console.log(el);
-} 
-}
-
-arr.forEach(verifyEvenNum);
-// 2
-// 4
-// 6
-```
-
-***
-
-### Example 3
-To count the duplicates in an array, declare an empty object variable that will store the count for each value and use the forEach() method to iterate over the array. On each iteration, increment the count for the value by 1 or initialize it to 1 if it hasn't been set already.
-
-```js
-const countries = ['Argentina', 'Brazil', 'Argentina', 'Argentina', 'Brazil', 'Portugal'];
-
-const count = {};
-
-countries.forEach(element => {
-  count[element] = (count[element] || 0) + 1;
-});
-
-
-console.log(count);
-// {Argentina: 3, Brasil: 2, Portugal: 1}
-```
-
-* The function we passed to the Array.forEach method gets called with each element in the array.
-
-* For each element we check if the value in already present as a key in the count object. If it is present, we increment it by 1.
-
-* If the value is not yet present, we initialize it to 1.
-
-* The logical OR (||) operator is there to check if the key has not been initialized in the array. If the accessor returns undefined, we initialize the value for the key to 0 + 1.
-
-
-```js
-let numbers = [1, 3, 4, 9, 8];
-
-// function to compute square of each number
-function computeSquare(element) {
-  console.log(element * element);
-}
-
-// compute square root of each element
-numbers.forEach(computeSquare);
-
-/* Output:
-1
-9 
-16
-81
-64
-*/
-```
