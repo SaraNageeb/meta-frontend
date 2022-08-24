@@ -221,7 +221,7 @@ Output
 
 ***
 
-#### Array Reverse Overview
+### Array Reverse Overview
 The ```reverse()``` method returns the array in reverse order.
 
 ```js
@@ -682,3 +682,98 @@ In the above example, we have passed two argument values in the ```include()``` 
 In ```languages.includes("Java", -3)```, the method starts searching ```'Java'``` from the third last element because of the negative argument ```-3```.
 
 ***
+
+### Array isArray() Overview
+
+The ```isArray()``` method checks whether the passed argument is an array or not.
+
+```js
+let numbers = [1, 2, 3, 4];
+
+// checking whether numbers is an array or not
+console.log(Array.isArray(numbers));
+
+let text = "JavaScript";
+
+// checking whether text is an array or not
+console.log(Array.isArray(text));
+
+// Output:
+// true
+// false
+```
+
+#### Example 1: Using isArray() Method
+
+```js
+let fruits = ["Apple", "Grapes", "Banana"];
+
+// checking whether fruits is an array or not
+console.log(Array.isArray(fruits));
+
+let text = "Apple";
+
+// checking whether text is an array or not
+console.log(Array.isArray(text));
+
+// Output
+// true
+// false
+```
+
+In the above example, we have used the ```isArray()``` method to find out whether ```fruits``` and ```text``` are arrays or not.
+
+```(Array.isArray(fruits))``` returns ```true``` since ```fruits``` is an array object and ```(Array.isArray(text))``` returns ```false``` since ```text``` is not an array (it's a string).
+
+***
+
+### Array toString() Overview
+The ```toString()``` method returns a string formed by the elements of the given array.
+
+The ```toString()``` method does not take any parameters.
+
+
+```js
+// defining an array
+let items = ["JavaScript", 1, "a", 3];
+
+// returns a string with elements of the array separated by commas
+let itemsString = items.toString();
+
+console.log(itemsString);
+
+// Output: 
+// JavaScript,1,a,3
+```
+
+**Notes:**
+
+* The ```toString()``` method does not change the original array.
+
+* Elements like ```undefined```, ```null```, or empty array, have an empty string representation.
+
+
+#### Example 1: Using toString() Method
+
+```js
+let info = ["Terence", 28, "Kathmandu"];
+
+// returns the string representation of the info array 
+let info_str = info.toString();
+
+console.log(info_str); 
+
+// toString() does not change the original array
+console.log(info);
+
+// Output
+// Terence,28,Kathmandu
+// [ 'Terence', 28, 'Kathmandu' ]
+```
+
+In the above example, we have used the ```toString()``` method to convert all the elements of the ```info``` array into a string.
+
+```info.toString()``` returns the string representation of ```info``` which is ```Terence,28,Kathmandu```.
+
+Since the method does not change the original array, the ```info``` array holds the same original value.
+*** 
