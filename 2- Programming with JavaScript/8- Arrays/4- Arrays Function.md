@@ -209,8 +209,8 @@ const characterMassLess50 = characters.some(character => character.mass < 50); /
 ```
 ***
 
-# Array Every Overview
-This method check if all array’s item passed the condition. If passed, it return ‘true’ otherwise ‘false’.
+### JavaScript Array every()
+This method check if all array’s item passed the condition. If passed, it return ```‘true’``` otherwise ```‘false’```.
 
 ```js
 // Create new array
@@ -253,16 +253,16 @@ const allMale = characters.every(character => character.gender === 'male'); // f
 
 ***
 
-# Array Sort Overview
-The sort() method sorts an array alphabetically:
+### JavaScript Array sort()
+The ```sort()``` method sorts an array alphabetically:
 
-By default, the sort() function sorts values as strings.
+By default, the ```sort()``` function sorts values as strings.
 
-This works well for strings ("Apple" comes before "Banana").
+This works well for strings (```"Apple"``` comes before ```"Banana"```).
 
-However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+However, if numbers are sorted as strings, ```"25"``` is bigger than ```"100"```, because ```"2"``` is bigger than ```"1"```.
 
-Because of this, the sort() method will produce incorrect result when sorting numbers.
+Because of this, the ```sort()``` method will produce incorrect result when sorting numbers.
 
 You can fix this by providing a compare function:
 
@@ -273,7 +273,7 @@ numbers.sort((a, b) => a - b);
 console.log(numbers);
 ```
 
-### 1) Sort by name
+#### 1. Sort by name
 
 ```js
 // sort in descending order
@@ -282,9 +282,8 @@ const byName = characters.sort((a,b) => a.name <  b.name ? 1 : -1);
 // sort in ascending order
 const byName = characters.sort((a,b) => a.name <  b.name ? -1 : 1);
 ```
-***
 
-### 2) Sort by mass
+#### 2. Sort by mass
 
 ```js
 // sort in descending order
@@ -293,9 +292,8 @@ const byMass = characters.sort((a,b) => a.mass - b.mass);
 // sort in ascending order
 const byMass = characters.sort((a,b) => b.mass - a.mass);
 ```
-***
 
-### 3) Sort by height
+#### 3. Sort by height
 
 ```js
 // sort in descending order
@@ -304,9 +302,8 @@ const byHeight = characters.sort((a,b) => a.height - b.height);
 // sort in ascending order
 const byHeight = characters.sort((a,b) => b.height - a.height);
 ```
-***
 
-### 4) Sort by gender
+#### 4. Sort by gender
 
 ```js
 const byGender = characters.sort((a,b) => a.gender === 'female' ? -1: 1);
