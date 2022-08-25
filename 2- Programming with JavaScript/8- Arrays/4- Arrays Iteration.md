@@ -237,7 +237,6 @@ const allBlueEyes = characters.every(character => character.eye_color === 'blue'
 ```js
 const allMassOver40 = characters.every(character => character.mass > 40); // true
 ```
-***
 
 #### 3. Is every character shorter than 200?
 
