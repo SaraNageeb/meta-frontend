@@ -111,7 +111,31 @@ Assume that the ```student``` object already exists - you can then give it new p
 Example
 
 ```js
+const student = { 
+    name: 'John', 
+    age: 20,
+    marks: {
+        science: 70,
+        math: 75
+    }
+}
+
+// Creates a new key of 'nationality' with a value of 'English'
 student.nationality = "English";
+
+console.log(student);
+
+/* 
+{
+  age: 20,
+  marks: {
+    math: 75,
+    science: 70
+  },
+  name: "John",
+  nationality: "English"
+}
+*/
 ```
 
 ***
@@ -137,6 +161,34 @@ student.age = 23,
 
 console.log(student.name); // Ash
 console.log(student.age); // 23
+```
+
+***
+
+## Deleting Properties
+The delete keyword deletes a property from an object:
+
+```js
+const student = { 
+    name: 'John', 
+    age: 20,
+    marks: {
+        science: 70,
+        math: 75
+    }
+}
+
+// Removes the marks property
+delete student.marks;
+
+console.log(student);
+
+/*
+{
+  age: 20,
+  name: "John"
+}
+*/
 ```
 
 ***
