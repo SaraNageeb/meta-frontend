@@ -2,6 +2,7 @@
 Want to learn how to use JavaScript array functions like map, reduce, filter, etc? Use this worksheet
 
 **Sample Data**
+
 Here's a sample piece of Star Wars data from the Star Wars API.
 
 ```js
@@ -116,6 +117,24 @@ const femaleCharacters = characters.filter(character => character.gender === 'fe
 The array ```reduce()``` is a built-in JavaScript method used to apply a function to each element in the array to reduce the array to a single value. 
 
 The ```reduce()``` method accepts two parameters, the total and the current value.
+
+```js
+// Sum of All Values of Array
+const numbers = [1, 2, 3, 4, 5, 6];
+
+function sum_reducer(accumulator, currentValue) {
+  return accumulator + currentValue;
+}
+
+let sum = numbers.reduce(sum_reducer);
+console.log(sum); // 21
+
+// using arrow function
+let summation = numbers.reduce(
+  (accumulator, currentValue) => accumulator + currentValue
+);
+console.log(summation); // 21
+```
 
 ![image](https://user-images.githubusercontent.com/25232528/176709910-a173dd25-e905-40e1-bf72-5487b86e95b9.png)
 
