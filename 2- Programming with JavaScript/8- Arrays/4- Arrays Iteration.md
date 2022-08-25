@@ -162,10 +162,10 @@ const totalHeight = characters.reduce((acc, cur)=> acc + cur.height, 0);
 
 ```js
 const characterByEyeColor = characters.reduce((acc, cur) => {
-  if(acc[cur.eye_color]) {
-     acc[cur.eye_color]++;
-  } else {
-  acc[cur.eye_color] = 1;
+  if(acc[cur.eye_color]) {            // If we already seen the eye_color before
+     acc[cur.eye_color]++;           // Increase it by 1 
+  } else {                          // If we not seen the eye_color 
+  acc[cur.eye_color] = 1;          // Since it's the first time, add 1 to it
   } 
   return acc;
 }, {});
