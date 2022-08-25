@@ -119,7 +119,7 @@ student.nationality = "English";
 ## Update Properties
 Once we’ve defined an object, we’re not stuck with all the properties we wrote. Objects are mutable meaning we can update them after we create them!
 
-We can use either dot notation, ., or bracket notation, [], and the assignment operator, = to add new key-value pairs to an object or change an existing property.
+We can use either dot notation, ```.```, or bracket notation, ```[]```, and the assignment operator, ```=``` to add new key-value pairs to an object or change an existing property.
 
 
 ```js
@@ -138,3 +138,5 @@ student.age = 23,
 console.log(student.name); // Ash
 console.log(student.age); // 23
 ```
+
+***
