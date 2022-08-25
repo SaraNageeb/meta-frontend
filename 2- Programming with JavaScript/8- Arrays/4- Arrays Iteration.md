@@ -165,7 +165,7 @@ const characterByEyeColor = characters.reduce((acc, cur) => {
   if(acc[cur.eye_color]) {            // If we already seen the eye_color before
      acc[cur.eye_color]++;           // Increase it by 1 
   } else {                          // If we not seen the eye_color 
-  acc[cur.eye_color] = 1;          // Since it's the first time, add 1 to it
+  acc[cur.eye_color] = 1;          // Then, add one to it
   } 
   return acc;
 }, {});
