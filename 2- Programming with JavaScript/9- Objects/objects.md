@@ -293,7 +293,11 @@ In the method ```greet```, while accessing a property of an object, ```this``` k
 
 In order to access the **properties** of an object, ```this``` keyword is used following by ```.``` and **key**.
 
-**Note: In JavaScript, this keyword when used with the object's method refers to the object. this is bound to an object.**
+<br>
+
+> **_NOTE:_** In JavaScript, this keyword when used with the object's method refers to the object. this is bound to an object.
+
+<br>
 
 However, the function inside of an object can access it's variable in a similar way as a normal function would. For example,
 
@@ -305,8 +309,16 @@ const person = {
         let surname = 'Doe';
         console.log('The name is' + ' ' + this.name + ' ' + surname); }
 };
+
+person.greet();
+```
+
+Output
+
+```
+The name is John Doe
 ```
 
 ***
 
-person.greet();
+
