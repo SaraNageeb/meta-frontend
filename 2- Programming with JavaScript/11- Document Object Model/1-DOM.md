@@ -296,3 +296,53 @@ demoQueryAll.forEach(query => {
 
 # Making Changes to the DOM
 Once you've selected an element in the DOM, you can read or modify it. You can replace or change the display of text, for example. Or you can create new nodes and insert them into the DOM. 
+
+## Get and Set Content with textContent and innerHTML
+Get and Set Content with textContent and innerHTML
+
+The difference between the two methods is quite clear and is in the name itself.
+
+The innerText method, for example, will change the content of an element with only text, that is, we cannot insert HTML with this method
+
+See a practical example:
+
+```js
+var el = document.querySelector("#teste");
+el.innerText = "<div> Olá </div>";
+```
+
+This code will make the text ```<div>Hello </div>```, be inserted in the element, ignoring the opening and closing of the div tags.
+
+**Graphic representation of the example:**
+
+![image](https://user-images.githubusercontent.com/25232528/187470765-8ff21b5e-531e-49cf-bbf6-27e15a0198e6.png)
+
+
+In ```innerHTML``` we will have a different approach, we can change the content of an element in the DOM by inserting text and HTML.
+
+So if we use this same example, but with the ```innerHTML``` method:
+
+```js
+var el = document.querySelector("#test");
+el.innerHTML = "<div> Hello </div>";
+```
+
+We will have the interpretation of the div tag, and it will be converted to HTML
+
+The only representation will be the one that is as text between the tags
+
+We can then conclude that when the content to be inserted is text only, we will opt for ```innerText```
+
+If we need to insert and create HTML structures, we will opt for ```innerHTML```
+
+**Conclusion**
+
+In this article we saw the difference between ```innerHTML``` and ```innerText``` to change DOM in JavaScript
+
+* The main difference is that ```innerText``` can only add text to elements.
+
+* ```innerHTML``` can add text and HTML tags too, being able to structure a web page.
+
+* So if we need to insert only text, we can use ```innerText```, if there is also HTML in our insertion, we will use ```innerHTML```
+
+***
