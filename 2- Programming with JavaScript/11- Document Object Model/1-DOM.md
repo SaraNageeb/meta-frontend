@@ -292,4 +292,7 @@ demoQueryAll.forEach(query => {
 </html>
 ```
 
+***
 
+# Making Changes to the DOM
+Once you've selected an element in the DOM, you can read or modify it. You can replace or change the display of text, for example. Or you can create new nodes and insert them into the DOM. 
