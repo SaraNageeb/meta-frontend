@@ -170,3 +170,126 @@ When you run this code, your live page will be rendered like this:
 
 
 ***
+
+## Use CSS Queries to Select Page Elements
+To access a single element, you can use the ```querySelector()``` method. In our HTML file, we have a ```demo-query``` element
+
+```js
+<div id="demo-query">Access me by query</div>
+```
+
+The selector for an ```id``` attribute is the hash symbol (```#```). You can assign the element with the ```demo-query``` id to the ```demoQuery``` variable.
+
+```js
+const demoQuery = document.querySelector('#demo-query');
+```
+
+In the case of a selector with multiple elements, such as a class or a tag, ```querySelector()``` will return the first element that matches the query. You can use the ```querySelectorAll()``` method to collect all the elements that match a specific query.
+
+In the example file, you have two elements with the ```demo-query-all``` class applied to them.
+
+```js
+<div class="demo-query-all">Access me by query all (1)</div>
+<div class="demo-query-all">Access me by query all (2)</div>
+```
+
+The selector for a ```class``` attribute is a period or full stop (```.```), so you can access the class with ```.demo-query-all```.
+
+```js
+const demoQueryAll = document.querySelectorAll('.demo-query-all');
+```
+
+Using the ```forEach()``` method, you can apply the color ```green``` to the ```border``` property of all matching elements.
+
+```js
+demoQueryAll.forEach(query => {
+  query.style.border = '1px solid green';
+});
+```
+
+![image](https://user-images.githubusercontent.com/25232528/187438603-f5ad2e71-7ee0-4932-90d3-69df89f9ba14.png)
+
+Using the query selector methods is extremely powerful, as you can access any element or group of elements in the DOM the same way you would in a CSS file.
+
+***
+
+# Complete JavaScript Code
+
+```js
+// Assign all elements
+const demoId = document.getElementById('demo');
+const demoClass = document.getElementsByClassName('demo');
+const demoTag = document.getElementsByTagName('article');
+const demoQuery = document.querySelector('#demo-query');
+const demoQueryAll = document.querySelectorAll('.demo-query-all');
+
+// Change border of ID demo to purple
+demoId.style.border = '1px solid purple';
+
+// Change border of class demo to orange
+for (i = 0; i < demoClass.length; i++) {
+  demoClass[i].style.border = '1px solid orange';
+}
+
+// Change border of tag demo to blue
+for (i = 0; i < demoTag.length; i++) {
+  demoTag[i].style.border = '1px solid blue';
+}
+
+// Change border of ID demo-query to red
+demoQuery.style.border = '1px solid red';
+
+// Change border of class query-all to green
+demoQueryAll.forEach(query => {
+  query.style.border = '1px solid green';
+});
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Accessing Elements in the DOM</title>
+
+  <style>
+    html { font-family: sans-serif; color: #333; }
+    body { max-width: 500px; margin: 0 auto; padding: 0 15px; }
+    div, article { padding: 10px; margin: 5px; border: 1px solid #dedede; }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Accessing Elements in the DOM</h1>
+
+  <h2>ID (#demo)</h2>
+  <div id="demo">Access me by ID</div>
+
+  <h2>Class (.demo)</h2>
+  <div class="demo">Access me by class (1)</div>
+  <div class="demo">Access me by class (2)</div>
+
+  <h2>Tag (article)</h2>
+  <article>Access me by tag (1)</article>
+  <article>Access me by tag (2)</article>
+
+  <h2>Query Selector</h2>
+  <div id="demo-query">Access me by query</div>
+
+  <h2>Query Selector All</h2>
+  <div class="demo-query-all">Access me by query all (1)</div>
+  <div class="demo-query-all">Access me by query all (2)</div>
+
+  <script src="access.js"></script>
+
+</body>
+
+</html>
+```
+
+
