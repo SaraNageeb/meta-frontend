@@ -298,8 +298,6 @@ demoQueryAll.forEach(query => {
 Once you've selected an element in the DOM, you can read or modify it. You can replace or change the display of text, for example. Or you can create new nodes and insert them into the DOM. 
 
 ## Get and Set Content with textContent and innerHTML
-Get and Set Content with textContent and innerHTML
-
 The difference between the two methods is quite clear and is in the name itself.
 
 The innerText method, for example, will change the content of an element with only text, that is, we cannot insert HTML with this method
