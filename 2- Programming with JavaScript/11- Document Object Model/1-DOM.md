@@ -63,3 +63,57 @@ body.addEventListener('click', function () {
   body.innerHTML = '<h1>Hello, world!</h1>';
 });
 ```
+
+***
+
+# Getting a Handle on the DOM
+The first step of making a web page interactive involves identifying an element for the browser to find and make it available to do something using JavaScript. There are several ways to access specific elements in the DOM. Let's explore those you are likely to use most often.
+
+
+## Select an Element by ID
+The easiest way to find an HTML element in the DOM, is by using the element id.
+
+This example finds the element with ```id="intro"```:
+
+Example
+
+```js
+const element = document.getElementById("intro");
+```
+
+## Select an Element by Tag Name
+This example finds all ```<p>``` elements:
+
+Example
+```js
+const element = document.getElementsByTagName("p");
+ ```
+ 
+ This method returns an HTMLCollection of elements with the given tag name.
+ 
+```js
+ // Loop Through an HTMLCollection
+ 
+ for (let i = 0; i < items.length; i++) {
+  items[i].style.color = 'orchid';
+
+  console.log(items[i]); // <li style="color: orchid;">Make coffee</li>
+}
+```
+ 
+ ## Select Elements by Class Name
+If you want to find all HTML elements with the same class name, use ```getElementsByClassName()```
+
+Example
+
+Get all elements with ```class="example"```:
+
+```js
+const collection = document.getElementsByClassName("example");
+```
+
+Get all elements with both the "example" and "color" classes:
+
+```js
+const collection = document.getElementsByClassName("example color");
+```
