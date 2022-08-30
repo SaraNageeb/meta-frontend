@@ -348,9 +348,11 @@ In this article we saw the difference between ```innerHTML``` and ```innerText``
 HTML tags are converted into objects (called nodes) and placed into the DOM. Attributes exist as properties of element objects, like the href attribute of an <a> element or the action attribute of a <form> element. You get or set those attributes by way of properties, similar to the way you did earlier with an input element's value property and a heading's textContent property.
  
 **className**
+ 
 The className property overwrites any existing classes on an element. When dealing with multiple classes on an element, the classList property offers a convenient alternative to accessing an element's list of classes.
 
 **Get and set attributes with JavaScript**
+ 
 The getAttribute and setAttribute methods provide alternative ways to manage element attributes.
 
 ***
@@ -365,3 +367,100 @@ Like most other attributes, you can get and set the inline style of an element i
 
 document.getElementById("myH1").style.color = "red";
 ```
+
+## Create New DOM Elements
+To add a new element to the HTML DOM, you must create the element (element node) first, and then append it to an existing element.
+
+**Example**
+ 
+```js
+<div id="div1">
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+const para = document.createElement("p");
+const node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+const element = document.getElementById("div1");
+element.appendChild(para);
+</script>
+```
+ 
+**Example Explained**
+ 
+This code creates a new ```<p>``` element:
+ 
+```js
+const para = document.createElement("p");
+```
+ 
+To add text to the ```<p>``` element, you must create a text node first. This code creates a text node:
+
+```js
+const node = document.createTextNode("This is a new paragraph.");
+```
+ 
+Then you must append the text node to the ```<p>``` element:
+
+```js
+para.appendChild(node);
+```
+ 
+Finally you must append the new element to an existing element.
+
+This code finds an existing element:
+
+```js
+const element = document.getElementById("div1");
+```
+ 
+This code appends the new element to the existing element:
+
+```js
+element.appendChild(para);
+```
+  
+## Removing Existing HTML Elements
+To remove an HTML element, use the ```remove()``` method:
+
+**Example**
+
+```js
+<div>
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+</div>
+
+
+<script>
+const elmnt = document.getElementById("p1"); elmnt.remove();
+</script>
+```
+ 
+**Example Explained**
+ 
+The HTML document contains a ```<div>``` element with two child nodes (two ```<p>``` elements):
+
+```js
+<div>
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+</div>
+```
+ 
+Find the element you want to remove:
+
+```js
+const elmnt = document.getElementById("p1");
+```
+ 
+Then execute the ```remove()``` method on that element:
+
+```js
+ elmnt.remove();
+ ```
+ 
+ ***
