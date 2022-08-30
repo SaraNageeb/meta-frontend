@@ -71,61 +71,102 @@ The first step of making a web page interactive involves identifying an element 
 
 
 ## Select an Element by ID
-The easiest way to find an HTML element in the DOM, is by using the element id.
-
-This example finds the element with ```id="intro"```:
-
-Example
+The easiest way to access a single element in the DOM is by its unique ```ID```. You can get an element by ID with the ```getElementById()``` method of the ```document``` object.
 
 ```js
-const element = document.getElementById("intro");
+document.getElementById();
 ```
 
-## Select an Element by Tag Name
-This example finds all ```<p>``` elements:
+In order to be accessed by ID, the HTML element must have an ```id``` attribute. You have a ```div``` element with an ID of ```demo``` you can use:
 
-Example
 ```js
-const element = document.getElementsByTagName("p");
- ```
+<div id="demo">Access me by ID</div>
+```
+
+In the Console, get the element and assign it to the ```demoId``` variable.
+
+```js
+const demoId = document.getElementById('demo');
+```
+
+Logging ```demoId``` to the console will return our entire HTML element.
+
+```js
+console.log(demoId);
+```
+
+```
+// Output
+<div id="demo">Access me by ID</div>
+```
+
+You can be sure you’re accessing the correct element by changing the ```border``` property to ```purple```.
+
+```js
+demoId.style.border = '1px solid purple';
+```
+
+Once you do so, your live page will look like this:
+
+![image](https://user-images.githubusercontent.com/25232528/187435369-85b871a1-bd52-4099-8faf-7acc21b202a4.png)
  
- This method returns an HTMLCollection of elements with the given tag name.
- 
-```js
- // Loop Through an HTMLCollection
- 
- for (let i = 0; i < items.length; i++) {
-  items[i].style.color = 'orchid';
-
-  console.log(items[i]); // <li style="color: orchid;">Make coffee</li>
-}
-```
- 
- ## Select Elements by Class Name
-If you want to find all HTML elements with the same class name, use ```getElementsByClassName()```
-
-Example
-
-Get all elements with ```class="example"```:
+## Select Elements by Class Name
+The ```class``` attribute is used to access one or more specific elements in the DOM. You can get all the elements with a given class name with the ```getElementsByClassName()``` method.
 
 ```js
-const collection = document.getElementsByClassName("example");
+document.getElementsByClassName();
 ```
 
-Get all elements with both the "example" and "color" classes:
+Now we want to access more than one element, and in our example we have two elements with a ```demo``` class.
 
 ```js
-const collection = document.getElementsByClassName("example color");
+<div class="demo">Access me by class (1)</div>
+<div class="demo">Access me by class (2)</div>
 ```
 
-The ```getElementsByClassName()``` method returns an HTMLCollection
-
-Inside the ```for...of loop```, the variable highlight is assigned a different value. Log the highlight variable to the console to view the collection of returned elements.
+Access these elements in the Console and put them in a variable called ```demoClass```.
 
 ```js
-for ( const highlight of highlights ) {
-  highlight.style.backgroundColor = 'cornsilk';
-
-  console.log(highlight);
-}
+const demoClass = document.getElementsByClassName('demo');
 ```
+
+At this point, it might be tempting to modify the elements the same way you did with the ID example. However, if you try to run the following code and change the ```border``` property of the class demo elements to orange, you will get an error.
+
+```js
+demoClass.style.border = '1px solid orange';
+```
+```
+Output
+Uncaught TypeError: Cannot set property 'border' of undefined
+```
+
+The reason this doesn’t work is because instead of just getting one element, you have an array-like object of elements (HTMLCollection).
+
+```
+console.log(demoClass);
+```
+
+```
+// Output
+(2) [div.demo, div.demo]
+```
+JavaScript arrays must be accessed with an index number. You can change the first element of this array by using an index of ```0```.
+
+```js
+demoClass[0].style.border = '1px solid orange';
+```
+
+Generally when accessing elements by class, we want to apply a change to all the elements in the document with that particular class, not just one. You can do this by creating a ```for loop```, and looping through every item in the array.
+
+```js
+for (i = 0; i < demoClass.length; i++) {
+  demoClass[i].style.border = '1px solid orange';
+ }
+```
+
+When you run this code, your live page will be rendered like this:
+
+![image](https://user-images.githubusercontent.com/25232528/187435190-3e3bb503-31d3-4d1f-9a61-c81c52a5b227.png)
+
+
+***
