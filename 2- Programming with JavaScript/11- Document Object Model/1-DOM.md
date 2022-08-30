@@ -38,6 +38,18 @@ alert("Hello")
 ## Accessing the DOM
 The window object contains a property named document, which is an object, and it's the entry point into the DOM loaded in the current window. We use the document object to select and control elements of the web page. 
 
+For Example,checking document property on Google page.
+
+```js
+document.title
+// 'Google''
+
+document.domain
+// 'www.google.com'
+
+// Change the background color
+document.body.style.backgroundColor = 'red';
+```
 ***
 
 ## Introduction to Browser Events
