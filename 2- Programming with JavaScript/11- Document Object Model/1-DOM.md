@@ -343,4 +343,25 @@ In this article we saw the difference between ```innerHTML``` and ```innerText``
 
 * So if we need to insert only text, we can use ```innerText```, if there is also HTML in our insertion, we will use ```innerHTML```
 
+
+## Change Element Attributes
+HTML tags are converted into objects (called nodes) and placed into the DOM. Attributes exist as properties of element objects, like the href attribute of an <a> element or the action attribute of a <form> element. You get or set those attributes by way of properties, similar to the way you did earlier with an input element's value property and a heading's textContent property.
+ 
+**className**
+The className property overwrites any existing classes on an element. When dealing with multiple classes on an element, the classList property offers a convenient alternative to accessing an element's list of classes.
+
+**Get and set attributes with JavaScript**
+The getAttribute and setAttribute methods provide alternative ways to manage element attributes.
+
 ***
+ 
+## Set Inline Styles with the style Property
+Like most other attributes, you can get and set the inline style of an element in the DOM with the style property. However, unlike most other attributes, the style property returns an object containing a list of CSS style properties.
+ 
+**Examples**
+
+```js
+// Change the color of "myH1":
+
+document.getElementById("myH1").style.color = "red";
+```
