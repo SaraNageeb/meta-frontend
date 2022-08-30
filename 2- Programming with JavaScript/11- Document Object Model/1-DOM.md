@@ -117,3 +117,15 @@ Get all elements with both the "example" and "color" classes:
 ```js
 const collection = document.getElementsByClassName("example color");
 ```
+
+The ```getElementsByClassName()``` method returns an HTMLCollection
+
+Inside the ```for...of loop```, the variable highlight is assigned a different value. Log the highlight variable to the console to view the collection of returned elements.
+
+```js
+for ( const highlight of highlights ) {
+  highlight.style.backgroundColor = 'cornsilk';
+
+  console.log(highlight);
+}
+```
