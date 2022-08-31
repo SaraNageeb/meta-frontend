@@ -211,9 +211,7 @@ demoQueryAll.forEach(query => {
 
 Using the query selector methods is extremely powerful, as you can access any element or group of elements in the DOM the same way you would in a CSS file.
 
-***
-
-# Complete JavaScript Code
+**Complete JavaScript Code**
 
 ```js
 // Assign all elements
