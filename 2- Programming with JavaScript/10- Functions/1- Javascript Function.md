@@ -8,6 +8,12 @@ Suppose you need to create a program to create a circle and color it. You can cr
 
 Dividing a complex problem into smaller chunks makes your program easy to understand and reusable.
 
+**Benefits of Using a Function**
+
+* Function makes the code reusable. You can declare it once and use it multiple times.
+* Function makes the program easier as each small task is divided into a function.
+* Function increases readability.
+
 ***
 
 ## Declaring a Function
