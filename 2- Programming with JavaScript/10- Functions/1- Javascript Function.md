@@ -67,7 +67,42 @@ Output
 Hello there!
 ```
 
-
 ***
 
+## Function Return
+The ```return``` statement can be used to return the value to a function call.
 
+The ```return``` statement denotes that the function has ended. Any code after ```return``` is not executed.
+
+If nothing is returned, the function returns an ```undefined``` value.
+
+![image](https://user-images.githubusercontent.com/25232528/187729002-5e5f94c9-ed70-4aae-9b5b-c9ae4ca9d8e9.png)
+
+**Example: Sum of Two Numbers**
+
+```js
+// program to add two numbers
+// declaring a function
+function add(a, b) {
+    return a + b;
+}
+
+// take input from the user
+let number1 = parseFloat(prompt("Enter first number: "));
+let number2 = parseFloat(prompt("Enter second number: "));
+
+// calling function
+let result = add(number1,number2);
+
+// display the result
+console.log("The sum is " + result);
+```
+```
+Output
+
+Enter first number: 3.4
+Enter second number: 4
+The sum is 7.4
+```
+
+In the above program, the sum of the numbers is returned by the function using the ```return``` statement. And that value is stored in the ```result``` variable.
