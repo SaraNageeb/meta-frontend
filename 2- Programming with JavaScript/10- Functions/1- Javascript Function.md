@@ -178,3 +178,7 @@ The function is called using its name and passing two arguments ```3``` and ```4
 Notice that you can call a function as many times as you want. You can write one function and then call it multiple times with different arguments.
 
 ***
+
+## Variable Scope
+
+***
