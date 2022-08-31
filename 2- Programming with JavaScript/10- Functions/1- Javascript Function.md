@@ -112,3 +112,19 @@ The sum is 7.4
 ```
 
 In the above program, the sum of the numbers is returned by the function using the ```return``` statement. And that value is stored in the ```result``` variable.
+
+
+**Using Multiple return Statements**
+
+```js
+function rectangleArea(width, height) {
+  if (width < 0 || height < 0) {
+    return 'You need positive integers to calculate area!';
+  }
+  return width * height;
+}
+```
+
+If an argument for ```width``` or ```height``` is less than ```0```, then ```rectangleArea()``` will return ```'You need positive integers to calculate area!'```. The second return statement ```width * height``` will not run.
+
+***
