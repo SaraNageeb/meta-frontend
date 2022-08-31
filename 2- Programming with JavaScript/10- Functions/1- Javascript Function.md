@@ -43,3 +43,31 @@ Here's how you can call the above ```greet()``` function.
 // function call
 greet();
 ```
+
+![image](https://user-images.githubusercontent.com/25232528/187720041-c08edb5f-f100-4cd1-92bd-089e362417fa.png)
+
+
+
+**Example 1: Display a Text**
+
+```js
+// program to print a text
+// declaring a function
+function greet() {
+    console.log("Hello there!");
+}
+
+// calling the function
+greet();
+```
+
+```
+Output
+
+Hello there!
+```
+
+
+***
+
+
