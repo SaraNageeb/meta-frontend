@@ -179,6 +179,8 @@ Notice that you can call a function as many times as you want. You can write one
 
 ***
 
-## Variable Scope
+## Variable Scope and Function Scope
 
 ***
+
+## Function Declarations vs. Function Expressions
