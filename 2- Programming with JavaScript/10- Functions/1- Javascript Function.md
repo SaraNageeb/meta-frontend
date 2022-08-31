@@ -149,7 +149,9 @@ In the function call above, the number ```10``` is passed as the ```width``` and
 ## Pass Multiple Arguments to a Function
 Functions can accept more than one argument. When calling a function, you're able to pass multiple arguments to the function; each argument gets stored in a separate parameter and used as a discrete variable within the function.
 
-Add Two Numbers
+**Example Add Two Numbers**
+
+```js
 // program to add two numbers using a function
 // declaring a function
 function add(a, b) {
@@ -159,13 +161,20 @@ function add(a, b) {
 // calling functions
 add(3,4);
 add(2,9);
-Run Code
+```
+
+```
 Output
 
 7
 11
-In the above program, the add function is used to find the sum of two numbers.
+```
 
-The function is declared with two parameters a and b.
-The function is called using its name and passing two arguments 3 and 4 in one and 2 and 9 in another.
+In the above program, the ```add``` function is used to find the sum of two numbers.
+
+The function is declared with two parameters ```a``` and ```b```.
+The function is called using its name and passing two arguments ```3``` and ```4``` in one and ```2``` and ```9``` in another.
+
 Notice that you can call a function as many times as you want. You can write one function and then call it multiple times with different arguments.
+
+***
