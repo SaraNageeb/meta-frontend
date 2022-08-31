@@ -128,3 +128,21 @@ function rectangleArea(width, height) {
 If an argument for ```width``` or ```height``` is less than ```0```, then ```rectangleArea()``` will return ```'You need positive integers to calculate area!'```. The second return statement ```width * height``` will not run.
 
 ***
+
+# Parameters and Arguments
+Functions can take inputs and use the inputs to perform a task. When declaring a function, we can specify its parameters. Parameters allow functions to accept input(s) and perform a task using the input(s). We use parameters as placeholders for information that will be passed to the function when it is called.
+
+Let’s observe how to specify parameters in our function declaration:
+
+![image](https://user-images.githubusercontent.com/25232528/187763707-f9f2ded7-fab6-4e97-9d98-f5a7669811c9.png)
+
+In the diagram above, ```calculateArea()```, computes the area of a rectangle, based on two inputs, ```width``` and ```height```. The parameters are specified between the parenthesis as ```width``` and ```height```, and inside the function body, they act just like regular variables. width and height act as placeholders for values that will be multiplied together.
+
+When calling a function that has parameters, we specify the values in the parentheses that follow the function name. The values that are passed to the function when it is called are called arguments. Arguments can be passed to the function as values or variables.
+
+![image](https://user-images.githubusercontent.com/25232528/187764058-e412f25e-29e0-4599-8329-12426136545e.png)
+
+In the function call above, the number ```10``` is passed as the ```width``` and ```6``` is passed as ```height```. Notice that the order in which arguments are passed and assigned follows the order that the parameters are declared.
+
+***
+
