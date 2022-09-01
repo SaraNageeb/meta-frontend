@@ -208,8 +208,6 @@ In the above program, variable ```x``` is used to store the function. Here the f
 
 **The Differences Between Function Expressions & Declarations**
 
-There are a few key differences between function expressions and function declarations:
-
 * Function declarations are hoisted, while function expressions are not. This means that you can call a function declaration before it is defined, but you cannot do this with a function expression.
 
 * With function expressions, you can use a function immediately after it is defined. With function declarations, you have to wait until the entire script has been parsed.
