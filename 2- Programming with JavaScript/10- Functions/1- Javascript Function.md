@@ -179,7 +179,53 @@ Notice that you can call a function as many times as you want. You can write one
 
 ***
 
-## Variable Scope and Function Scope
+## Variable Scope
+
+**Global Scope:**
+A variable declared at the top of a program or outside of a function is considered a global scope variable.
+
+Let's see an example of a global scope variable.
+
+```js
+// program to print a text 
+let a = "hello";
+
+function greet () {
+    console.log(a);
+}
+
+greet(); // hello
+```
+
+In the above program, variable ```a``` is declared at the top of a program and is a global variable. It means the variable ```a``` can be used anywhere in the program.
+
+
+**Local Scope:**
+A variable can also have a local scope, i.e it can only be accessed within a function.
+
+**Example 1: Local Scope Variable**
+
+```js
+// program showing local scope of a variable
+let a = "hello";
+
+function greet() {
+    let b = "World"
+    console.log(a + b);
+}
+
+greet();
+console.log(a + b); // error
+```
+
+```
+Output
+
+helloWorld
+Uncaught ReferenceError: b is not defined
+```
+
+In the above program, variable ```a``` is a global variable and variable ```b``` is a local variable. The variable ```b``` can be accessed only inside the function ```greet```. Hence, when we try to access variable ```b``` outside of the function, an error occurs.
 
 ***
 
