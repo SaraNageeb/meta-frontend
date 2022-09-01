@@ -215,3 +215,17 @@ In the above program, variable ```x``` is used to store the function. Here the f
 * Function expressions can be used as an argument to another function, but function declarations cannot.
 
 * Function expressions can be anonymous, while function declarations cannot.
+
+**Benefits of function declarations**
+
+* It can make your code more readable. If you have a long function, giving it a name can help you keep track of what it’s doing.
+
+* Function declarations are hoisted, which means that they are available before they are defined in your code. This helps if you need to use the function before it is defined.
+
+**Benefits of function expressions**
+
+* They are more flexible than function declarations. You can create function expressions and assign them to different variables, which can be helpful when you need to use the same function in different places.
+
+* Function expressions are not hoisted, so you can’t use them before they are defined in your code. This helps if you want to make sure that a function is only used after it is defined.
+
+***
