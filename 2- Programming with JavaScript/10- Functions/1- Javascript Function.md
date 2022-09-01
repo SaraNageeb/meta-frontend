@@ -341,35 +341,26 @@ console.log(result1); // 12
 ***
 
 ## Default Function Parameters
+One of the features added in ES6 is the ability to use default parameters. Default parameters allow parameters to have a predetermined value in case there is no argument passed into the function or if the argument is ```undefined``` when called.
 
-The concept of default parameters is a new feature introduced in the ES6 version of JavaScript. This allows us to give default values to function parameters. Let's take an example,
+Take a look at the code snippet below that uses a default parameter:
 
-function sum(x = 3, y = 5) {
-
-    // return sum
-    return x + y;
+```js
+function greeting (name = 'stranger') {
+  console.log(`Hello, ${name}!`)
 }
+ 
+greeting('Nick') // Output: Hello, Nick!
+greeting() // Output: Hello, stranger!
+```
+ 
+* In the example above, we used the ```=``` operator to assign the parameter ```name``` a default value of ```'stranger'```. This is useful to have in case we ever want to include a non-personalized default greeting!
 
-console.log(sum(5, 15));  // 20 
-console.log(sum(7));        // 12
-console.log(sum());          // 8
-Run Code
-In the above example, the default value of x is 3 and the default value of y is 5.
+* When the code calls ```greeting('Nick')``` the value of the argument is passed in and, ```'Nick'```, will override the default parameter of ```'stranger'``` to log ```'Hello, Nick!'``` to the console.
 
-sum(5, 15) - When both arguments are passed, x takes 5 and y takes 15.
-sum(7) - When 7 is passed to the sum() function, x takes 7 and y takes default value 5.
-sum() - When no argument is passed to the sum() function, x takes default value 3 and y takes default value 5.
+* When there isn’t an argument passed into ```greeting()```, the default value of ```'stranger'``` is used, and ```'Hello, stranger!'``` is logged to the console.
 
-Passing undefined Value
-In JavaScript, when you pass undefined to a default parameter function, the function takes the default value. For example,
-
-function test(x = 1) {
-  console.log(x);
-}
-
-// passing undefined
-// takes default value 1
-test(undefined); // 1
+By using a default parameter, we account for situations when an argument isn’t passed into a function that is expecting an argument.
 
 ***
 
