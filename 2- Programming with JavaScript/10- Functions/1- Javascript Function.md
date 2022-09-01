@@ -207,6 +207,7 @@ Output
 In the above program, variable ```x``` is used to store the function. Here the function is treated as an ```expressio```n. And the function is called using the variable name. The function above is called an anonymous function.
 
 **The Differences Between Function Expressions & Declarations**
+
 There are a few key differences between function expressions and function declarations:
 
 * Function declarations are hoisted, while function expressions are not. This means that you can call a function declaration before it is defined, but you cannot do this with a function expression.
