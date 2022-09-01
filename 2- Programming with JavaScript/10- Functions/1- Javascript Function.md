@@ -296,6 +296,12 @@ let x = (x, y) => x * y;
 
 using an arrow function.
 
+**Concise Body Arrow Functions**
+
+JavaScript also provides several ways to refactor arrow function syntax. The most condensed form of the function is known as concise body. We’ll explore a few of these techniques below:
+
+![image](https://user-images.githubusercontent.com/25232528/187942491-f0f49df7-55d6-447c-aa5b-654446114aff.png)
+
 **Example 1: Arrow Function with No Argument**
 If a function doesn't take any argument, then you should use empty parentheses. For example,
 
@@ -303,7 +309,6 @@ If a function doesn't take any argument, then you should use empty parentheses. 
 let greet = () => console.log('Hello');
 greet(); // Hello
 ```
-
 
 **Example 2: Arrow Function with One Argument**
 If a function has only one argument, you can omit the parentheses. For example,
