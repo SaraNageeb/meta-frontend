@@ -275,3 +275,101 @@ In the above program, variable ```x``` is used to store the function. Here the f
 * Function expressions are not hoisted, so you can’t use them before they are defined in your code. This helps if you want to make sure that a function is only used after it is defined.
 
 ***
+
+## JavaScript Arrow Function
+Arrow function is one of the features introduced in the ES6 version of JavaScript. It allows you to create functions in a cleaner way compared to regular functions. For example,
+
+This function
+
+```js
+// function expression
+let x = function(x, y) {
+   return x * y;
+}
+```
+can be written as
+
+```js
+// using arrow functions
+let x = (x, y) => x * y;
+```
+
+using an arrow function.
+
+**Example 1: Arrow Function with No Argument**
+If a function doesn't take any argument, then you should use empty parentheses. For example,
+
+```js
+let greet = () => console.log('Hello');
+greet(); // Hello
+```
+
+
+**Example 2: Arrow Function with One Argument**
+If a function has only one argument, you can omit the parentheses. For example,
+
+```js
+let greet = x => console.log(x);
+greet('Hello'); // Hello 
+```
+
+**Example 3: Arrow Function as an Expression**
+You can also dynamically create a function and use it as an expression. For example,
+
+```js
+let age = 5;
+
+let welcome = (age < 18) ?
+  () => console.log('Baby') :
+  () => console.log('Adult');
+
+welcome(); // Baby
+```
+
+**Example 4: Multiline Arrow Functions**
+If a function body has multiple statements, you need to put them inside curly brackets ```{}```. For example,
+
+```js
+let sum = (a, b) => {
+    let result = a + b;
+    return result;
+}
+
+let result1 = sum(5,7);
+console.log(result1); // 12
+```
+***
+
+## Default Function Parameters
+
+The concept of default parameters is a new feature introduced in the ES6 version of JavaScript. This allows us to give default values to function parameters. Let's take an example,
+
+function sum(x = 3, y = 5) {
+
+    // return sum
+    return x + y;
+}
+
+console.log(sum(5, 15));  // 20 
+console.log(sum(7));        // 12
+console.log(sum());          // 8
+Run Code
+In the above example, the default value of x is 3 and the default value of y is 5.
+
+sum(5, 15) - When both arguments are passed, x takes 5 and y takes 15.
+sum(7) - When 7 is passed to the sum() function, x takes 7 and y takes default value 5.
+sum() - When no argument is passed to the sum() function, x takes default value 3 and y takes default value 5.
+
+Passing undefined Value
+In JavaScript, when you pass undefined to a default parameter function, the function takes the default value. For example,
+
+function test(x = 1) {
+  console.log(x);
+}
+
+// passing undefined
+// takes default value 1
+test(undefined); // 1
+
+***
+
