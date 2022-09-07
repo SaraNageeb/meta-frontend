@@ -1,5 +1,8 @@
 # React Basics
+![image](https://user-images.githubusercontent.com/25232528/188939311-c2fef9d7-dcda-43d7-a84a-bd880cdf2ec2.png)
+
 React is a JavaScript library for building user interfaces. React makes building and maintaining the user interface of your application faster and easier by breaking it up into smaller, reusable components. It also helps eliminate the complexity that comes with updating your DOM elements when the user interacts with your application.
+
 
 ***
 
