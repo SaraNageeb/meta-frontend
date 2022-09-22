@@ -68,5 +68,67 @@ If a JavaScript file contains JSX code, then that file will have to be compiled.
 
 ***
 
+## Component
+A component is an independent, reusable code block which divides the UI into smaller pieces. For example, if we were building the UI of Twitter with React:
+
+**The components of Twitter's News Feed**
+
+![image](https://user-images.githubusercontent.com/25232528/191860510-35a192b9-15c4-4d14-bc7c-62fc9d97c4a7.png)
+
+Rather than building the whole UI under one single file, we can and we should divide all the sections (marked with red) into smaller independent pieces. In other words, these are components.
+
+React has two types of components: functional and class, I will only focus on functional components.
+
+
+**Functional Components**
+
+The first and recommended component type in React is functional components. A functional component is basically a JavaScript/ES6 function that returns a React element (JSX). According to React's official docs, the function below is a valid functional component:
+
+```js
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+Alternatively, you can also create a functional component with the arrow function definition:
+
+```js
+const Welcome = (props) => { 
+  return <h1>Hello, {props.name}</h1>; 
+}
+```
+
+To be able to use a component later, you need to first ```export``` it so you can import it somewhere else:
+
+```js
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+export default Welcome;
+```
+
+After importing it, you can call the component like in this example:
+
+```js
+import Welcome from './Welcome';
+
+function App() { 
+  return (
+    <div className="App">
+      <Welcome />
+    </div>
+  );
+}
+```
+
+**So a Functional Component in React:**
+
+* Is a JavaScript/ES6 function
+* Must return a React element (JSX)
+* Always starts with a capital letter (naming convention)
+* Takes props as a parameter if necessary
+
+***
 
 
