@@ -44,3 +44,40 @@ function App() {
 ```
 
 And this would be the outcome:
+
+![image](https://user-images.githubusercontent.com/25232528/191931170-0a811bad-e5f9-45f0-9440-ff9f4f6c1a61.png)
+
+***
+
+## Using JSX for Inline Styles
+React lets you style DOM elements using inline styles. While the CSS logic remains the same, the style itself has to pass through JavaScript. This is also known as JSX.
+
+Let’s look at an example:
+
+```Headline.js```
+
+```js
+function Headline(){
+
+ const headlineStyle = {
+      backgroundColor: "#fff",
+      lineHeight: "1.5",
+      height: "2rem",
+      border: "none",
+      color: "black"
+ }
+
+    return (
+        <div style= { headlineStyle } >
+            <h2>Headline title</h2>
+            <p>the sub-headline</p>
+        </div>
+    )
+}
+```
+
+One thing you’ll note is that instead of writing line-height we use lineHeight.
+
+The explanation for this is that, “Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.”.
+
+***
