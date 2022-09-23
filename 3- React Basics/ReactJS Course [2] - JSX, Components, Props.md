@@ -204,4 +204,4 @@ const Job = (props) => {
 export default Job;
 ```
 
-https://jcn6wm.csb.app/
+View the result: https://jcn6wm.csb.app/
