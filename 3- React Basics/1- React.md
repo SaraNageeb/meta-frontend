@@ -140,6 +140,7 @@ Let's revisit the App( ) function above to see how to pass data with props.
 
 First, we need to define a prop on the Welcome Component and assign a value to it:
 
+```js
 import Welcome from './Welcome';
 
 function App() { 
@@ -151,11 +152,15 @@ function App() {
     </div>
   );
 }
+```
+
 Props are custom values and they also make components more dynamic. Since the Welcome component is the child here, we need to define props on its parent (App), so we can pass the values and get the result simply by accessing the prop "name":
 
+```js
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
+```
 
 ![image](https://user-images.githubusercontent.com/25232528/191864664-6e01d10f-7456-43c7-8b84-06753e65667e.png)
 
