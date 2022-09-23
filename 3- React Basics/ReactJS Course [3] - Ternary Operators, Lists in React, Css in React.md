@@ -141,3 +141,23 @@ const liArray = [
 <ul>{liArray}</ul>
 ```
 
+**Example**
+
+```js
+import React from "react";
+
+function App() {
+  const people = ["Rowe", "Prevost", "Gare"];
+
+  return people.map((person, i) => (
+    // expression goes here:
+    <ul key={"person_" + i}>{person}</ul>
+  ));
+}
+
+export default App;
+```
+
+View the result: https://d15w0k.csb.app/
+
+***
