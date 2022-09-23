@@ -166,3 +166,42 @@ function Welcome(props) {
 
 ***
 
+
+## Quick Example
+
+```App.js File```
+
+```js
+import "./styles.css";
+import Job from "./components/Job";
+
+function App() {
+  return (
+    <div className="App">
+      <Job salary={90000} position="Senior SDE" company="Amazon" />
+      <Job salary={80000} position="Junior SDE" company="Apple" />
+      <Job salary={120000} position="Backend" company="Netflix" />
+    </div>
+  );
+}
+
+export default App;
+```
+
+```Job Component```
+
+```jsx
+const Job = (props) => {
+  return (
+    <div>
+      <h1>{props.salary}</h1>
+      <h1>{props.position}</h1>
+      <h1>{props.company}</h1>
+    </div>
+  );
+};
+
+export default Job;
+```
+
+https://jcn6wm.csb.app/
