@@ -1,4 +1,4 @@
-# useState() Hook?
+# useState() Hook
 The most common hook used to control some state variable inside a functional component in React. To use it we define:
 
 ```js
