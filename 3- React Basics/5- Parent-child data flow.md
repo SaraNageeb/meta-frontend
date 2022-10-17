@@ -42,3 +42,8 @@ export default PromoHeading;
 
 
  In this example, you learned how the parent-child relationship can be set up so that data flows from parent to child. By storing data in the parent component, you can dynamically pass it to the child component without the need to update children individually.
+ 
+
+Check Result: https://bbzcfy.csb.app/
+
+***
