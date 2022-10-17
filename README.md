@@ -35,11 +35,8 @@ In this course, you will learn advanced React concepts. You’ll examine differe
 ### 7: Principles of UI/UX Design
 Learn the fundamentals of User Experience (UX) research and design, such as how UX insights relate to design decisions and how accessibility affects users. You will get a brief tour in modern User Interface (UI) design, learning the basics of Figma, and understanding the importance of micro interactions.
 
-
 ### 8 Front-End Developer Capstone
 The Capstone project enables you to demonstrate multiple skills from the Certificate by solving an authentic real-world problems. This course will test your knowledge and understanding, and provide you with a platform to show off your new abilities in front-end web development using React. 
-
-On completion of the Capstone project, you’ll have a job-ready portfolio that you can show to recruiters, demonstrate during interviews and impress potential future employers.
 
 ### 9: Coding Interview Preparation
 The final course in this program will help prepare you for the unique aspects of a coding job interview, with approaches to problem solving, computer science foundations and soft skills needed to land the job.
