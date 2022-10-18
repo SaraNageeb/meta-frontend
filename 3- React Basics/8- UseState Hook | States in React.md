@@ -1,4 +1,9 @@
 # useState() Hook
+
+React library provides the useState function for functional components, which will return an array with two elements, where the first is the constant that stores that state and the second is a function to replace the value of that state.
+
+***
+
 The most common hook used to control some state variable inside a functional component in React. To use it we define:
 
 ```js
