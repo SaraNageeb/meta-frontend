@@ -1,6 +1,6 @@
 # useState() Hook
 
-![image](https://user-images.githubusercontent.com/25232528/196664114-96961ccb-76df-4bdf-96ea-2fdaed4be88a.png)
+![image](https://user-images.githubusercontent.com/25232528/196673014-56c7ac50-cdba-40ff-9059-c1200c60312a.png)
 
 React library provides the useState function for functional components, which will return an array with two elements, where the first is the constant that stores that state and the second is a function to replace the value of that state.
 
