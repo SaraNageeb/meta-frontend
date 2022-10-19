@@ -1,4 +1,5 @@
 # What are React Hooks?
+![image](https://user-images.githubusercontent.com/25232528/196477682-63b2cbb0-9276-4ec7-8a1f-3db5d6b41129.png)
 
 Until version 16.7 it was necessary to create classes to use all React functionality in a component, such as state and lifecycle.
 
@@ -25,5 +26,3 @@ There are 3 rules for hooks:
 > **_NOTE:_**  Hooks will not work in React class components.
 
 ***
-
-![image](https://user-images.githubusercontent.com/25232528/196477682-63b2cbb0-9276-4ec7-8a1f-3db5d6b41129.png)
