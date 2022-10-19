@@ -14,14 +14,14 @@ import "./styles.css";
 export default function App() {
   const [word, setWord] = useState("Eat");
 
-  function updateWord() {
+  function handleClick() {
     setWord("Drink");
   }
 
   return (
     <div className="App">
       <Heading message={word + " at Little Lemon"} />
-      <button onClick={updateWord}></button>
+      <button onClick={handleClick}></button>
     </div>
   );
 }
