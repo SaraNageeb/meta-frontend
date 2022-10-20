@@ -40,3 +40,20 @@
  ```
  
  ***
+ 
+ ## prop drilling
+ Prop drilling is a situation where you are passing data from a parent to a child component, then to a grandchild component, and so on, until it reaches a more distant component further down the component tree, where this data is required
+ 
+ **
+ 
+ ## lifting up state 
+ 
+ A stateful component becoming a stateless component.
+ 
+ That’s right! Lifting up state means moving state up from a child to the parent component - meaning that a previously stateless parent component becomes a stateful component, and a previously stateful child component becomes a stateless component. 
+
+A stateless component becoming a stateful component.
+
+That’s right! Lifting up state means moving state up from a child to the parent component - meaning that a previously stateless parent component becomes a stateful component, and a previously stateful child component becomes a stateless component.
+
+
