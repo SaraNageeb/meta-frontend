@@ -41,12 +41,12 @@
  
  ***
  
- ## prop drilling
+ ## Prop Drilling
  Prop drilling is a situation where you are passing data from a parent to a child component, then to a grandchild component, and so on, until it reaches a more distant component further down the component tree, where this data is required
  
- **
+ ***
  
- ## lifting up state 
+ ## Lifting up State 
  
  A stateful component becoming a stateless component.
  
