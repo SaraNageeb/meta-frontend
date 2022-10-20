@@ -107,6 +107,70 @@ function Fruits(props) {
         </div>
     )
 }
-```
 
 export default Fruits
+```
+
+**Step 3.**
+
+Once you've lifted the state up from the ```Fruits``` component to the ```App``` component, you also need to update the ```FruitsCounter``` component. 
+
+Just like the ```Fruits``` component, the ```FruitsCounter``` component should also receive state from the ```App``` component, so that it can display the number of the available fruits using the length property of the array of fruits from the fruits state variable.
+
+The ```FruitsCounter``` component will end up having the following code:
+
+
+```js
+function FruitsCounter(props) {
+    return (
+        <h2>Total fruits: {props.fruits.length}</h2>
+    )
+}
+
+export default FruitsCounter;
+```
+
+***
+
+Here is the completed App.js file:
+
+```jsx
+import React from "react";
+import Fruits from "./Fruits";
+import FruitsCounter from "./FruitsCounter";
+
+function App() {
+  const [fruits] = React.useState([
+      {fruitName: 'apple', id: 1},
+      {fruitName: 'apple', id: 2},
+      {fruitName: 'plum', id: 3},
+  ]);
+
+  return (
+    <div className="App">
+      <h1>Where should the state go?</h1>
+      <Fruits fruits={fruits} />
+      <FruitsCounter fruits={fruits} />
+    </div>
+  );
+}
+
+export default App;
+```
+
+Here is the completed Fruits.js file:
+
+```jsx
+function Fruits(props) {
+    return (
+        <div>
+            {props.fruits.map(f => <p key={f.id}>{f.fruitName}</p>)}
+        </div>
+    )
+}
+
+export default Fruits
+```
+
+
+
