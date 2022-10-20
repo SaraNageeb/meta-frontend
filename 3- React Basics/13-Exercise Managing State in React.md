@@ -172,5 +172,22 @@ function Fruits(props) {
 export default Fruits
 ```
 
+Here is the completed FruitsCounter.js file:
+
+```jsx
+function FruitsCounter(props) {
+    return (
+        <h2>Total fruits: {props.fruits.length}</h2>
+    )
+}
+
+export default FruitsCounter;
+```
+
+The completed app should look as follows:
+
+![image](https://user-images.githubusercontent.com/25232528/196994428-c0d94fe2-5171-4962-8e25-b0e2417df436.png)
+
+
 
 
