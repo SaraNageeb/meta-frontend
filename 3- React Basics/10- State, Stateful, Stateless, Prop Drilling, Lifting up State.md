@@ -42,18 +42,48 @@
  ***
  
  ## Prop Drilling
- Prop drilling is a situation where you are passing data from a parent to a child component, then to a grandchild component, and so on, until it reaches a more distant component further down the component tree, where this data is required
+Prop drilling is a situation where you are passing data from a parent to a child component, then to a grandchild component, and so on, until it reaches a more distant component further down the component tree, where this data is required.
+ 
+![image](https://user-images.githubusercontent.com/25232528/197039259-ad645820-ec5d-4116-b571-5047efbc3864.png)
+
  
  ***
  
- ## Lifting up State 
+ ## What is Lifting up State 
  
- A stateful component becoming a stateless component.
+ **A stateful component becoming a stateless component.**
  
- That’s right! Lifting up state means moving state up from a child to the parent component - meaning that a previously stateless parent component becomes a stateful component, and a previously stateful child component becomes a stateless component. 
+That’s right! Lifting up state means moving state up from a child to the parent component - meaning that a previously stateless parent component becomes a stateful component, and a previously stateful child component becomes a stateless component. 
 
-A stateless component becoming a stateful component.
+
+**A stateless component becoming a stateful component.**
 
 That’s right! Lifting up state means moving state up from a child to the parent component - meaning that a previously stateless parent component becomes a stateful component, and a previously stateful child component becomes a stateless component.
 
+<br>
 
+**Quick Example**
+
+Lifting up the State: As we know, every component in React has its own state. Because of this sometimes data can be redundant and inconsistent. So, by Lifting up the state we make the state of the parent component as a single source of truth and pass the data of the parent in its children.
+
+Time to use Lift up the State: If the data in “parent and children components” or in “cousin components” is Not in Sync.
+
+**Example 1:** If we have 2 components in our App. A -> B where, A is parent of B. keeping the same data in both Component A and B might cause inconsistency of data. 
+
+**Example 2:** If we have 3 components in our App.
+
+
+```
+
+        A
+       / \
+      B   C
+```
+
+Where A is the parent of B and C. In this case, If there is some Data only in component B but, component C also wants that data. We know Component C cannot access the data because a component can talk only to its parent or child (Not cousins).
+
+**Problem:** Let’s Implement this with a simple but general example. We are considering the second example.
+
+**Approach:** To solve this, we will Lift the state of component B and component C to component A. Make A.js as our Main Parent by changing the path of App in the index.js file
+
+***
