@@ -13,7 +13,7 @@ The three phases are:
 ***
 
 
-# useEffect Hook
+## React component lifecycle with hooks
 
 ```jsx
 import "./App.css";
@@ -49,12 +49,17 @@ export const Text = () => {
   const [text, setText] = useState("");
 
   useEffect(() => {
+    // use effect only is calling itself when the component has mounted
     console.log("COMPONENT MOUNTED");
 
     return () => {
+      // use effect only is calling itself when the component has unmounted
       console.log("COMPONENT UNMOUNTED");
     };
-  }, []);
+
+    //To run the useEffect only on mount, pass an empty array []
+    // If the array contains a state variable, the useEffect callback function gets triggered on 2 occasions. First, when the page renders and whenever the state variable is updated.
+  }, [text]);
 
   return (
     <div>
@@ -68,6 +73,7 @@ export const Text = () => {
     </div>
   );
 };
+
 ```
 
 ***
