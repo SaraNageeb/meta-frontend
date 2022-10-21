@@ -12,7 +12,6 @@ The three phases are:
 
 ***
 
-
 ## React component lifecycle with hooks
 
 ```jsx
@@ -76,6 +75,7 @@ export const Text = () => {
 
 ```
 
+Check Result: https://v1fumi.csb.app/
+
 ***
 
-Check Result: https://v1fumi.csb.app/
