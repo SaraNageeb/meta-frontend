@@ -1,3 +1,18 @@
+# Lifecycle of Components
+
+Each component in React has a lifecycle which you can monitor and manipulate during its three main phases.
+
+The three phases are: 
+
+* **Mounting lifecycle methods**, that is inserting elements into the DOM.
+* **Updating**, which involves methods for updating components in the DOM.
+* **Unmounting**, that is removing a component from the DOM.
+
+![image](https://user-images.githubusercontent.com/25232528/197160657-9119b66f-2cd3-4b12-abb2-c929dc2c8e00.png)
+
+***
+
+
 # useEffect Hook
 
 ```jsx
