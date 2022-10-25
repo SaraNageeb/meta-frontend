@@ -1,4 +1,4 @@
-# What is Axios?
+# Axios API
 Axios is an HTTP client library that allows you to make requests to a given endpoint:
 
 This could be an external API or your own backend Node.js server, for example.
