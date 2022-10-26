@@ -101,3 +101,21 @@ There are a few things to unpack here, so here is the explanation of the ```Logi
 2. In the return statement, an ```h1``` heading is wrapped inside a ```div``` element, and then curly braces are used to include a JSX expression. Inside this JSX expression is a single ```&&``` operator, which is surrounded by some code both on its left and on its right sides; on the left side, the val value is provided, and on the right, a piece of JSX is provided. 
 
 To understand what will be output on screen, consider the following example in standard JavaScript:
+
+```js
+true && console.log('This will show')
+```
+
+If you ran this command in the browser’s console, the text ‘This will show’ will be output.
+
+On the flip side, consider the following example:
+
+```jsx
+false && console.log('This will never show')
+```
+
+If you ran this command, the output will just be the boolean value of ```false```.
+
+In other words, if a prop gets evaluated to ```true```, using the ```&&``` operator, you can render whatever JSX elements you want to the right of the ```&&``` operator.
+
+***
