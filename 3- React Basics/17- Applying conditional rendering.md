@@ -98,6 +98,6 @@ There are a few things to unpack here, so here is the explanation of the ```Logi
 
 1. First, you ask the user to type into the prompt, specifying that you require anything other than a zero character; and you save the input into the ```val``` value.
 
-2. In the return statement, an ```h1``` heading is wrapped inside a ```div``` element, and then curly braces are used to include a JSX expression. Inside this JSX expression is a single && operator, which is surrounded by some code both on its left and on its right sides; on the left side, the val value is provided, and on the right, a piece of JSX is provided. 
+2. In the return statement, an ```h1``` heading is wrapped inside a ```div``` element, and then curly braces are used to include a JSX expression. Inside this JSX expression is a single ```&&``` operator, which is surrounded by some code both on its left and on its right sides; on the left side, the val value is provided, and on the right, a piece of JSX is provided. 
 
 To understand what will be output on screen, consider the following example in standard JavaScript:
