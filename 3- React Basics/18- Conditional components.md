@@ -32,8 +32,28 @@ Conditional rendering is built on the same principle. By using conditions, you c
 
 Let’s take a look at a simple example.
 
-Let’s say you have two child components called ```**LoginButton**``` and ```**LogoutButton**```; each displaying their corresponding button.
+Let’s say you have two child components called **LoginButton** and **LogoutButton**; each displaying their corresponding button.
 
-In the parent component, named ```**LogInOutButton`**``, you can check the props passed into the parent component and return a different child component based on the value of the props.
+In the parent component, named **LogInOutButton**, you can check the props passed into the parent component and return a different child component based on the value of the props.
 
 In this example, the props contains a property named isLoggedIn. When this is set to true, the LogoutButton component is returned. Otherwise, the LoginButton component is returned.
+
+```jsx
+function LogInOutButton(props) {
+const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return <LogoutButton />;
+  } else {
+  return <LoginButton />;
+}
+```
+
+Then when the **LogInOutButton** parent component is used, the prop can be passed in.
+
+```jsx
+<LogInOutButton isLoggedIn={false} />
+```
+
+This is a simple example showing how you can change what is displayed based on a condition check. You will use this often when developing React applications.
+
+***
