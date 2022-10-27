@@ -1,5 +1,4 @@
 # Task
-
 Say you are working on a website that allows visitors to play bird sound by pressing buttons. The user interface is set up so that when a user presses a button it will start playing the bird sounds. Alternatively, if the bird sound is already playing, clicking on the button will pause it. Upon a subsequent click on the button, the sound should continue to play from where it was paused.
 
 Additionally, you need to add multiple buttons for multiple bird sound mp3 tracks.
@@ -21,5 +20,51 @@ After adding the `toggle2` function to the JSX expression in the second button's
 ### **Step 3** 
 
 Next, you need to define the `toggle2` function: it should have the exact same functionality as the `toggle1` function, but it needs to work with the `bird2` variable (instead of the `bird1` variable as it does in the `toggle1` function).
+
+***
+
+#### The Complete App: Song selection
+
+```jsx
+import React from "react"; 
+ 
+function App() { 
+ 
+  const bird1 = new Audio( 
+    "https://upload.wikimedia.org/wikipedia/commons/9/9b/Hydroprogne_caspia_-_Caspian_Tern_XC432679.mp3" 
+  ); 
+ 
+  const bird2 = new Audio( 
+    "https://upload.wikimedia.org/wikipedia/commons/b/b5/Hydroprogne_caspia_-_Caspian_Tern_XC432881.mp3" 
+  ); 
+ 
+  function toggle1() { 
+    if (bird1.paused) { 
+      bird1.play(); 
+    } else { 
+      bird1.pause(); 
+    } 
+  }; 
+ 
+  function toggle2() { 
+    if (bird2.paused) { 
+      bird2.play(); 
+    } else { 
+      bird2.pause(); 
+    } 
+  }; 
+ 
+  return ( 
+    <div> 
+      <button onClick={toggle1}>Caspian Tern 1</button> 
+      <button onClick={toggle2}>Caspian Tern 2</button> 
+    </div> 
+  ); 
+} 
+ 
+export default App;
+```
+
+Check the app: https://zygsfh.csb.app/
 
 ***
